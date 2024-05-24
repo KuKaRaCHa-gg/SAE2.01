@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56ae800e-2148-42f4-8442-c980d64c6844" name="Changes" comment="creation of project">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/Images/LOGO.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/Images/compte.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/PageJeu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,21 +15,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "KuKaRaCHa-gg"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;KuKaRaCHa-gg&quot;
   }
-}]]></component>
+}</component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="5" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/KuKaRaCHa-gg/SAE2.01.git",
-    "accountId": "facc958c-4d13-4b3d-b215-8972981d61a6"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/KuKaRaCHa-gg/SAE2.01.git&quot;,
+    &quot;accountId&quot;: &quot;facc958c-4d13-4b3d-b215-8972981d61a6&quot;
   }
-}]]></component>
+}</component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -45,9 +37,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2gphmyhay6Ee9rVa7a85OdOGvDE" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -60,7 +52,8 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/danii/Desktop/Cours/SAE_201/src/main/resources/com/example/sae_201"
+    "last_opened_file_path": "C:/Users/danii/Desktop/Cours/SAE_201/src/main/resources/com/example/sae_201",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -68,6 +61,21 @@
       <recent name="C:\Users\danii\Desktop\Cours\SAE_201\src\main\resources\com\example\sae_201" />
       <recent name="C:\Users\danii\Desktop\Cours\SAE_201\src\main\java\com\example\sae_201" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="SAE2.01" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="SAE2.01" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -90,6 +98,7 @@
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Merge remote-tracking branch 'SAE201/master'" />
     <MESSAGE value="creation of project" />
     <option name="LAST_COMMIT_MESSAGE" value="creation of project" />
   </component>
