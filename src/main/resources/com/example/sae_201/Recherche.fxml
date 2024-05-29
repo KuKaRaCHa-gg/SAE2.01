@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1020.0" style="-fx-background-color: #6E6E6E;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <VBox prefHeight="720.0" prefWidth="1020.0">
+            <children>
+                <HBox prefHeight="75.0" prefWidth="1020.0" style="-fx-background-color: #000000;">
+                    <children>
+                        <ImageView fitHeight="80.0" fitWidth="105.0" pickOnBounds="true" preserveRatio="true" />
+                        <Pane prefHeight="80.0" prefWidth="89.0" />
+                        <VBox prefHeight="80.0" prefWidth="569.0">
+                            <children>
+                                <Pane prefHeight="200.0" prefWidth="200.0">
+                                    <children>
+                                        <TextField fx:id="searchTextField" layoutX="197.0" layoutY="25.0" />
+                                        <Button layoutX="400.0" layoutY="25.0" text="Rechercher" />
+                                    </children>
+                                </Pane>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+                <HBox prefHeight="30.0" prefWidth="207.0" style="-fx-background-color: #484848;" />
+                <HBox prefHeight="56.0" prefWidth="1020.0">
+                    <children>
+                        <Pane prefHeight="70.0" prefWidth="26.0" />
+                        <Label text="V" textFill="#a5a5a5">
+                            <font>
+                                <Font size="48.0" />
+                            </font>
+                        </Label>
+                        <Label prefHeight="56.0" prefWidth="273.0" text="Résultats de la recherche" textFill="WHITE">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <ScrollPane fitToWidth="true">
+                    <content>
+                        <VBox prefHeight="200.0" prefWidth="1020.0">
+                            <children>
+                                <HBox prefHeight="164.0" prefWidth="1020.0">
+                                    <children>
+                                        <Pane prefHeight="164.0" prefWidth="30.0" />
+                                        <VBox prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fx:id="gameImage1" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="gameLabel1" text="Jeu 1" />
+                                            </children>
+                                        </VBox>
+                                        <Pane prefHeight="164.0" prefWidth="30.0" />
+                                        <VBox prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fx:id="gameImage2" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="gameLabel2" text="Jeu 2" />
+                                            </children>
+                                        </VBox>
+                                        <Pane prefHeight="164.0" prefWidth="30.0" />
+                                        <VBox prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fx:id="gameImage3" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="gameLabel3" text="Jeu 3" />
+                                            </children>
+                                        </VBox>
+                                        <Pane prefHeight="164.0" prefWidth="30.0" />
+                                        <VBox prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fx:id="gameImage4" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="gameLabel4" text="Jeu 4" />
+                                            </children>
+                                        </VBox>
+                                        <Pane prefHeight="164.0" prefWidth="30.0" />
+                                        <VBox prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fx:id="gameImage5" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="gameLabel5" text="Jeu 5" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                                <HBox prefHeight="164.0" prefWidth="1020.0">
+                                    <children>
+                                        <Pane prefHeight="164.0" prefWidth="30.0" />
+                                        <VBox prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fx:id="gameImage6" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="gameLabel6" text="Jeu 6" />
+                                            </children>
+                                        </VBox>
+                                        <Pane prefHeight="164.0" prefWidth="30.0" />
+                                        <VBox prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fx:id="gameImage7" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="gameLabel7" text="Jeu 7" />
+                                            </children>
+                                        </VBox>
+                                        <Pane prefHeight="164.0" prefWidth="30.0" />
+                                        <VBox prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fx:id="gameImage8" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="gameLabel8" text="Jeu 8" />
+                                            </children>
+                                        </VBox>
+                                        <Pane prefHeight="164.0" prefWidth="30.0" />
+                                        <VBox prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fx:id="gameImage9" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="gameLabel9" text="Jeu 9" />
+                                            </children>
+                                        </VBox>
+                                        <Pane prefHeight="164.0" prefWidth="30.0" />
+                                        <VBox prefHeight="200.0" prefWidth="200.0">
+                                            <children>
+                                                <ImageView fx:id="gameImage10" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                                <Label fx:id="gameLabel10" text="Jeu 10" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </content>
+                </ScrollPane>
+            </children>
+        </VBox>
+    </children>
+</Pane>
