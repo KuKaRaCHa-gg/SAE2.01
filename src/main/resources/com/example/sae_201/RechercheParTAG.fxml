@@ -40,7 +40,12 @@
                 </HBox>
             </children>
         </HBox>
-        <Pane prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #484848;" />
+        <Pane prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #484848;">
+         <children>
+                <Button fx:id="mesJeuxButton" layoutX="75.0" layoutY="-1.0" onAction="#handleMesJeuxButtonAction" text="Mes Jeux" />
+                <Button fx:id="tagsButton" layoutX="166.0" layoutY="-1.0" onAction="#handleTagsButtonAction" text="Tags" />
+                <Button fx:id="creerTagButton" layoutX="236.0" layoutY="-1.0" onAction="#handleCreerTagButtonAction" text="Créer un Tag" />
+         </children></Pane>
         <HBox alignment="BASELINE_CENTER" prefHeight="33.0" prefWidth="1020.0">
             <children>
                 <Pane prefHeight="50.0" prefWidth="50.0" />
