@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <ScrollPane hbarPolicy="NEVER" prefHeight="700.0" prefWidth="1022.0" style="-fx-background-color: #323232;" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sae_201.accueil">
    <content>
       <VBox alignment="TOP_CENTER" prefHeight="1020.0" prefWidth="1020.0" style="-fx-background-color: #323232;">
@@ -52,7 +51,27 @@
                   </HBox>
                </children>
             </HBox>
-            <Pane prefHeight="30.0" prefWidth="1061.0" style="-fx-background-color: #484848;" />
+            <HBox prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #484848;">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #484848;" text="Mes Jeux" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Pane prefHeight="30.0" prefWidth="10.0" />
+                  <Button mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: #484848;" text="Tags" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Pane prefHeight="30.0" prefWidth="10.0" />
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="127.0" style="-fx-background-color: #484848;" text="Créer un Tag" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
             <HBox alignment="CENTER" prefHeight="56.0" prefWidth="1020.0">
                <children>
                   <Pane prefHeight="70.0" prefWidth="26.0" />
@@ -70,25 +89,29 @@
                         </Label>
                      </children>
                   </HBox>
-                  <VBox fx:id="textBienvenu" prefHeight="70.0" prefWidth="528.0">
+                  <Pane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Label prefHeight="27.0" prefWidth="457.0" text="Bienvenue sur GreenLog rechercher et classer vos" textFill="WHITE">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label prefHeight="27.0" prefWidth="510.0" text="jeu favoris (ou pas) et trouver les par tag que vous aurez fais" textFill="WHITE">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
-                        <Label prefHeight="27.0" prefWidth="510.0" text="Commencer par ajouter un jeu," textFill="WHITE">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Label>
+                        <VBox fx:id="textBienvenu" layoutX="-250.0" layoutY="50.0" prefHeight="70.0" prefWidth="528.0">
+                           <children>
+                              <Label prefHeight="27.0" prefWidth="457.0" text="Bienvenue sur GreenLog rechercher et classer vos" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="27.0" prefWidth="510.0" text="jeu favoris (ou pas) et trouver les par tag que vous aurez fais" textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="27.0" prefWidth="510.0" text="Commencer par ajouter un jeu," textFill="WHITE">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
                      </children>
-                  </VBox>
+                  </Pane>
                </children>
             </HBox>
             <HBox prefHeight="164.0" prefWidth="1020.0">
