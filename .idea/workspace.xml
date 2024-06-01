@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Mis en place des package pour l'api">
+    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Changement dans l'interface de l'acceuil et ajout du logo dans l'icone de l'application">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/accueil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/accueil.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717230932728</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Changement dans l'interface de l'acceuil et ajout du logo dans l'icone de l'application">
+      <option name="closed" value="true" />
+      <created>1717232004431</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1717232004431</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -126,6 +133,7 @@
     <MESSAGE value="Test" />
     <MESSAGE value="Logo mis en place" />
     <MESSAGE value="Mis en place des package pour l'api" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mis en place des package pour l'api" />
+    <MESSAGE value="Changement dans l'interface de l'acceuil et ajout du logo dans l'icone de l'application" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changement dans l'interface de l'acceuil et ajout du logo dans l'icone de l'application" />
   </component>
 </project>
