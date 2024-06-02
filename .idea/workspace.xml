@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Quelque changement de l'interface accueil">
+    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Header de selection mis en place dans l'interface">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/accueil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/accueil.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +67,7 @@
     "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "#1 on Mattis",
+    "git-widget-placeholder": "Mattis",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/10/Documents/JavaFX/Projet/MorpionJeu",
     "project.structure.last.edited": "Project",
@@ -141,7 +140,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717233038633</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Header de selection mis en place dans l'interface">
+      <option name="closed" value="true" />
+      <created>1717242131440</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1717242131440</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -151,6 +158,7 @@
     <MESSAGE value="Mis en place des package pour l'api" />
     <MESSAGE value="Changement dans l'interface de l'acceuil et ajout du logo dans l'icone de l'application" />
     <MESSAGE value="Quelque changement de l'interface accueil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Quelque changement de l'interface accueil" />
+    <MESSAGE value="Header de selection mis en place dans l'interface" />
+    <option name="LAST_COMMIT_MESSAGE" value="Header de selection mis en place dans l'interface" />
   </component>
 </project>
