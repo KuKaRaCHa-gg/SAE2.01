@@ -6,7 +6,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class PageJeuController {
+public class AccueilController {
 
     @FXML
     private ImageView logoImageView;
@@ -18,7 +18,7 @@ public class PageJeuController {
     private Button tagButton;
 
     @FXML
-    private ImageView loginImageView;
+    private ImageView accountImageView;
 
     @FXML
     private Button mesJeuxButton;
