@@ -1,119 +1,57 @@
 package com.example.sae_201;
 
-
-
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
-
-public class accueil {
+public class AccueilController {
 
     @FXML
-    private HBox ajoutRecLabel;
+    private ImageView logoImageView;
 
     @FXML
-    private HBox alphaLabel;
+    private TextField searchTextField;
 
     @FXML
-    private ImageView gameImage1;
+    private Button tagButton;
 
     @FXML
-    private ImageView gameImage10;
+    private ImageView accountImageView;
 
     @FXML
-    private ImageView gameImage2;
+    private Button mesJeuxButton;
 
     @FXML
-    private ImageView gameImage3;
+    private Button tagsButton;
 
     @FXML
-    private ImageView gameImage4;
+    private Button creerTagButton;
+
+    private Stage stage;
 
     @FXML
-    private ImageView gameImage5;
-
-    @FXML
-    private ImageView gameImage6;
-
-    @FXML
-    private ImageView gameImage7;
-
-    @FXML
-    private ImageView gameImage8;
-
-    @FXML
-    private ImageView gameImage9;
-
-    @FXML
-    private Label gameLabel1;
-
-    @FXML
-    private Label gameLabel10;
-
-    @FXML
-    private Label gameLabel2;
-
-    @FXML
-    private Label gameLabel3;
-
-    @FXML
-    private Label gameLabel4;
-
-    @FXML
-    private Label gameLabel5;
-
-    @FXML
-    private Label gameLabel6;
-
-    @FXML
-    private Label gameLabel7;
-
-    @FXML
-    private Label gameLabel8;
-
-    @FXML
-    private Label gameLabel9;
-
-    @FXML
-    private ImageView image;
-
-
-    @FXML
-    private ImageView imageTendance1;
-
-    @FXML
-    private ImageView imageTendance2;
-
-    @FXML
-    private ImageView imageTendance3;
-
-    @FXML
-    private ImageView imageTendance4;
-
-    @FXML
-    private ImageView imageTendance5;
-    @FXML
-    private VBox textBienvenu;
-
-
-
-
-    public void onTestClicked(javafx.event.ActionEvent event) {
-        ajoutRecLabel.setOpacity(1);
-        gameLabel1.setOpacity(1);
-        gameLabel2.setOpacity(1);
-        gameLabel3.setOpacity(1);
-        gameLabel4.setOpacity(1);
-        gameLabel5.setOpacity(1);
-        textBienvenu.setOpacity(0);
-
+    private void initialize() {
+        // Initialize the controller
     }
 
+    @FXML
+    private void handleMesJeuxButtonAction() {
+        NavigationUtil.navigateTo(stage, "accueil.fxml");
+    }
 
+    @FXML
+    private void handleTagsButtonAction() {
+        NavigationUtil.navigateTo(stage, "RechercheParTAG.fxml");
+    }
 
+    @FXML
+    private void handleCreerTagButtonAction() {
+        NavigationUtil.navigateTo(stage, "Recherche.fxml");
+    }
 
-
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
 }

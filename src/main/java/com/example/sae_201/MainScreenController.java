@@ -38,17 +38,17 @@ public class MainScreenController {
 
     @FXML
     private void handleMesJeuxButtonAction() {
-        NavigationUtil.navigateTo(stage, "MainScreen.fxml");
+        NavigationUtil.navigateTo(stage, "accueil.fxml");
     }
 
     @FXML
     private void handleTagsButtonAction() {
-        NavigationUtil.navigateTo(stage, "TagsScreen.fxml");
+        NavigationUtil.navigateTo(stage, "RechercheParTAG.fxml");
     }
 
     @FXML
     private void handleCreerTagButtonAction() {
-        NavigationUtil.navigateTo(stage, "CreateTagScreen.fxml");
+        NavigationUtil.navigateTo(stage, "Recherche.fxml");
     }
 
     public void setStage(Stage stage) {
