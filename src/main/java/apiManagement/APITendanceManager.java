@@ -20,15 +20,8 @@ import java.util.List;
 
 public class APITendanceManager {
 
-    public List<Game> getMultipleGames(String searchedText) throws GameNotFoundException {
+    public List<Game> getMultipleGames() throws GameNotFoundException {
         List<Game> gamesList = new ArrayList<>();
-
-        String searchedEncoded = "";
-        try {
-            searchedEncoded = URLEncoder.encode(searchedText, StandardCharsets.UTF_8.toString());
-        } catch (UnsupportedEncodingException e2) {
-            e2.printStackTrace();
-        }
 
         //Permet de recuperer les jeu en tendances
 		HttpRequest request = HttpRequest.newBuilder()
@@ -95,6 +88,7 @@ public class APITendanceManager {
                     detailedResult = detailedObjectMapper.readValue(newResponse.body(), Result.class);
                     game.setDescription(detailedResult.getDescription());
                     game.setRate(detailedResult.getRating());
+                    System.out.println(game.getRate());
                 } catch (JsonProcessingException e) {
                     e.printStackTrace();
                 }

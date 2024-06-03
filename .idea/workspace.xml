@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Creation des classes pour faire les recherches des jeux">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PersistentModelManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/persistence/PersistenceBySerialization.java" afterDir="false" />
+    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Creation des classes pour faire la persistence du projet, la sauvegarde local">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/apiManagement/APITendanceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiManagement/APITendanceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/result/ResultGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/result/ResultGame.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,8 +86,8 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "#1 on Mattis",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/10/Documents/JavaFX/SAE2.01/Jar Jackson/jackson-datatype-jsr310-2.17.1.jar",
-    "project.structure.last.edited": "Libraries",
+    "last_opened_file_path": "C:/Users/10/Documents/JavaFX/SAE2.01/demo1test",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
@@ -173,7 +176,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717415618396</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Creation des classes pour faire la persistence du projet, la sauvegarde local">
+      <option name="closed" value="true" />
+      <created>1717415887241</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717415887241</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,6 +207,7 @@
     <MESSAGE value="Quelque changement de l'interface accueil" />
     <MESSAGE value="Header de selection mis en place dans l'interface" />
     <MESSAGE value="Creation des classes pour faire les recherches des jeux" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creation des classes pour faire les recherches des jeux" />
+    <MESSAGE value="Creation des classes pour faire la persistence du projet, la sauvegarde local" />
+    <option name="LAST_COMMIT_MESSAGE" value="Creation des classes pour faire la persistence du projet, la sauvegarde local" />
   </component>
 </project>
