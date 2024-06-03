@@ -17,6 +17,8 @@ import java.util.List;
 
 public class APITendanceManager {
 
+    private int compteur = 0;
+
     public List<Game> getMultipleGames() throws GameNotFoundException {
         List<Game> gamesList = new ArrayList<>();
 
@@ -47,6 +49,7 @@ public class APITendanceManager {
             }
 
             for (Result gameResult : result.getResults()) {
+                compteur++;
                 Game game = new Game();
                 game.setId(gameResult.getId());
                 game.setName(gameResult.getName());
@@ -73,6 +76,7 @@ public class APITendanceManager {
                     game.setDescription(detailedResult.getDescription());
                     game.setRate(String.valueOf(detailedResult.getRating()));
                     System.out.println(game.getRate());
+
                 } catch (JsonProcessingException e) {
                     e.printStackTrace();
                 }
@@ -82,6 +86,8 @@ public class APITendanceManager {
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
+
+        System.out.println(compteur);
 
         return gamesList;
     }
