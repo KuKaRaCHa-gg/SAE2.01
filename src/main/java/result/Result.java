@@ -1,37 +1,63 @@
 package result;
 
-import gameModel.Platform;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Result {
-    @JsonProperty("name")
-    private String name;
-    @JsonProperty("background_image")
-    private String backgroundImage;
-    @JsonProperty("slug")
-    private String slug;
-    @JsonProperty("metacritic")
-    private String metacritic;
-    @JsonProperty("playtime")
-    private String playtime;
-    @JsonProperty("rating")
-    private String rating;
-    @JsonProperty("platforms")
-    private Platform[] platforms;
-    @JsonProperty("id")
     private int id;
-    @JsonProperty("description")
+    private String name;
+    private String backgroundImage;
     private String description;
+    private double rating;
 
+    // Getters and setters
 
-    public String getName() { return name; }
-    public String getBackgroundImage() { return backgroundImage; }
-    public String getSlug() { return slug; }
-    public String getMetacritic() { return metacritic; }
-    public String getPlaytime() { return playtime; }
-    public String getRating() { return rating; }
-    public Platform[] getPlatforms() { return platforms; }
-    public int getId() { return id;}
-    public String getDescription() { return description;}
+    @JsonProperty("id")
+    public int getId() {
+        return id;
+    }
 
+    @JsonProperty("id")
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @JsonProperty("name")
+    public String getName() {
+        return name;
+    }
+
+    @JsonProperty("name")
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @JsonProperty("background_image")
+    public String getBackgroundImage() {
+        return backgroundImage;
+    }
+
+    @JsonProperty("background_image")
+    public void setBackgroundImage(String backgroundImage) {
+        this.backgroundImage = backgroundImage;
+    }
+
+    @JsonProperty("description")
+    public String getDescription() {
+        return description;
+    }
+
+    @JsonProperty("description")
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    @JsonProperty("rating")
+    public double getRating() {
+        return rating;
+    }
+
+    @JsonProperty("rating")
+    public void setRating(double rating) {
+        this.rating = rating;
+    }
 }

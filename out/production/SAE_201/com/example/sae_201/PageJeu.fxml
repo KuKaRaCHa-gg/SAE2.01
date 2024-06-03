@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #323232;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sae_201.HelloController">
+    <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="1600.0" style="-fx-background-color: #000000;">
+            <children>
+                <ImageView fx:id="logoImageView" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+                <Label fx:id="titleLabel" text="GreenLog" textFill="white" style="-fx-font-size: 24px;" />
+                <Pane prefWidth="318.0" />
+                <TextField fx:id="searchTextField" prefHeight="25.0" prefWidth="150.0" promptText="Recherche ..." style="-fx-background-color: #3C3C3C; -fx-text-fill: white;" />
+                <Pane prefWidth="255.0" />
+                <Button fx:id="tagButton" mnemonicParsing="false" prefHeight="39.0" prefWidth="106.0" text="TAG+" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" />
+                <Pane prefWidth="194.0" />
+                <ImageView fx:id="loginImageView" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+            </children>
+        </HBox>
+        <ImageView fx:id="bannerImageView" fitHeight="150.0" fitWidth="1020.0" pickOnBounds="true" preserveRatio="true" />
+        <HBox alignment="TOP_LEFT" prefHeight="600.0" prefWidth="1600.0" spacing="20.0">
+            <padding>
+                <Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/>
+            </padding>
+            <children>
+                <VBox fx:id="leftContainer" prefWidth="600.0" spacing="10.0">
+                    <children>
+                        <Label fx:id="descriptionLabel" text="DESCRIPTION:" textFill="white" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+                        <TextArea fx:id="descriptionTextArea" wrapText="true" editable="false" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-control-inner-background: #2e2e2e; -fx-background-color: #2e2e2e; -fx-border-color: transparent;" prefHeight="150.0"/>
+                        <Label fx:id="aboutGameLabel" text="A propos du jeu" textFill="white" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+                        <TextArea fx:id="aboutGameTextArea" wrapText="true" editable="false" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-control-inner-background: #2e2e2e; -fx-background-color: #2e2e2e; -fx-border-color: transparent;" prefHeight="150.0"/>
+                        <Button fx:id="moreInfoButton" text="Voir plus" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" />
+                        <Separator fx:id="separator1" orientation="HORIZONTAL" />
+                        <VBox fx:id="authorDateContainer" spacing="5.0">
+                            <children>
+                                <Label fx:id="authorDateLabel" text="Auteur et date" textFill="white" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+                                <Label fx:id="releaseDateLabel" text="Date de sortie :" textFill="white" style="-fx-font-size: 14px;" />
+                                <Label fx:id="releaseDateText" text="" textFill="white" style="-fx-font-size: 14px;" />
+                                <Label fx:id="authorLabel" text="Auteur :" textFill="white" style="-fx-font-size: 14px;" />
+                                <Label fx:id="authorText" text="" textFill="white" style="-fx-font-size: 14px;" />
+                                <Label fx:id="developersLabel" text="Développeurs de :" textFill="white" style="-fx-font-size: 14px;" />
+                                <Label fx:id="developersText1" text="• " textFill="white" style="-fx-font-size: 14px;" />
+                                <Label fx:id="developersText2" text="• " textFill="white" style="-fx-font-size: 14px;" />
+                                <Label fx:id="developersText3" text="• " textFill="white" style="-fx-font-size: 14px;" />
+                            </children>
+                        </VBox>
+                        <Separator fx:id="separator2" orientation="HORIZONTAL" />
+                        <VBox fx:id="requirementsContainer" spacing="5.0">
+                            <children>
+                                <Label fx:id="requirementsLabel" text="Configuration requise" textFill="white" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+                                <Label fx:id="minimumLabel" text="Minimale" textFill="white" style="-fx-font-size: 14px;" />
+                                <Label fx:id="minimumOSLabel" text="OS: " textFill="white" style="-fx-font-size: 14px;" />
+                                <Label fx:id="minimumProcessorLabel" text="Processeur: " textFill="white" style="-fx-font-size: 14px;" />
+                                <Label fx:id="minimumMemoryLabel" text="Mémoire: " textFill="white" style="-fx-font-size: 14px;" />
+                                <Label fx:id="minimumGraphicsLabel" text="Carte graphique: " textFill="white" style="-fx-font-size: 14px;" />
+                                <Label fx:id="minimumStorageLabel" text="Stockage: " textFill="white" style="-fx-font-size: 14px;" />
+                                <Label fx:id="recommendedLabel" text="Recommandée" textFill="white" style="-fx-font-size: 14px;" />
+                                <Label fx:id="recommendedOSLabel" text="OS: " textFill="white" style="-fx-font-size: 14px;" />
+                                <Label fx:id="recommendedProcessorLabel" text="Processeur: " textFill="white" style="-fx-font-size: 14px;" />
+                                <Label fx:id="recommendedMemoryLabel" text="Mémoire: " textFill="white" style="-fx-font-size: 14px;" />
+                                <Label fx:id="recommendedGraphicsLabel" text="Carte graphique: " textFill="white" style="-fx-font-size: 14px;" />
+                                <Label fx:id="recommendedStorageLabel" text="Stockage: " textFill="white" style="-fx-font-size: 14px;" />
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+                <VBox fx:id="rightContainer" prefWidth="300.0" spacing="10.0">
+                    <children>
+                        <Label fx:id="generalRatingLabel" text="AVIS GENERAUX" textFill="white" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+                        <Label fx:id="ratingValueLabel" text="3,6" textFill="white" style="-fx-font-size: 36px;" />
+                        <Label fx:id="ratingScaleLabel" text="4.5/5 étoiles" textFill="white" style="-fx-font-size: 14px;" />
+                        <VBox fx:id="tagsContainer" spacing="5.0">
+                            <children>
+                                <Label fx:id="tagsLabel" text="Tags" textFill="white" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+                                <Button fx:id="multiplayerTagButton" text="Multijoueur" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" />
+                                <Button fx:id="rpgTagButton" text="RPG" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" />
+                                <Button fx:id="freeToPlayTagButton" text="Free to play" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" />
+                                <Button fx:id="adventureTagButton" text="Aventure" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" />
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</VBox>
