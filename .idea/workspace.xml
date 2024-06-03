@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Corriger de l'erreur mais encore quelque erreur">
+    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="ça marche ! enfin... presque">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SAE_201/apiManagement/APITendanceManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/apiManagement/APITendanceManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saveFile" beforeDir="false" afterPath="$PROJECT_DIR$/saveFile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/HelloApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/result/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/result/Result.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/apiManagement/APITendanceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiManagement/APITendanceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/result/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/result/Result.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717425889981</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="ça marche ! enfin... presque">
+      <option name="closed" value="true" />
+      <created>1717426660908</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1717426660908</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -225,6 +239,7 @@
     <MESSAGE value="Creation des classes pour faire la persistence du projet, la sauvegarde local" />
     <MESSAGE value="Encore des erreur mais sa s&quot;ouvre" />
     <MESSAGE value="Corriger de l'erreur mais encore quelque erreur" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corriger de l'erreur mais encore quelque erreur" />
+    <MESSAGE value="ça marche ! enfin... presque" />
+    <option name="LAST_COMMIT_MESSAGE" value="ça marche ! enfin... presque" />
   </component>
 </project>

@@ -91,6 +91,7 @@ public class accueil {
     private ImageView image;
 
 
+
     @FXML
     private ImageView imageTendance1;
 
@@ -105,6 +106,9 @@ public class accueil {
 
     @FXML
     private ImageView imageTendance5;
+
+    //private ImageView['imageTendance1']
+
     @FXML
     private VBox textBienvenu;
 
@@ -132,17 +136,32 @@ public class accueil {
 
         // Rafraîchit l'image du premier jeu et la liste complète
         if (!newGames.isEmpty()) {
-            refreshImage(newGames.get(0));
+            //refreshImage(newGames.get(0));
         }
-        refreshList();
+       // refreshList();
     }
 
-
-    private void refreshList() {
-    }
-
+/*
     private void refreshImage(Game game) {
+        if (game == null) {
+            pictureImageView.setImage(null);
+            return;
+        }
+        Image image = new Image(game.getImageURL(), true);
+        Platform.runLater(() -> pictureImageView.setImage(image));
     }
+
+ */
+
+    /*
+    private void refreshList() {
+        listView.getItems().clear();
+        listView.getItems().addAll(model.getAllGames());
+        entry.setText("");
+        validateButton.setDisable(true);
+    }
+
+     */
 
     public void onTestClicked(javafx.event.ActionEvent event) {
         ajoutRecLabel.setOpacity(1);

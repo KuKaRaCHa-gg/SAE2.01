@@ -1,6 +1,7 @@
 package result;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import gameModel.Platform;
 
 public class Result {
     private int id;
@@ -8,6 +9,7 @@ public class Result {
     private String backgroundImage;
     private String description;
     private double rating;
+    //private Platform[] platforms;
 
     // Getters and setters
 
@@ -60,4 +62,16 @@ public class Result {
     public void setRating(double rating) {
         this.rating = rating;
     }
+/*
+    @JsonProperty("platforms")
+    public Platform[] getPlatforms() {
+        return platforms;
+    }
+
+    @JsonProperty("platforms")
+    public void setPlatforms(Platform[] platforms) {
+        this.platforms = platforms;
+    }
+
+ */
 }
