@@ -1,45 +1,35 @@
 package com.example.sae_201;
 
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
+import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Objects;
 
-public class HelloController {
+public class HelloApplication extends Application {
+    @Override
+    public void start(Stage stage) throws IOException {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("accueil.fxml"));
+            Parent root = fxmlLoader.load();
+            accueil accueilController = fxmlLoader.getController();
+            Scene scene = new Scene(root, 1225, 745);
+            stage.setTitle("Gestionnaire de jeu");
+            stage.getIcons().add(new Image(Objects.requireNonNull(HelloApplication.class.getResourceAsStream("Images/LOGO.png"))));
+            stage.setScene(scene);
+            stage.show();
+            accueilController.initialization();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-    @FXML
-    private Button mesJeuxButton;
-
-    @FXML
-    private Button tagsButton;
-
-    @FXML
-    private Button creerTagButton;
-
-    @FXML
-    private void handleMesJeuxButtonAction(ActionEvent event) throws IOException {
-        loadScene("MainScreen.fxml");
     }
 
-    @FXML
-    private void handleTagsButtonAction(ActionEvent event) throws IOException {
-        loadScene("TagsScreen.fxml");
-    }
-
-    @FXML
-    private void handleCreerTagButtonAction(ActionEvent event) throws IOException {
-        loadScene("CreateTagScreen.fxml");
-    }
-
-    private void loadScene(String fxml) throws IOException {
-        Stage stage = (Stage) mesJeuxButton.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource(fxml));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
+    public static void main(String[] args) {
+        launch();
     }
 }
