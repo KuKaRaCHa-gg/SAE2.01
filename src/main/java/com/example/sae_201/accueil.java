@@ -154,7 +154,7 @@ public class accueil {
                 }
             });
             gridPane.add(vBox, compteur, compteur2);
-            if (compteur == 4) {
+            if (compteur == 3) {
                 compteur = 0;
                 compteur2++;
             } else {

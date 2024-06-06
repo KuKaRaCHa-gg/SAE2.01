@@ -72,7 +72,7 @@
             </Button>
          </children>
       </HBox>
-      <ScrollPane hbarPolicy="NEVER" hmax="100.0" pannable="true" prefHeight="651.0" prefWidth="1225.0" style="-fx-background-color: #323232;" vbarPolicy="NEVER" vmax="100.0">
+      <ScrollPane hbarPolicy="NEVER" hmax="200.0" pannable="true" prefHeight="651.0" prefWidth="1225.0" style="-fx-background-color: #323232;" vbarPolicy="NEVER" vmax="200.0">
          <content>
             <VBox alignment="TOP_CENTER" prefHeight="634.0" prefWidth="1225.0" style="-fx-background-color: #323232;">
                <children>
