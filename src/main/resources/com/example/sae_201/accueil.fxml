@@ -74,9 +74,9 @@
       </HBox>
       <ScrollPane hbarPolicy="NEVER" hmax="100.0" pannable="true" prefHeight="651.0" prefWidth="1063.0" style="-fx-background-color: #323232;" vbarPolicy="NEVER" vmax="100.0">
          <content>
-            <VBox alignment="TOP_CENTER" prefHeight="634.0" prefWidth="1020.0" style="-fx-background-color: #323232;">
+            <VBox alignment="TOP_CENTER" prefHeight="634.0" prefWidth="1063.0" style="-fx-background-color: #323232;">
                <children>
-                  <VBox alignment="TOP_CENTER" prefHeight="606.0" prefWidth="1020.0" style="-fx-background-color: #323232;">
+                  <VBox alignment="TOP_CENTER" prefHeight="606.0" prefWidth="1132.0" style="-fx-background-color: #323232;">
                      <children>
                         <HBox alignment="CENTER" prefHeight="52.0" prefWidth="1020.0">
                            <children>
