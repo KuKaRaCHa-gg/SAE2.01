@@ -7,6 +7,7 @@ import apiManagement.GameNotFoundException;
 import gameModel.Game;
 import gameModel.MyGames;
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -203,7 +204,12 @@ public class accueil {
     }
 
 
+    public void handleMesJeuxButtonAction(ActionEvent event) {
+    }
 
+    public void handleCreerTagButtonAction(ActionEvent event) {
+    }
 
-
+    public void handleTagsButtonAction(ActionEvent event) {
+    }
 }

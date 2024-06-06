@@ -13,90 +13,74 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" style="-fx-background-color: #484848;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sae_201.accueil">
+<VBox alignment="TOP_CENTER" prefHeight="745.0" prefWidth="1063.0" style="-fx-background-color: #484848;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sae_201.accueil">
    <children>
-      <ScrollPane hbarPolicy="NEVER" pannable="true" prefHeight="700.0" prefWidth="1022.0" style="-fx-background-color: #323232;" vbarPolicy="NEVER">
-         <content>
-            <VBox alignment="TOP_CENTER" prefHeight="1020.0" prefWidth="1020.0" style="-fx-background-color: #323232;">
+      <HBox prefHeight="75.0" prefWidth="1020.0" style="-fx-background-color: #000000;">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <HBox prefHeight="75.0" prefWidth="1020.0" style="-fx-background-color: #000000;">
+                  <ImageView fitHeight="80.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/LOGO.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="80.0" prefWidth="945.0">
+               <children>
+                  <Label text="GreenLog" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Pane prefHeight="80.0" prefWidth="159.0" />
+                  <TextField prefHeight="26.0" prefWidth="300.0" promptText="Recherche ..." />
+                  <Pane prefHeight="80.0" prefWidth="145.0" />
+                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="50.0" text="+ Tag" />
+                  <Pane prefHeight="80.0" prefWidth="55.0" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <ImageView fitHeight="73.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/compte.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #484848;">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #484848;" text="Mes Jeux" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Pane prefHeight="30.0" prefWidth="10.0" />
+            <Button mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: #484848;" text="Tags" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Pane prefHeight="30.0" prefWidth="10.0" />
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="127.0" style="-fx-background-color: #484848;" text="Créer un Tag" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      <ScrollPane hbarPolicy="NEVER" hmax="100.0" pannable="true" prefHeight="651.0" prefWidth="1063.0" style="-fx-background-color: #323232;" vbarPolicy="NEVER" vmax="100.0">
+         <content>
+            <VBox alignment="TOP_CENTER" prefHeight="634.0" prefWidth="1020.0" style="-fx-background-color: #323232;">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="606.0" prefWidth="1020.0" style="-fx-background-color: #323232;">
                      <children>
-                        <HBox prefHeight="100.0" prefWidth="200.0">
+                        <HBox alignment="CENTER" prefHeight="52.0" prefWidth="1020.0">
                            <children>
-                              <ImageView fitHeight="80.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@Images/LOGO.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </HBox>
-                        <HBox alignment="CENTER" prefHeight="80.0" prefWidth="945.0">
-                           <children>
-                              <Label text="GreenLog" textFill="WHITE">
-                                 <font>
-                                    <Font size="25.0" />
-                                 </font>
-                              </Label>
-                              <Pane prefHeight="80.0" prefWidth="159.0" />
-                              <TextField prefHeight="26.0" prefWidth="300.0" promptText="Recherche ..." />
-                              <Pane prefHeight="80.0" prefWidth="145.0" />
-                              <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="50.0" text="+ Tag" />
-                              <Pane prefHeight="80.0" prefWidth="55.0" />
-                           </children>
-                        </HBox>
-                        <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <ImageView fitHeight="73.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@Images/compte.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </HBox>
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #484848;">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #484848;" text="Mes Jeux" textFill="WHITE">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Button>
-                        <Pane prefHeight="30.0" prefWidth="10.0" />
-                        <Button mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: #484848;" text="Tags" textFill="WHITE">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Button>
-                        <Pane prefHeight="30.0" prefWidth="10.0" />
-                        <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="127.0" style="-fx-background-color: #484848;" text="Créer un Tag" textFill="WHITE">
-                           <font>
-                              <Font size="18.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <VBox alignment="TOP_CENTER" prefHeight="606.0" prefWidth="1020.0">
-                     <children>
-                        <HBox alignment="CENTER" prefHeight="29.0" prefWidth="1020.0" />
-                        <Pane prefHeight="47.0" prefWidth="1020.0" />
-                        <HBox fx:id="ajoutRecLabel" opacity="0.0" prefHeight="70.0" prefWidth="262.0">
-                           <children>
-                              <Label text="V" textFill="#a5a5a5">
-                                 <font>
-                                    <Font size="48.0" />
-                                 </font>
-                              </Label>
-                              <Label prefHeight="56.0" prefWidth="214.0" text="Ajouter récemment" textFill="WHITE">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </HBox>
-                        <Pane layoutX="200.0" layoutY="200.0" prefHeight="90.0" prefWidth="1020.0">
-                           <children>
-                              <VBox fx:id="textBienvenu" layoutX="215.0" layoutY="-91.0" prefHeight="70.0" prefWidth="528.0">
+                              <VBox fx:id="textBienvenu" prefHeight="70.0" prefWidth="528.0">
                                  <children>
                                     <Label prefHeight="27.0" prefWidth="457.0" text="Bienvenue sur GreenLog rechercher et classer vos" textFill="WHITE">
                                        <font>
@@ -116,9 +100,9 @@
                                  </children>
                               </VBox>
                            </children>
-                        </Pane>
-                        <Pane prefHeight="20.0" prefWidth="1020.0" />
-                        <HBox alignment="CENTER_LEFT" prefHeight="56.0" prefWidth="1020.0">
+                        </HBox>
+                        <Pane prefHeight="35.0" prefWidth="1020.0" />
+                        <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="1049.0">
                            <children>
                               <Pane prefHeight="70.0" prefWidth="26.0" />
                               <HBox fx:id="alphaLabel" prefHeight="70.0" prefWidth="278.0">
@@ -146,7 +130,7 @@
                               </VBox>
                            </children>
                         </HBox>
-                        <GridPane fx:id="gridPane" hgap="50.0" prefHeight="232.0" prefWidth="1022.0" vgap="50.0">
+                        <GridPane fx:id="gridPane" hgap="50.0" prefHeight="400.0" prefWidth="1020.0" vgap="50.0">
                           <columnConstraints>
                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                           </columnConstraints>
