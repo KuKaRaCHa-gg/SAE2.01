@@ -27,13 +27,16 @@
                         </VBox>
                     </children>
                 </HBox>
-                <Pane prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #484848;">
-                    <children>
-                        <Button fx:id="mesJeuxButton" layoutX="38.0" layoutY="1.0" onAction="#handleMesJeuxButtonAction" text="Mes Jeux" />
-                        <Button fx:id="tagsButton" layoutX="148.0" layoutY="1.0" onAction="#handleTagsButtonAction" text="Tags" />
-                        <Button fx:id="creerTagButton" layoutX="220.0" layoutY="1.0" onAction="#handleCreerTagButtonAction" text="Créer un Tag" />
-                    </children>
-                </Pane>
+            <HBox prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #484848;">
+               <children>
+                  <AnchorPane prefHeight="200.0" prefWidth="20.0" />
+                        <Button fx:id="mesJeuxButton" onAction="#handleMesJeuxButtonAction" prefHeight="44.0" prefWidth="81.0" style="-fx-background-color: #484848; -fx-text-fill: WHITE;" text="Mes Jeux" />
+                  <AnchorPane prefHeight="200.0" prefWidth="20.0" />
+                        <Button fx:id="tagsButton" onAction="#handleTagsButtonAction" prefHeight="39.0" prefWidth="51.0" style="-fx-background-color: #484848; -fx-text-fill: WHITE;" text="Tags" />
+                  <AnchorPane prefHeight="200.0" prefWidth="20.0" />
+                        <Button fx:id="creerTagButton" onAction="#handleCreerTagButtonAction" prefHeight="44.0" prefWidth="105.0" style="-fx-background-color: #484848; -fx-text-fill: WHITE;" text="Créer un Tag" />
+               </children>
+            </HBox>
                 <HBox prefHeight="56.0" prefWidth="1020.0">
                     <children>
                         <Pane prefHeight="70.0" prefWidth="26.0" />

@@ -7,28 +7,36 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="TOP_CENTER" prefHeight="900.0" prefWidth="1020.0" style="-fx-background-color: #323232;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sae_201.PageJeuController">
+<VBox alignment="TOP_CENTER" prefHeight="1056.0" prefWidth="1020.0" style="-fx-background-color: #323232;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sae_201.PageJeuController">
     <children>
-        <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="1600.0" style="-fx-background-color: #000000;">
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1600.0" style="-fx-background-color: #000000;">
             <children>
-                <ImageView fx:id="logoImageView" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+                <ImageView fx:id="logoImageView" fitHeight="100.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../Desktop/Cours/SAE201_D/src/main/resources/com/example/sae201_d/Images/LOGO.png" />
+               </image></ImageView>
                 <Label fx:id="titleLabel" prefHeight="35.0" prefWidth="164.0" style="-fx-font-size: 24px;" text="GreenLog" textFill="white" />
                 <Pane prefWidth="318.0" />
                 <TextField fx:id="searchTextField" prefHeight="31.0" prefWidth="160.0" promptText="Recherche ..." style="-fx-background-color: #3C3C3C; -fx-text-fill: white;" />
                 <Pane prefWidth="255.0" />
-                <Button fx:id="tagButton" mnemonicParsing="false" prefHeight="39.0" prefWidth="175.0" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" text="TAG+" />
                 <Pane prefWidth="194.0" />
-                <ImageView fx:id="loginImageView" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+                <ImageView fx:id="loginImageView" fitHeight="82.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../../../Desktop/Cours/SAE_201/src/main/resources/com/example/sae_201/Images/compte.png" />
+               </image></ImageView>
             </children>
         </HBox>
-        <Pane prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #484848;">
-            <children>
-                <Button fx:id="mesJeuxButton" layoutX="38.0" layoutY="1.0" onAction="#handleMesJeuxButtonAction" text="Mes Jeux" />
-                <Button fx:id="tagsButton" layoutX="129.0" layoutY="1.0" onAction="#handleTagsButtonAction" text="Tags" />
-                <Button fx:id="creerTagButton" layoutX="190.0" layoutY="1.0" onAction="#handleCreerTagButtonAction" text="Créer un Tag" />
-            </children>
-        </Pane>
-        <HBox alignment="CENTER" prefHeight="50.0" prefWidth="1020.0" spacing="10" />
+      <AnchorPane prefHeight="0.0" prefWidth="1020.0" />
+      <HBox prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #484848;">
+         <children>
+            <AnchorPane prefHeight="0.0" prefWidth="20.0" />
+                <Button fx:id="mesJeuxButton" onAction="#handleMesJeuxButtonAction" prefHeight="42.0" prefWidth="81.0" style="-fx-background-color: #484848; -fx-text-fill: WHITE;" text="Mes Jeux" />
+            <AnchorPane prefHeight="0.0" prefWidth="20.0" />
+                <Button fx:id="tagsButton" onAction="#handleTagsButtonAction" prefHeight="43.0" prefWidth="51.0" style="-fx-background-color: #484848; -fx-text-fill: WHITE;" text="Tags" />
+            <AnchorPane prefHeight="0.0" prefWidth="20.0" />
+                <Button fx:id="creerTagButton" onAction="#handleCreerTagButtonAction" prefHeight="44.0" prefWidth="105.0" style="-fx-background-color: #484848; -fx-text-fill: WHITE;" text="Créer un Tag" />
+         </children>
+      </HBox>
         <ImageView fx:id="bannerImageView" fitHeight="150.0" fitWidth="1020.0" pickOnBounds="true" preserveRatio="true" />
         <HBox alignment="TOP_LEFT" prefHeight="600.0" prefWidth="1600.0" spacing="20.0">
             <padding>
