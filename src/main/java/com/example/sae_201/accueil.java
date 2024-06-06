@@ -7,12 +7,16 @@ import apiManagement.GameNotFoundException;
 import gameModel.Game;
 import gameModel.MyGames;
 import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Paint;
 import persistence.PersistenceBySerialization;
 import result.Result;
 
@@ -110,6 +114,9 @@ public class accueil {
     //private ImageView['imageTendance1']
 
     @FXML
+    private GridPane gridPane;
+
+    @FXML
     private VBox textBienvenu;
 
     private MyGames model;
@@ -125,12 +132,33 @@ public class accueil {
     }
 
     public void initialization() throws GameNotFoundException {
+        int compteur = 0;
+        int compteur2 = 0;
         List<Game> newGames;
         newGames = apiTendanceManager.getMultipleGames();
 
         // Ajoute tous les nouveaux jeux au modèle
         for (Game game : newGames) {
             model.addGame(game);
+            VBox vBox = new VBox();
+            Label label = new Label(game.getName());
+            label.setTextFill(Paint.valueOf("white"));
+            ImageView image = new ImageView(new Image (game.getImageURL(), gridPane.getPrefWidth()/5,100,true,true));
+            vBox.getChildren().add(image);
+            vBox.getChildren().add(label);
+            vBox.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent mouseEvent) {
+                    System.out.println(game.getName());
+                }
+            });
+            gridPane.add(vBox, compteur, compteur2);
+            if (compteur == 4) {
+                compteur = 0;
+                compteur2++;
+            } else {
+                compteur++;
+            }
         }
         persistentModelManager.save(model);
 

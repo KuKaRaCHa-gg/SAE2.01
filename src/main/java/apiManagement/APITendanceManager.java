@@ -24,7 +24,7 @@ public class APITendanceManager {
                 .uri(URI.create("https://api.rawg.io/api/games"
                         + "?key=03aefea4690c4af5828591dca83a3c8f"
                         + "&ordering=-added"
-                        + "&page_size=10"))
+                        + "&page_size=50"))
                 .method("GET", HttpRequest.BodyPublishers.noBody())
                 .build();
         HttpResponse<String> response;
@@ -72,7 +72,7 @@ public class APITendanceManager {
                     Result detailedResult = detailedObjectMapper.readValue(newResponse.body(), Result.class);
                     game.setDescription(detailedResult.getDescription());
                     game.setRate(String.valueOf(detailedResult.getRating()));
-                    System.out.println(game.getRate());
+                    //System.out.println(game.getRate());
 
                 } catch (JsonProcessingException e) {
                     e.printStackTrace();

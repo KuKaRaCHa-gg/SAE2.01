@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Correction en plus mais pas fini">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/apiManagement/APITendanceManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/apiManagement/APITendanceManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saveFile" beforeDir="false" afterPath="$PROJECT_DIR$/saveFile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/apiManagement/APITendanceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiManagement/APITendanceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/result/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/result/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/accueil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/accueil.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,6 +103,26 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.sae_201" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.sae_201.HelloApplication" />
+      <module name="SAE_201" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.sae_201.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.HelloApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
