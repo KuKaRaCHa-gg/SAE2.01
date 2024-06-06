@@ -35,9 +35,7 @@
                   </Label>
                   <Pane prefHeight="80.0" prefWidth="159.0" />
                   <TextField prefHeight="26.0" prefWidth="300.0" promptText="Recherche ..." />
-                  <Pane prefHeight="80.0" prefWidth="145.0" />
-                  <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="50.0" text="+ Tag" />
-                  <Pane prefHeight="80.0" prefWidth="55.0" />
+                  <Pane prefHeight="80.0" prefWidth="250.0" />
                </children>
             </HBox>
             <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">

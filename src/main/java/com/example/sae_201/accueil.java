@@ -2,6 +2,7 @@ package com.example.sae_201;
 
 
 
+import apiManagement.APIGameManager;
 import apiManagement.APITendanceManager;
 import apiManagement.GameNotFoundException;
 import gameModel.Game;
@@ -126,13 +127,16 @@ public class accueil {
     private MyGames model;
     private PersistentModelManager persistentModelManager;
     private APITendanceManager apiTendanceManager;
+    private APIGameManager apiGameManager;
     private Result result;
     private Scene scene;
     private Stage stage;
+    private PageJeuController gameInfoController;
 
     public accueil(){
         super();
         apiTendanceManager = new APITendanceManager();
+        apiGameManager = new APIGameManager();
         model = new MyGames();
         persistentModelManager = new PersistenceBySerialization();
     }
@@ -163,7 +167,7 @@ public class accueil {
             vBox.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent mouseEvent) {
-                    System.out.println(game.getName());
+                    jeuSelectionner(game.getId());
                     Stage stage = (Stage)vBox.getScene().getWindow();
                     stage.setScene(scene);
                 }
@@ -177,6 +181,17 @@ public class accueil {
             }
         }
         persistentModelManager.save(model);
+
+    }
+
+    private void jeuSelectionner(int id) {
+        List<Game> selectionGame;
+        selectionGame = apiGameManager.getInfoGame(id);
+        for (Game game : selectionGame) {
+        gameInfoController.getRatingValueLabel().setText(game.getRate());
+        gameInfoController.getDescriptionTextArea().setText(game.getDescription());
+        System.out.println(game.getRate());
+        }
 
     }
 
@@ -202,5 +217,7 @@ public class accueil {
     public void handleTagsButtonAction(ActionEvent event) {
     }
 
-
+    public void setGameController(PageJeuController gameInfoController) {
+        this.gameInfoController = gameInfoController;
+    }
 }

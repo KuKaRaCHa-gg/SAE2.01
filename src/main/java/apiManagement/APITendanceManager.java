@@ -71,7 +71,7 @@ public class APITendanceManager {
                 try {
                     Result detailedResult = detailedObjectMapper.readValue(newResponse.body(), Result.class);
                     game.setDescription(detailedResult.getDescription());
-                    game.setRate(String.valueOf(detailedResult.getRating()));
+                    game.setRate(String.valueOf(detailedResult.getRating()));;
                     System.out.println(game.getName());
 
                 } catch (JsonProcessingException e) {

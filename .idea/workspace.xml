@@ -4,20 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Daniil">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/pageJeuController.java" afterDir="false" />
+    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="ça marche pour le moment">
+      <change afterPath="$PROJECT_DIR$/src/main/java/apiManagement/APIGameManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/HelloApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/HelloController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/PageJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/PageJeu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/Recherche.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/Recherche.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/rechercheParTag.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/rechercheParTag.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/PageJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/PageJeu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/Recherche.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/Recherche.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/accueil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/accueil.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/rechercheParTag.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/rechercheParTag.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/apiManagement/APITendanceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiManagement/APITendanceManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/pageJeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/pageJeuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/PageJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/PageJeu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/accueil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/accueil.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/rechercheParTag.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/rechercheParTag.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,20 +100,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "#1 on Mattis",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/10/Documents/GitHub/SAE2.01 Gestion Jeu/SAE2.01/src/main/java/com/example/sae_201",
-    "last_opened_file_path": "C:/Users/10/Documents/JavaFX/Projet/MorpionJeu",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#1 on Mattis&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/10/Documents/GitHub/SAE2.01 Gestion Jeu/SAE2.01/src/main/java/com/example/sae_201&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/10/Documents/JavaFX/Projet/MorpionJeu&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="gameModel" />
@@ -290,7 +298,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717681305332</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="ça marche pour le moment">
+      <option name="closed" value="true" />
+      <created>1717683999044</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1717683999044</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -321,6 +337,7 @@
     <MESSAGE value="Ouais bah, si sa pete c'est la faute a noé" />
     <MESSAGE value="Ouais bah, si sa pete c'est la faute a daniil" />
     <MESSAGE value="Daniil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Daniil" />
+    <MESSAGE value="ça marche pour le moment" />
+    <option name="LAST_COMMIT_MESSAGE" value="ça marche pour le moment" />
   </component>
 </project>

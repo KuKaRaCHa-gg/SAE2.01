@@ -33,6 +33,9 @@ public class HelloApplication extends Application {
             toJeuController.setStage(stage);
 
 
+            PageJeuController gameInfoController = fxmlgameLoader.getController();
+            toJeuController.setGameController(gameInfoController);
+
         } catch (Exception e) {
             e.printStackTrace();
         }
