@@ -73,7 +73,6 @@ public class APITendanceManager {
                     game.setDescription(detailedResult.getDescription());
                     game.setRate(String.valueOf(detailedResult.getRating()));
                     System.out.println(game.getRate());
-                    System.out.println(detailedResult.getDescription());
 
                 } catch (JsonProcessingException e) {
                     e.printStackTrace();
