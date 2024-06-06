@@ -4,29 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="ça marche pour le moment">
-      <change afterPath="$PROJECT_DIR$/src/main/java/apiManagement/APIGameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/HelloApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/HelloController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/HelloController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/PageJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/PageJeu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/Recherche.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/Recherche.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/rechercheParTag.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/rechercheParTag.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/PageJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/PageJeu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/Recherche.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/Recherche.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/accueil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/accueil.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/rechercheParTag.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/rechercheParTag.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/apiManagement/APITendanceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiManagement/APITendanceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/pageJeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/pageJeuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/PageJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/PageJeu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/accueil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/accueil.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/rechercheParTag.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/rechercheParTag.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Le projet marche pour le moment, des chose importer et tous et tous" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -306,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717683999044</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Le projet marche pour le moment, des chose importer et tous et tous">
+      <option name="closed" value="true" />
+      <created>1717691203607</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1717691203607</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -338,6 +324,7 @@
     <MESSAGE value="Ouais bah, si sa pete c'est la faute a daniil" />
     <MESSAGE value="Daniil" />
     <MESSAGE value="ça marche pour le moment" />
-    <option name="LAST_COMMIT_MESSAGE" value="ça marche pour le moment" />
+    <MESSAGE value="Le projet marche pour le moment, des chose importer et tous et tous" />
+    <option name="LAST_COMMIT_MESSAGE" value="Le projet marche pour le moment, des chose importer et tous et tous" />
   </component>
 </project>
