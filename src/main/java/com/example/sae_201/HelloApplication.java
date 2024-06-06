@@ -17,7 +17,7 @@ public class HelloApplication extends Application {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("accueil.fxml"));
             Parent root = fxmlLoader.load();
             accueil accueilController = fxmlLoader.getController();
-            Scene scene = new Scene(root, 1024, 720);
+            Scene scene = new Scene(root, 1225, 745);
             stage.setTitle("Gestionnaire de jeu");
             stage.getIcons().add(new Image(Objects.requireNonNull(HelloApplication.class.getResourceAsStream("Images/LOGO.png"))));
             stage.setScene(scene);
