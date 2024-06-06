@@ -135,6 +135,7 @@
                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                           </columnConstraints>
                         </GridPane>
+                        <VBox prefHeight="19.0" prefWidth="1226.0" />
                      </children>
                   </VBox>
                </children>

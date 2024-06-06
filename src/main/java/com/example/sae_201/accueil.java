@@ -10,14 +10,17 @@ import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Paint;
+import javafx.stage.Stage;
 import persistence.PersistenceBySerialization;
 import result.Result;
 
@@ -124,12 +127,22 @@ public class accueil {
     private PersistentModelManager persistentModelManager;
     private APITendanceManager apiTendanceManager;
     private Result result;
+    private Scene scene;
+    private Stage stage;
 
     public accueil(){
         super();
         apiTendanceManager = new APITendanceManager();
         model = new MyGames();
         persistentModelManager = new PersistenceBySerialization();
+    }
+
+    public void setNewScene(Scene gamePage) {
+        this.scene = gamePage;
+    }
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
     }
 
     public void initialization() throws GameNotFoundException {
@@ -144,13 +157,15 @@ public class accueil {
             VBox vBox = new VBox();
             Label label = new Label(game.getName());
             label.setTextFill(Paint.valueOf("white"));
-            ImageView image = new ImageView(new Image (game.getImageURL(), gridPane.getPrefWidth()/5,100,true,true));
+            ImageView image = new ImageView(new Image (game.getImageURL(), gridPane.getPrefWidth()/4,250,true,true));
             vBox.getChildren().add(image);
             vBox.getChildren().add(label);
             vBox.setOnMouseClicked(new EventHandler<MouseEvent>() {
                 @Override
                 public void handle(MouseEvent mouseEvent) {
                     System.out.println(game.getName());
+                    Stage stage = (Stage)vBox.getScene().getWindow();
+                    stage.setScene(scene);
                 }
             });
             gridPane.add(vBox, compteur, compteur2);
@@ -186,4 +201,6 @@ public class accueil {
 
     public void handleTagsButtonAction(ActionEvent event) {
     }
+
+
 }

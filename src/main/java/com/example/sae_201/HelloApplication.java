@@ -23,9 +23,20 @@ public class HelloApplication extends Application {
             stage.setScene(scene);
             stage.show();
             accueilController.initialization();
+
+
+            FXMLLoader fxmlgameLoader = new FXMLLoader(HelloApplication.class.getResource("PageJeu.fxml"));
+            Parent gameRoot = fxmlgameLoader.load();
+            Scene gamePage = new Scene(gameRoot, 1225, 745);
+            accueil toJeuController = (accueil) fxmlLoader.getController();
+            toJeuController.setNewScene(gamePage);
+            toJeuController.setStage(stage);
+
+
         } catch (Exception e) {
             e.printStackTrace();
         }
+
 
     }
 
