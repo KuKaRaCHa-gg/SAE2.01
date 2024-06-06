@@ -6,13 +6,19 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class HelloController {
+public class AccueilController {
 
     @FXML
-    private ImageView LOGO;
+    private ImageView logoImageView;
 
     @FXML
     private TextField searchTextField;
+
+    @FXML
+    private Button tagButton;
+
+    @FXML
+    private ImageView accountImageView;
 
     @FXML
     private Button mesJeuxButton;
@@ -32,17 +38,17 @@ public class HelloController {
 
     @FXML
     private void handleMesJeuxButtonAction() {
-        NavigationUtil.navigateTo(stage, "accueil.fxml");
+        NavigationUtil.navigateTo(stage, "MainScreen.fxml");
     }
 
     @FXML
     private void handleTagsButtonAction() {
-        NavigationUtil.navigateTo(stage, "RechercheParTAG.fxml");
+        NavigationUtil.navigateTo(stage, "TagsScreen.fxml");
     }
 
     @FXML
     private void handleCreerTagButtonAction() {
-        NavigationUtil.navigateTo(stage, "Recherche.fxml");
+        NavigationUtil.navigateTo(stage, "CreateTagScreen.fxml");
     }
 
     public void setStage(Stage stage) {
