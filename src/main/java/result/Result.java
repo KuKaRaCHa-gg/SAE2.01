@@ -9,7 +9,7 @@ public class Result {
     private String backgroundImage;
     private String description;
     private double rating;
-    //private Platform[] platforms;
+    private Platform[] platforms;
 
     // Getters and setters
 
@@ -67,7 +67,7 @@ public class Result {
     public Platform[] getPlatforms() {
         return platforms;
     }
-
+/*
     @JsonProperty("platforms")
     public void setPlatforms(Platform[] platforms) {
         this.platforms = platforms;
