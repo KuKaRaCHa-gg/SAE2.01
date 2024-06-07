@@ -189,7 +189,10 @@ public class accueil {
         selectionGame = apiGameManager.getInfoGame(id);
         for (Game game : selectionGame) {
         gameInfoController.getRatingValueLabel().setText(game.getRate());
+        gameInfoController.getRatingScaleLabel().setText(game.getRate() + "/5 étoiles");
         gameInfoController.getDescriptionTextArea().setText(game.getDescription());
+        gameInfoController.getBannerImageView().setImage(new Image (game.getImageURL()));
+        gameInfoController.getBannerImageView().setFitWidth(1000);
         System.out.println(game.getRate());
         }
 

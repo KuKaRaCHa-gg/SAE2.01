@@ -62,16 +62,16 @@ public class Result {
     public void setRating(double rating) {
         this.rating = rating;
     }
-/*
+
     @JsonProperty("platforms")
     public Platform[] getPlatforms() {
         return platforms;
     }
-/*
+
     @JsonProperty("platforms")
     public void setPlatforms(Platform[] platforms) {
         this.platforms = platforms;
     }
 
- */
+
 }

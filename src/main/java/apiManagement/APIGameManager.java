@@ -40,6 +40,8 @@ public class APIGameManager {
             game.setDescription(detailedResult.getDescription());
             game.setRate(String.valueOf(detailedResult.getRating()));
             game.setName(String.valueOf(detailedResult.getName()));
+            game.setImageURL(detailedResult.getBackgroundImage());
+            //game.setPlatforms(detailedResult.getPlatforms().getPlatformName());
             System.out.println(game.getDescription());
             System.out.println(game.getRate());
             System.out.println(game.getName());
