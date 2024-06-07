@@ -3,6 +3,7 @@ package com.example.sae_201;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -95,6 +96,13 @@ public class PageJeuController {
     @FXML
     private Label ratingValueLabel;
 
+
+    @FXML
+    private GridPane tagGridPane;
+
+    @FXML
+    private GridPane plateformeGridPane;
+
     @FXML
     private Label recommendedGraphicsLabel;
 
@@ -181,5 +189,21 @@ public class PageJeuController {
 
     public TextArea getDescriptionTextArea() {
         return descriptionTextArea;
+    }
+
+    public ImageView getBannerImageView() {
+        return bannerImageView;
+    }
+
+    public Label getRatingScaleLabel() {
+        return ratingScaleLabel;
+    }
+
+    public GridPane getTagGridPane() {
+        return tagGridPane;
+    }
+
+    public GridPane getPlateformeGridPane() {
+        return plateformeGridPane;
     }
 }
