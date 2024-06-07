@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Le projet marche pour le moment, des chose importer et tous et tous">
+    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Mis a jour de l'API et Platform semi fonctionnel">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/ChargementController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/pageChargement.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saveFile" beforeDir="false" afterPath="$PROJECT_DIR$/saveFile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/apiManagement/APIGameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiManagement/APIGameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/apiManagement/APITendanceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiManagement/APITendanceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gameModel/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameModel/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/result/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/result/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/PageJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/PageJeu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +92,7 @@
     "git-widget-placeholder": "#1 on Mattis",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/10/Documents/GitHub/SAE2.01 Gestion Jeu/SAE2.01/src/main/java/com/example/sae_201",
-    "last_opened_file_path": "C:/Users/10/Documents/JavaFX/SAE2.01/SAE2024/SAE2024",
+    "last_opened_file_path": "C:/Users/10/Documents/JavaFX/Projet/MorpionJeu",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -303,7 +298,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717691203607</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Mis a jour de l'API et Platform semi fonctionnel">
+      <option name="closed" value="true" />
+      <created>1717779957959</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1717779957959</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -336,6 +339,7 @@
     <MESSAGE value="Daniil" />
     <MESSAGE value="ça marche pour le moment" />
     <MESSAGE value="Le projet marche pour le moment, des chose importer et tous et tous" />
-    <option name="LAST_COMMIT_MESSAGE" value="Le projet marche pour le moment, des chose importer et tous et tous" />
+    <MESSAGE value="Mis a jour de l'API et Platform semi fonctionnel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mis a jour de l'API et Platform semi fonctionnel" />
   </component>
 </project>

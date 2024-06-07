@@ -223,4 +223,8 @@ public class accueil {
     public void setGameController(PageJeuController gameInfoController) {
         this.gameInfoController = gameInfoController;
     }
+
+    public void setChargement(Stage modalChargement) {
+        this.stage = modalChargement;
+    }
 }

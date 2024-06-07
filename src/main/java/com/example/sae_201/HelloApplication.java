@@ -5,7 +5,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -21,7 +23,37 @@ public class HelloApplication extends Application {
             stage.setTitle("Gestionnaire de jeu");
             stage.getIcons().add(new Image(Objects.requireNonNull(HelloApplication.class.getResourceAsStream("Images/LOGO.png"))));
             stage.setScene(scene);
-            stage.show();
+
+            // Préparer la fenêtre modale de chargement (pageChargement.fxml)
+            FXMLLoader fxmlChargementLoader = new FXMLLoader(HelloApplication.class.getResource("pageChargement.fxml"));
+            Parent loadRoot = fxmlChargementLoader.load();
+            Scene sceneChargement = new Scene(loadRoot, 400, 200);
+
+            Stage modalChargement = new Stage(StageStyle.DECORATED);
+            modalChargement.initModality(Modality.APPLICATION_MODAL);
+            modalChargement.initOwner(stage);
+            modalChargement.setScene(sceneChargement);
+            modalChargement.setTitle("Chargement...");
+            accueilController.setChargement(modalChargement);
+            modalChargement.show();
+
+            // Simuler une tâche de chargement (vous pouvez la remplacer par votre logique de chargement)
+
+            new Thread(() -> {
+                try {
+                    Thread.sleep(2000); // Simuler une attente de 2 secondes pour le chargement
+
+                    // Fermer la fenêtre de chargement sur le thread JavaFX
+                    javafx.application.Platform.runLater(() -> {
+                        modalChargement.close();
+                        stage.show(); // Afficher la fenêtre principale après le chargement
+                    });
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }).start();
+
+            // Initialiser le contrôleur de la fenêtre principale
             accueilController.initialization();
 
 
@@ -32,9 +64,14 @@ public class HelloApplication extends Application {
             toJeuController.setNewScene(gamePage);
             toJeuController.setStage(stage);
 
-
             PageJeuController gameInfoController = fxmlgameLoader.getController();
             toJeuController.setGameController(gameInfoController);
+
+
+
+
+            //ChargementController controller = fxmlChargementLoader.getController();
+            //controller.updateProgress(0.5);
 
         } catch (Exception e) {
             e.printStackTrace();
