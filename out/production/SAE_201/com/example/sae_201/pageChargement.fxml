@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="402.0" prefWidth="646.0" style="-fx-background-color: #323232;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sae_201.ChargementController">
+   <children>
+      <Label prefHeight="42.0" prefWidth="554.0" text="Chargement de GreenLog, Veuillez patienter" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <ProgressBar fx:id="progressBar" prefHeight="38.0" prefWidth="531.0" progress="0.0" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
