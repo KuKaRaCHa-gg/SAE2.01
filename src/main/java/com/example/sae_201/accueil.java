@@ -8,6 +8,7 @@ import apiManagement.GameNotFoundException;
 import gameModel.Game;
 import gameModel.MyGames;
 import javafx.application.Platform;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -132,6 +133,10 @@ public class accueil {
     private Scene scene;
     private Stage stage;
     private PageJeuController gameInfoController;
+    private int compteur = 0;
+    private int compteur2 = 0;
+
+    private Stage modalChargement;
 
     public accueil(){
         super();
@@ -139,6 +144,10 @@ public class accueil {
         apiGameManager = new APIGameManager();
         model = new MyGames();
         persistentModelManager = new PersistenceBySerialization();
+    }
+
+    public void setChargement(Stage modalChargement) {
+        this.modalChargement = modalChargement;
     }
 
     public void setNewScene(Scene gamePage) {
@@ -149,57 +158,80 @@ public class accueil {
         this.stage = stage;
     }
 
-    public void initialization() throws GameNotFoundException {
-        int compteur = 0;
-        int compteur2 = 0;
-        List<Game> newGames;
-        newGames = apiTendanceManager.getMultipleGames();
+    public void initialization() {
+        Task<Void> initTask = new Task<>() {
+            @Override
+            protected Void call() throws Exception {
+                List<Game> newGames = apiTendanceManager.getMultipleGames();
 
-        // Ajoute tous les nouveaux jeux au modèle
-        for (Game game : newGames) {
-            model.addGame(game);
-            VBox vBox = new VBox();
-            Label label = new Label(game.getName());
-            label.setTextFill(Paint.valueOf("white"));
-            ImageView image = new ImageView(new Image (game.getImageURL(), gridPane.getPrefWidth()/4,250,true,true));
-            vBox.getChildren().add(image);
-            vBox.getChildren().add(label);
-            vBox.setOnMouseClicked(new EventHandler<MouseEvent>() {
-                @Override
-                public void handle(MouseEvent mouseEvent) {
-                    jeuSelectionner(game.getId());
-                    Stage stage = (Stage)vBox.getScene().getWindow();
-                    stage.setScene(scene);
+                // Ajoute tous les nouveaux jeux au modèle
+                for (Game game : newGames) {
+                    model.addGame(game);
+                    Platform.runLater(() -> {
+                        VBox vBox = new VBox();
+                        Label label = new Label(game.getName());
+                        label.setTextFill(Paint.valueOf("white"));
+                        ImageView image = new ImageView(new Image(game.getImageURL(), gridPane.getPrefWidth() / 4, 250, true, true));
+                        vBox.getChildren().add(image);
+                        vBox.getChildren().add(label);
+                        vBox.setOnMouseClicked(mouseEvent -> {
+                            jeuSelectionner(game.getId());
+                            Stage stage = (Stage) vBox.getScene().getWindow();
+                            stage.setScene(scene);
+                        });
+                        gridPane.add(vBox, compteur, compteur2);
+                        if (compteur == 3) {
+                            compteur = 0;
+                            compteur2++;
+                        } else {
+                            compteur++;
+                        }
+                    });
                 }
-            });
-            gridPane.add(vBox, compteur, compteur2);
-            if (compteur == 3) {
-                compteur = 0;
-                compteur2++;
-            } else {
-                compteur++;
+                persistentModelManager.save(model);
+                return null;
             }
-        }
-        persistentModelManager.save(model);
 
+            @Override
+            protected void succeeded() {
+                Platform.runLater(() -> {
+                    if (modalChargement != null) {
+                        modalChargement.close();
+                    }
+                    if (stage != null) {
+                        stage.show();
+                    }
+                });
+            }
+
+            @Override
+            protected void failed() {
+                Platform.runLater(() -> {
+                    if (modalChargement != null) {
+                        modalChargement.close();
+                    }
+                    // Optionnel : Afficher un message d'erreur ou effectuer d'autres actions en cas d'échec
+                });
+            }
+        };
+
+        // Démarrer le Task d'initialisation dans un nouveau thread
+        new Thread(initTask).start();
     }
 
     private void jeuSelectionner(int id) {
-        List<Game> selectionGame;
-        selectionGame = apiGameManager.getInfoGame(id);
+        List<Game> selectionGame = apiGameManager.getInfoGame(id);
         for (Game game : selectionGame) {
-        gameInfoController.getRatingValueLabel().setText(game.getRate());
-        gameInfoController.getRatingScaleLabel().setText(game.getRate() + "/5 étoiles");
-        gameInfoController.getDescriptionTextArea().setText(game.getDescription());
-        gameInfoController.getBannerImageView().setImage(new Image (game.getImageURL()));
-        gameInfoController.getBannerImageView().setFitWidth(1000);
-        System.out.println(game.getRate());
+            gameInfoController.getRatingValueLabel().setText(game.getRate());
+            gameInfoController.getRatingScaleLabel().setText(game.getRate() + "/5 étoiles");
+            gameInfoController.getDescriptionTextArea().setText(game.getDescription());
+            gameInfoController.getBannerImageView().setImage(new Image(game.getImageURL()));
+            gameInfoController.getBannerImageView().setFitWidth(1000);
+            System.out.println(game.getRate());
         }
-
     }
 
-
-    public void onTestClicked(javafx.event.ActionEvent event) {
+    public void onTestClicked(ActionEvent event) {
         ajoutRecLabel.setOpacity(1);
         gameLabel1.setOpacity(1);
         gameLabel2.setOpacity(1);
@@ -207,9 +239,7 @@ public class accueil {
         gameLabel4.setOpacity(1);
         gameLabel5.setOpacity(1);
         textBienvenu.setOpacity(0);
-
     }
-
 
     public void handleMesJeuxButtonAction(ActionEvent event) {
     }
@@ -222,9 +252,5 @@ public class accueil {
 
     public void setGameController(PageJeuController gameInfoController) {
         this.gameInfoController = gameInfoController;
-    }
-
-    public void setChargement(Stage modalChargement) {
-        this.stage = modalChargement;
     }
 }

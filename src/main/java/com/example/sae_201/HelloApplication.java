@@ -27,34 +27,17 @@ public class HelloApplication extends Application {
             // Préparer la fenêtre modale de chargement (pageChargement.fxml)
             FXMLLoader fxmlChargementLoader = new FXMLLoader(HelloApplication.class.getResource("pageChargement.fxml"));
             Parent loadRoot = fxmlChargementLoader.load();
-            Scene sceneChargement = new Scene(loadRoot, 400, 200);
+            Scene sceneChargement = new Scene(loadRoot, 600, 300);
 
             Stage modalChargement = new Stage(StageStyle.DECORATED);
             modalChargement.initModality(Modality.APPLICATION_MODAL);
             modalChargement.initOwner(stage);
             modalChargement.setScene(sceneChargement);
             modalChargement.setTitle("Chargement...");
-            accueilController.setChargement(modalChargement);
             modalChargement.show();
 
-            // Simuler une tâche de chargement (vous pouvez la remplacer par votre logique de chargement)
-
-            new Thread(() -> {
-                try {
-                    Thread.sleep(2000); // Simuler une attente de 2 secondes pour le chargement
-
-                    // Fermer la fenêtre de chargement sur le thread JavaFX
-                    javafx.application.Platform.runLater(() -> {
-                        modalChargement.close();
-                        stage.show(); // Afficher la fenêtre principale après le chargement
-                    });
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }).start();
-
+            accueilController.setChargement(modalChargement);
             accueilController.initialization();
-
 
             FXMLLoader fxmlgameLoader = new FXMLLoader(HelloApplication.class.getResource("PageJeu.fxml"));
             Parent gameRoot = fxmlgameLoader.load();
@@ -66,11 +49,6 @@ public class HelloApplication extends Application {
             PageJeuController gameInfoController = fxmlgameLoader.getController();
             toJeuController.setGameController(gameInfoController);
 
-
-
-
-            //ChargementController controller = fxmlChargementLoader.getController();
-            //controller.updateProgress(0.5);
 
         } catch (Exception e) {
             e.printStackTrace();
