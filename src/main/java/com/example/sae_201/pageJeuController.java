@@ -5,6 +5,7 @@ import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 
 public class PageJeuController {
@@ -104,6 +105,15 @@ public class PageJeuController {
     private GridPane plateformeGridPane;
 
     @FXML
+    private GridPane devGridPane;
+
+    @FXML
+    private GridPane editorGridPane;
+
+    @FXML
+    private GridPane requirementGridPane;
+
+    @FXML
     private Label recommendedGraphicsLabel;
 
     @FXML
@@ -157,6 +167,10 @@ public class PageJeuController {
     @FXML
     private Label titleLabel;
 
+    @FXML
+    private WebView webDescView;
+
+
     private Stage stage;
 
     @FXML
@@ -203,7 +217,23 @@ public class PageJeuController {
         return tagGridPane;
     }
 
+    public GridPane getDevGridPane() {
+        return devGridPane;
+    }
+
     public GridPane getPlateformeGridPane() {
         return plateformeGridPane;
+    }
+
+    public GridPane getEditorGridPane() {
+        return editorGridPane;
+    }
+
+    public GridPane getRequirementGridPane() {
+        return requirementGridPane;
+    }
+
+    public WebView getWebDescView() {
+        return webDescView;
     }
 }

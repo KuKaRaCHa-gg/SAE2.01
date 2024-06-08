@@ -1,6 +1,8 @@
 package result;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import gameModel.Developer;
+import gameModel.Editor;
 import gameModel.Platform;
 
 public class Result {
@@ -10,6 +12,8 @@ public class Result {
     private String description;
     private double rating;
     private Platform[] platforms;
+    private Editor[] publishers;
+    private Developer[] developers;
 
     // Getters and setters
 
@@ -28,19 +32,9 @@ public class Result {
         return name;
     }
 
-    @JsonProperty("name")
-    public void setName(String name) {
-        this.name = name;
-    }
-
     @JsonProperty("background_image")
     public String getBackgroundImage() {
         return backgroundImage;
-    }
-
-    @JsonProperty("background_image")
-    public void setBackgroundImage(String backgroundImage) {
-        this.backgroundImage = backgroundImage;
     }
 
     @JsonProperty("description")
@@ -48,19 +42,9 @@ public class Result {
         return description;
     }
 
-    @JsonProperty("description")
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     @JsonProperty("rating")
     public double getRating() {
         return rating;
-    }
-
-    @JsonProperty("rating")
-    public void setRating(double rating) {
-        this.rating = rating;
     }
 
     @JsonProperty("platforms")
@@ -68,10 +52,14 @@ public class Result {
         return platforms;
     }
 
-    @JsonProperty("platforms")
-    public void setPlatforms(Platform[] platforms) {
-        this.platforms = platforms;
+    @JsonProperty("publishers")
+    public Editor[] getPublishers(){
+        return publishers;
     }
 
+    @JsonProperty("developers")
+    public Developer[] getDevelopers() {
+        return developers;
+    }
 
 }

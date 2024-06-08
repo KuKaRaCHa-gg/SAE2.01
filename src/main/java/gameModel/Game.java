@@ -11,6 +11,8 @@ public class Game implements Comparator<Game>, Serializable {
     private int id;
     private String rate;
     private Platform[] platforms;
+    private Editor[] publishers;
+    private Developer[] developers;
 
     public Game() {
         super();
@@ -75,6 +77,21 @@ public class Game implements Comparator<Game>, Serializable {
         this.platforms = platforms;
     }
 
+    public Editor[] getPublishers() {
+        return publishers;
+    }
+
+    public void setPublishers(Editor[] publishers) {
+        this.publishers = publishers;
+    }
+
+    public Developer[] getDevelopers() {
+        return developers;
+    }
+
+    public void setDevelopers(Developer[] developers){
+        this.developers = developers;
+    }
 
 
 

@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import gameModel.Game;
+import gameModel.Platform;
 import result.Result;
 
 import java.io.IOException;
@@ -41,7 +42,13 @@ public class APIGameManager {
             game.setRate(String.valueOf(detailedResult.getRating()));
             game.setName(String.valueOf(detailedResult.getName()));
             game.setImageURL(detailedResult.getBackgroundImage());
-            //game.setPlatforms(detailedResult.getPlatforms().getPlatformName());
+            game.setPlatforms(detailedResult.getPlatforms());
+            game.setPublishers(detailedResult.getPublishers());
+            game.setDevelopers(detailedResult.getDevelopers());
+            for (int i = 0; i<detailedResult.getPlatforms().length; i++){
+            //System.out.println(detailedResult.getPlatforms()[i].getPlatformName());
+            System.out.println(game.getPlatforms()[i].getRequirementMinimum());
+            }
             System.out.println(game.getDescription());
             System.out.println(game.getRate());
             System.out.println(game.getName());

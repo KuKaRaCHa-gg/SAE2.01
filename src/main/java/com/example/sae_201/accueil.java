@@ -164,7 +164,6 @@ public class accueil {
             protected Void call() throws Exception {
                 List<Game> newGames = apiTendanceManager.getMultipleGames();
 
-                // Ajoute tous les nouveaux jeux au modèle
                 for (Game game : newGames) {
                     model.addGame(game);
                     Platform.runLater(() -> {
@@ -215,30 +214,67 @@ public class accueil {
             }
         };
 
-        // Démarrer le Task d'initialisation dans un nouveau thread
         new Thread(initTask).start();
     }
 
     private void jeuSelectionner(int id) {
         List<Game> selectionGame = apiGameManager.getInfoGame(id);
         for (Game game : selectionGame) {
+            int compteurGame = 0;
             gameInfoController.getRatingValueLabel().setText(game.getRate());
             gameInfoController.getRatingScaleLabel().setText(game.getRate() + "/5 étoiles");
-            gameInfoController.getDescriptionTextArea().setText(game.getDescription());
+            //gameInfoController.getDescriptionTextArea().setText(game.getDescription());
+            String htmlContent = "<html>" +
+                    "<head>" +
+                    "<style>" +
+                    "body { background-color: #2e2e2e; color: white; }" +
+                    "p { color: white; }" +
+                    "</style>" +
+                    "</head>" +
+                    "<body>" + game.getDescription() + "</body>" +
+                    "</html>";
+            gameInfoController.getWebDescView().getEngine().loadContent(htmlContent);
             gameInfoController.getBannerImageView().setImage(new Image(game.getImageURL()));
             gameInfoController.getBannerImageView().setFitWidth(1000);
+            VBox vBox1 = new VBox();
+            Label label1 = new Label(game.getPlatforms()[0].getRequirementMinimum());
+            label1.setTextFill(Paint.valueOf("white"));
+            vBox1.getChildren().add(label1);
+            gameInfoController.getRequirementGridPane().add(label1, 0,0);
+            vBox1 = new VBox();
+            label1 = new Label(game.getPlatforms()[0].getRequirementRecommended());
+            label1.setTextFill(Paint.valueOf("white"));
+            vBox1.getChildren().add(label1);
+            gameInfoController.getRequirementGridPane().add(label1, 0,1);
+
+            for (int i = 0; i<game.getPlatforms().length; i++) {
+                VBox vBox = new VBox();
+                Label label = new Label(game.getPlatforms()[i].getPlatformName());
+                label.setTextFill(Paint.valueOf("white"));
+                vBox.getChildren().add(label);
+                gameInfoController.getPlateformeGridPane().add(vBox, 0, compteurGame);
+                compteurGame++; }
+
+            compteurGame = 0;
+            for (int j = 0; j<game.getPublishers().length; j++){
+                VBox vBox = new VBox();
+                Label label = new Label(game.getPublishers()[j].getName());
+                label.setTextFill(Paint.valueOf("white"));
+                vBox.getChildren().add(label);
+                gameInfoController.getEditorGridPane().add(vBox, 0, compteurGame);
+                compteurGame++; }
+
+            compteurGame = 0;
+            for(int k = 0; k<game.getDevelopers().length; k++){
+                VBox vBox = new VBox();
+                Label label = new Label(game.getDevelopers()[k].getName());
+                label.setTextFill(Paint.valueOf("white"));
+                vBox.getChildren().add(label);
+                gameInfoController.getDevGridPane().add(vBox, 0, compteurGame);
+                compteurGame++; }
+
             System.out.println(game.getRate());
         }
-    }
-
-    public void onTestClicked(ActionEvent event) {
-        ajoutRecLabel.setOpacity(1);
-        gameLabel1.setOpacity(1);
-        gameLabel2.setOpacity(1);
-        gameLabel3.setOpacity(1);
-        gameLabel4.setOpacity(1);
-        gameLabel5.setOpacity(1);
-        textBienvenu.setOpacity(0);
     }
 
     public void handleMesJeuxButtonAction(ActionEvent event) {
