@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Daniil YO JE CORRIGER LES FXML">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/saveFile" beforeDir="false" afterPath="$PROJECT_DIR$/saveFile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -62,12 +61,12 @@
       </RecentBranches>
     </option>
   </component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/KuKaRaCHa-gg/SAE2.01.git&quot;,
-    &quot;accountId&quot;: &quot;d6fd0033-9e85-4d52-85ae-05d376c55987&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/KuKaRaCHa-gg/SAE2.01.git",
+    "accountId": "facc958c-4d13-4b3d-b215-8972981d61a6"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 3
@@ -77,21 +76,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Daniil",
-    "jdk.selected.JAVA_MODULE": "19",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/10/Documents/GitHub/SAE2.01 Gestion Jeu/SAE2.01/src/main/java/com/example/sae_201",
-    "last_opened_file_path": "C:/Users/danii/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/javafx-sdk-19.0.2.1/lib/javafx.web.jar",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Daniil&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/10/Documents/GitHub/SAE2.01 Gestion Jeu/SAE2.01/src/main/java/com/example/sae_201&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/danii/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/javafx-sdk-19.0.2.1/lib/javafx.web.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="gameModel" />
