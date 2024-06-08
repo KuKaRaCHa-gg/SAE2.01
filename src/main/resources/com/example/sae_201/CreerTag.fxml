@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" prefHeight="900.0" prefWidth="1020.0" style="-fx-background-color: #323232;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sae_201.CreerTagController">
+    <children>
+        <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="1600.0" style="-fx-background-color: #000000;">
+            <children>
+                <ImageView fx:id="logoImageView" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+                <Label fx:id="titleLabel" prefHeight="35.0" prefWidth="164.0" style="-fx-font-size: 24px;" text="GreenLog" textFill="white" />
+                <Pane prefWidth="318.0" />
+                <TextField fx:id="searchTextField" prefHeight="31.0" prefWidth="160.0" promptText="Recherche ..." style="-fx-background-color: #3C3C3C; -fx-text-fill: white;" />
+                <Pane prefWidth="255.0" />
+                <Button fx:id="tagButton" mnemonicParsing="false" prefHeight="39.0" prefWidth="175.0" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" text="TAG+" />
+                <Pane prefWidth="194.0" />
+                <ImageView fx:id="loginImageView" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+            </children>
+        </HBox>
+        <Pane prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #484848;">
+            <children>
+                <Button fx:id="mesJeuxButton" layoutX="38.0" layoutY="1.0" onAction="#handleMesJeuxButtonAction" text="Mes Jeux" />
+                <Button fx:id="tagsButton" layoutX="129.0" layoutY="1.0" onAction="#handleTagsButtonAction" text="Tags" />
+                <Button fx:id="creerTagButton" layoutX="190.0" layoutY="1.0" onAction="#handleCreerTagButtonAction" text="Créer un Tag" />
+            </children>
+        </Pane>
+        <Label fx:id="titreCreerTag" prefHeight="176.0" prefWidth="533.0" text="Créer un tag" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font size="94.0" />
+            </font>
+        </Label>
+        <VBox prefHeight="619.0" prefWidth="1020.0">
+            <children>
+                <Pane prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <TextField fx:id="ecrireNomTag" alignment="CENTER" layoutX="183.0" layoutY="50.0" prefHeight="71.0" prefWidth="658.0" promptText="Nom du tag" style="-fx-background-color: #323232; -fx-border-color: #ffffff;">
+                            <font>
+                                <Font size="32.0" />
+                            </font>
+                        </TextField>
+                    </children>
+                </Pane>
+                <Pane prefHeight="292.0" prefWidth="1020.0">
+                    <children>
+                        <TextField fx:id="ecrireDescTag" alignment="TOP_LEFT" layoutX="65.0" prefHeight="250.0" prefWidth="905.0" promptText="Description" style="-fx-background-color: #323232; -fx-border-color: #ffffff;">
+                            <font>
+                                <Font size="39.0" />
+                            </font>
+                        </TextField>
+                    </children>
+                </Pane>
+                <Pane prefHeight="200.0" prefWidth="200.0">
+                    <children>
+                        <Button fx:id="creerTagButton" layoutX="805.0" layoutY="8.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="161.0" style="-fx-border-radius: 180;" text="CRÉER" textFill="#58c358" onAction="#handleCreerTagButtonAction">
+                            <font>
+                                <Font size="22.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </Pane>
+            </children>
+        </VBox>
+    </children>
+</VBox>
