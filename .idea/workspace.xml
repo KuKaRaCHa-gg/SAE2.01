@@ -4,30 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="L'ecran de chargement est fonctionnel (mais bug a certain moment)">
-      <change afterPath="$PROJECT_DIR$/src/main/java/gameModel/Developer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/gameModel/Editor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/apiManagement/APIGameManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/apiManagement/APIGameManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/apiManagement/APITendanceManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/apiManagement/APITendanceManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/PageJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/PageJeu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/PageJeuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/PageJeuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/gameModel/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/gameModel/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/gameModel/Platform.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/gameModel/Platform.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/PageJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/PageJeu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/result/Result.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/result/Result.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/saveFile" beforeDir="false" afterPath="$PROJECT_DIR$/saveFile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/apiManagement/APIGameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiManagement/APIGameManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/apiManagement/APITendanceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiManagement/APITendanceManager.java" afterDir="false" />
+    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Plateforme, editeur et developeur mis, et la description est mieux maintenant (merci la WebView)">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gameModel/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameModel/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gameModel/Platform.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gameModel/Platform.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/result/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/result/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/PageJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/PageJeu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -340,7 +318,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717850820779</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Plateforme, editeur et developeur mis, et la description est mieux maintenant (merci la WebView)">
+      <option name="closed" value="true" />
+      <created>1717862311270</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1717862311270</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -376,6 +362,7 @@
     <MESSAGE value="Mis a jour de l'API et Platform semi fonctionnel" />
     <MESSAGE value="L'app a un ecran de chargement presque fonctionnel (manque juste la page fxml)" />
     <MESSAGE value="L'ecran de chargement est fonctionnel (mais bug a certain moment)" />
-    <option name="LAST_COMMIT_MESSAGE" value="L'ecran de chargement est fonctionnel (mais bug a certain moment)" />
+    <MESSAGE value="Plateforme, editeur et developeur mis, et la description est mieux maintenant (merci la WebView)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Plateforme, editeur et developeur mis, et la description est mieux maintenant (merci la WebView)" />
   </component>
 </project>
