@@ -8,19 +8,20 @@ import apiManagement.GameNotFoundException;
 import gameModel.Game;
 import gameModel.MyGames;
 import javafx.application.Platform;
+import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.value.ObservableValue;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 import persistence.PersistenceBySerialization;
@@ -223,7 +224,6 @@ public class accueil {
             int compteurGame = 0;
             gameInfoController.getRatingValueLabel().setText(game.getRate());
             gameInfoController.getRatingScaleLabel().setText(game.getRate() + "/5 étoiles");
-            //gameInfoController.getDescriptionTextArea().setText(game.getDescription());
             String htmlContent = "<html>" +
                     "<head>" +
                     "<style>" +
@@ -234,8 +234,8 @@ public class accueil {
                     "<body>" + game.getDescription() + "</body>" +
                     "</html>";
             gameInfoController.getWebDescView().getEngine().loadContent(htmlContent);
+
             gameInfoController.getBannerImageView().setImage(new Image(game.getImageURL()));
-            gameInfoController.getBannerImageView().setFitWidth(1000);
             VBox vBox1 = new VBox();
             Label label1 = new Label(game.getPlatforms()[0].getRequirementMinimum());
             label1.setTextFill(Paint.valueOf("white"));
@@ -272,8 +272,16 @@ public class accueil {
                 vBox.getChildren().add(label);
                 gameInfoController.getDevGridPane().add(vBox, 0, compteurGame);
                 compteurGame++; }
+            
+            compteurGame = 0;
+            for (int m = 0;m<game.getTags().length; m++){
+                Button vBox = new Button();
+                vBox.setTextFill(Paint.valueOf("white"));
+                vBox.setText(game.getTags()[m].getName());
+                vBox.setStyle("-fx-background-color: #3a3a3a;");
+                gameInfoController.getTagGridPane().add(vBox, 0, compteurGame);
+                compteurGame++; }
 
-            System.out.println(game.getRate());
         }
     }
 

@@ -13,6 +13,7 @@ public class Game implements Comparator<Game>, Serializable {
     private Platform[] platforms;
     private Editor[] publishers;
     private Developer[] developers;
+    private Tags[] tags;
 
     public Game() {
         super();
@@ -93,7 +94,12 @@ public class Game implements Comparator<Game>, Serializable {
         this.developers = developers;
     }
 
+    public Tags[] getTags() {
+        return tags;
+    }
 
-
+    public void setTags(Tags[] tags) {
+        this.tags = tags;
+    }
 }
 

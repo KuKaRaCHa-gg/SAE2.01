@@ -88,7 +88,7 @@
                             <VBox fx:id="leftContainer" prefHeight="950.0" prefWidth="850.0" spacing="10.0">
                                 <children>
                                     <Label fx:id="descriptionLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="DESCRIPTION:" textFill="white" />
-                              <WebView fx:id="webDescView" prefHeight="150.0" prefWidth="600.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-control-inner-background: #2e2e2e; -fx-background-color: #2e2e2e; -fx-border-color: none;" styleClass="background-color: gray; color: white" />
+                              <WebView fx:id="webDescView" prefHeight="182.0" prefWidth="850.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-control-inner-background: #2e2e2e; -fx-background-color: #2e2e2e; -fx-border-color: none;" styleClass="background-color: gray; color: white" />
                                     <Label fx:id="aboutGameLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="A propos du jeu" textFill="white" />
                                     <TextArea fx:id="aboutGameTextArea" editable="false" prefHeight="150.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-control-inner-background: #2e2e2e; -fx-background-color: #2e2e2e; -fx-border-color: transparent;" wrapText="true" />
                                     <Button fx:id="moreInfoButton" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" text="Voir plus" />
@@ -142,10 +142,6 @@
                                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                                       </rowConstraints>
                                     </GridPane>
-                                            <Button fx:id="multiplayerTagButton" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" text="Multijoueur" />
-                                            <Button fx:id="rpgTagButton" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" text="RPG" />
-                                            <Button fx:id="freeToPlayTagButton" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" text="Free to play" />
-                                            <Button fx:id="adventureTagButton" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" text="Aventure" />
                                         </children>
                                     </VBox>
                                 </children>

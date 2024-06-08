@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import gameModel.Developer;
 import gameModel.Editor;
 import gameModel.Platform;
+import gameModel.Tags;
 
 public class Result {
     private int id;
@@ -14,6 +15,7 @@ public class Result {
     private Platform[] platforms;
     private Editor[] publishers;
     private Developer[] developers;
+    private Tags[] tags;
 
     // Getters and setters
 
@@ -60,6 +62,11 @@ public class Result {
     @JsonProperty("developers")
     public Developer[] getDevelopers() {
         return developers;
+    }
+
+    @JsonProperty("tags")
+    public Tags[] getTags() {
+        return tags;
     }
 
 }
