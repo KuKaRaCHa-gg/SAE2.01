@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Mis a jour de l'API et Platform semi fonctionnel">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/ChargementController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/pageChargement.fxml" afterDir="false" />
+    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="L'app a un ecran de chargement presque fonctionnel (manque juste la page fxml)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -306,7 +303,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717779957959</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="L'app a un ecran de chargement presque fonctionnel (manque juste la page fxml)">
+      <option name="closed" value="true" />
+      <created>1717791278133</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1717791278133</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -340,6 +345,7 @@
     <MESSAGE value="ça marche pour le moment" />
     <MESSAGE value="Le projet marche pour le moment, des chose importer et tous et tous" />
     <MESSAGE value="Mis a jour de l'API et Platform semi fonctionnel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mis a jour de l'API et Platform semi fonctionnel" />
+    <MESSAGE value="L'app a un ecran de chargement presque fonctionnel (manque juste la page fxml)" />
+    <option name="LAST_COMMIT_MESSAGE" value="L'app a un ecran de chargement presque fonctionnel (manque juste la page fxml)" />
   </component>
 </project>

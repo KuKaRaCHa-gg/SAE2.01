@@ -53,7 +53,6 @@ public class HelloApplication extends Application {
                 }
             }).start();
 
-            // Initialiser le contrôleur de la fenêtre principale
             accueilController.initialization();
 
 
