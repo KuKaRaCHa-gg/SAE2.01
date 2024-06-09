@@ -63,6 +63,8 @@ public class HelloApplication extends Application {
             searchToJeu.setNewScene(gamePage);
             searchToJeu.setStage(stage);
 
+            searchToJeu.setGameController(gameInfoController);
+
 
         } catch (Exception e) {
             e.printStackTrace();

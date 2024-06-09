@@ -216,7 +216,7 @@ public class accueil {
         new Thread(initTask).start();
     }
 
-    private void jeuSelectionner(int id) {
+    public void jeuSelectionner(int id) {
         List<Game> selectionGame = apiGameManager.getInfoGame(id);
         for (Game game : selectionGame) {
             int compteurGame = 0;
@@ -238,16 +238,15 @@ public class accueil {
             Text text1 = new Text(game.getPlatforms()[0].getRequirementMinimum());
             text1.setFill(Paint.valueOf("white"));
             TextFlow textFlow1 = new TextFlow(text1);
-            textFlow1.setMaxWidth(800); // Définir la largeur maximale du TextFlow
+            textFlow1.setMaxWidth(800);
             vBox1.getChildren().add(textFlow1);
             gameInfoController.getRequirementGridPane().add(vBox1, 0, 0);
 
-            // Configuration recommandée
             vBox1 = new VBox();
             Text text2 = new Text(game.getPlatforms()[0].getRequirementRecommended());
             text2.setFill(Paint.valueOf("white"));
             TextFlow textFlow2 = new TextFlow(text2);
-            textFlow2.setMaxWidth(800); // Définir la largeur maximale du TextFlow
+            textFlow2.setMaxWidth(800);
             vBox1.getChildren().add(textFlow2);
             gameInfoController.getRequirementGridPane().add(vBox1, 0, 1);
 

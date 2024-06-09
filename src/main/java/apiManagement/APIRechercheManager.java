@@ -48,6 +48,9 @@ public class APIRechercheManager {
 
         ResultGame result;
         try {
+            if ((objectMapper.readValue(response.body(), ResultGame.class)) == null) {
+                System.out.println("y a une erreur ducoup");
+            }
             result = objectMapper.readValue(response.body(), ResultGame.class);
             if (result.getResults().length == 0) {
                 throw new GameNotFoundException();
