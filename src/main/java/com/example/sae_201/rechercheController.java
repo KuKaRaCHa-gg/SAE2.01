@@ -72,7 +72,9 @@ public class rechercheController {
 
         List<Game> researchGame = apiRechercheManager.getInfoGame(searchedText);
 
-
+        compteurX = 0;
+        compteurY = 0;
+        gridRecherchePane.getChildren().clear();
         for (Game game : researchGame) {
             Platform.runLater(() -> {
                 VBox vBox = new VBox();
@@ -105,6 +107,12 @@ public class rechercheController {
 
     public void jeuSelectionner(int id) {
         List<Game> selectionGame = apiGameManager.getInfoGame(id);
+
+        gameInfoController.getRequirementGridPane().getChildren().clear();
+        gameInfoController.getPlateformeGridPane().getChildren().clear();
+        gameInfoController.getTagGridPane().getChildren().clear();
+        gameInfoController.getDevGridPane().getChildren().clear();
+        gameInfoController.getEditorGridPane().getChildren().clear();
         for (Game game : selectionGame) {
             int compteurGame = 0;
             gameInfoController.getRatingValueLabel().setText(game.getRate());

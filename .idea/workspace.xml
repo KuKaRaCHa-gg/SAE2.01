@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="La parti recherche a eu une ptite mise a jour, ont peu rechercher des jeu sur la page recherche (en grosse beta encore)">
+    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="La page Jeu est relier a la page de recherche">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/PageJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/PageJeu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/rechercheController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/rechercheController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -402,7 +401,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717953266115</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="La page Jeu est relier a la page de recherche">
+      <option name="closed" value="true" />
+      <created>1717962394076</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1717962394076</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -417,7 +424,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Header de selection mis en place dans l'interface" />
     <MESSAGE value="Creation des classes pour faire les recherches des jeux" />
     <MESSAGE value="Creation des classes pour faire la persistence du projet, la sauvegarde local" />
     <MESSAGE value="Encore des erreur mais sa s&quot;ouvre" />
@@ -442,6 +448,7 @@
     <MESSAGE value="La recherche de jeu par titre marche !!!!" />
     <MESSAGE value="Les jeu de la recherche de jeu par titre envoie vers leurs page !" />
     <MESSAGE value="La parti recherche a eu une ptite mise a jour, ont peu rechercher des jeu sur la page recherche (en grosse beta encore)" />
-    <option name="LAST_COMMIT_MESSAGE" value="La parti recherche a eu une ptite mise a jour, ont peu rechercher des jeu sur la page recherche (en grosse beta encore)" />
+    <MESSAGE value="La page Jeu est relier a la page de recherche" />
+    <option name="LAST_COMMIT_MESSAGE" value="La page Jeu est relier a la page de recherche" />
   </component>
 </project>
