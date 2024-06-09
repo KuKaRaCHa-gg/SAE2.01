@@ -1,12 +1,25 @@
 package com.example.sae_201;
 
+import apiManagement.APIGameManager;
+import apiManagement.APIRechercheManager;
+import apiManagement.GameNotFoundException;
+import gameModel.Game;
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Paint;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+
+import java.util.List;
 
 public class PageJeuController {
 
@@ -172,10 +185,22 @@ public class PageJeuController {
 
 
     private Stage stage;
+    private APIRechercheManager apiRechercheManager;
+    private rechercheController searchGameController;
+    private int compteurX = 0;
+    private int compteurY = 0;
+    private Scene searchPage;
+    private APIGameManager apiGameManager;
+    private Scene scene;
 
     @FXML
     private void initialize() {
         // Initialize the controller
+    }
+
+    public PageJeuController(){
+        apiRechercheManager = new APIRechercheManager();
+        apiGameManager = new APIGameManager();
     }
 
     @FXML
@@ -193,9 +218,7 @@ public class PageJeuController {
         NavigationUtil.navigateTo(stage, "Recherche.fxml");
     }
 
-    public void setStage(Stage stage) {
-        this.stage = stage;
-    }
+
 
     public Label getRatingValueLabel(){
         return ratingValueLabel;
@@ -235,5 +258,134 @@ public class PageJeuController {
 
     public WebView getWebDescView() {
         return webDescView;
+    }
+
+    @FXML
+    void onActionJeu(ActionEvent event) throws GameNotFoundException {
+        String searchedText = searchTextField.getText();
+
+        if (searchedText.isBlank()){
+            return; }
+
+        List<Game> researchGame = apiRechercheManager.getInfoGame(searchedText);
+
+        for (Game game : researchGame) {
+            Platform.runLater(() -> {
+                VBox vBox = new VBox();
+                Label label = new Label(game.getName());
+                label.setTextFill(Paint.valueOf("white"));
+                ImageView image = new ImageView(new Image(game.getImageURL(), searchGameController.getGridRecherchePane().getPrefWidth() / 4, 250, true, true));
+                vBox.getChildren().add(image);
+                vBox.getChildren().add(label);
+                vBox.setOnMouseClicked(mouseEvent -> {
+                    jeuSelectionner(game.getId());
+                    Stage stage = (Stage) vBox.getScene().getWindow();
+                    stage.setScene(scene);
+                });
+                System.out.println(game.getName());
+                searchGameController.getGridRecherchePane().add(vBox, compteurX, compteurY);
+                if (compteurX == 3) {
+                    compteurX = 0;
+                    compteurY++;
+                } else {
+                    compteurX++;
+                }
+            });
+
+        }
+        searchGameController.getEntrySearch().setText(searchedText);
+        Stage stage = (Stage) searchTextField.getScene().getWindow();
+        stage.setScene(searchPage);
+}
+
+
+    public void jeuSelectionner(int id) {
+        List<Game> selectionGame = apiGameManager.getInfoGame(id);
+        for (Game game : selectionGame) {
+            int compteurGame = 0;
+            getRatingValueLabel().setText(game.getRate());
+            getRatingScaleLabel().setText(game.getRate() + "/5 étoiles");
+            String htmlContent = "<html>" +
+                    "<head>" +
+                    "<style>" +
+                    "body { background-color: #2e2e2e; color: white; }" +
+                    "p { color: white; }" +
+                    "</style>" +
+                    "</head>" +
+                    "<body>" + game.getDescription() + "</body>" +
+                    "</html>";
+            getWebDescView().getEngine().loadContent(htmlContent);
+
+            getBannerImageView().setImage(new Image(game.getImageURL()));
+            VBox vBox1 = new VBox();
+            Text text1 = new Text(game.getPlatforms()[0].getRequirementMinimum());
+            text1.setFill(Paint.valueOf("white"));
+            TextFlow textFlow1 = new TextFlow(text1);
+            textFlow1.setMaxWidth(800);
+            vBox1.getChildren().add(textFlow1);
+            getRequirementGridPane().add(vBox1, 0, 0);
+
+            vBox1 = new VBox();
+            Text text2 = new Text(game.getPlatforms()[0].getRequirementRecommended());
+            text2.setFill(Paint.valueOf("white"));
+            TextFlow textFlow2 = new TextFlow(text2);
+            textFlow2.setMaxWidth(800);
+            vBox1.getChildren().add(textFlow2);
+            getRequirementGridPane().add(vBox1, 0, 1);
+
+            for (int i = 0; i<game.getPlatforms().length; i++) {
+                VBox vBox = new VBox();
+                Label label = new Label(game.getPlatforms()[i].getPlatformName());
+                label.setTextFill(Paint.valueOf("white"));
+                vBox.getChildren().add(label);
+                getPlateformeGridPane().add(vBox, 0, compteurGame);
+                compteurGame++; }
+
+            compteurGame = 0;
+            for (int j = 0; j<game.getPublishers().length; j++){
+                VBox vBox = new VBox();
+                Label label = new Label(game.getPublishers()[j].getName());
+                label.setTextFill(Paint.valueOf("white"));
+                vBox.getChildren().add(label);
+                getEditorGridPane().add(vBox, 0, compteurGame);
+                compteurGame++; }
+
+            compteurGame = 0;
+            for(int k = 0; k<game.getDevelopers().length; k++){
+                VBox vBox = new VBox();
+                Label label = new Label(game.getDevelopers()[k].getName());
+                label.setTextFill(Paint.valueOf("white"));
+                vBox.getChildren().add(label);
+                getDevGridPane().add(vBox, 0, compteurGame);
+                compteurGame++; }
+
+            compteurGame = 0;
+            for (int m = 0;m<game.getTags().length; m++){
+                Button vBox = new Button();
+                vBox.setTextFill(Paint.valueOf("white"));
+                vBox.setText(game.getTags()[m].getName());
+                vBox.setStyle("-fx-background-color: #3a3a3a;");
+                getTagGridPane().add(vBox, 0, compteurGame);
+                compteurGame++; }
+
+        }
+    }
+
+
+    public void setSearchController(rechercheController searchGameController) {
+        this.searchGameController = searchGameController;
+    }
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
+
+    public void setNewScene(Scene searchPage) {
+        this.searchPage = searchPage;
+    }
+
+    public void setThisScene(Scene scene) {
+        this.scene = scene;
     }
 }
