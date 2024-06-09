@@ -23,6 +23,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Paint;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import persistence.PersistenceBySerialization;
 import result.Result;
@@ -237,15 +239,21 @@ public class accueil {
 
             gameInfoController.getBannerImageView().setImage(new Image(game.getImageURL()));
             VBox vBox1 = new VBox();
-            Label label1 = new Label(game.getPlatforms()[0].getRequirementMinimum());
-            label1.setTextFill(Paint.valueOf("white"));
-            vBox1.getChildren().add(label1);
-            gameInfoController.getRequirementGridPane().add(label1, 0,0);
+            Text text1 = new Text(game.getPlatforms()[0].getRequirementMinimum());
+            text1.setFill(Paint.valueOf("white"));
+            TextFlow textFlow1 = new TextFlow(text1);
+            textFlow1.setMaxWidth(800); // Définir la largeur maximale du TextFlow
+            vBox1.getChildren().add(textFlow1);
+            gameInfoController.getRequirementGridPane().add(vBox1, 0, 0);
+
+            // Configuration recommandée
             vBox1 = new VBox();
-            label1 = new Label(game.getPlatforms()[0].getRequirementRecommended());
-            label1.setTextFill(Paint.valueOf("white"));
-            vBox1.getChildren().add(label1);
-            gameInfoController.getRequirementGridPane().add(label1, 0,1);
+            Text text2 = new Text(game.getPlatforms()[0].getRequirementRecommended());
+            text2.setFill(Paint.valueOf("white"));
+            TextFlow textFlow2 = new TextFlow(text2);
+            textFlow2.setMaxWidth(800); // Définir la largeur maximale du TextFlow
+            vBox1.getChildren().add(textFlow2);
+            gameInfoController.getRequirementGridPane().add(vBox1, 0, 1);
 
             for (int i = 0; i<game.getPlatforms().length; i++) {
                 VBox vBox = new VBox();
@@ -281,7 +289,6 @@ public class accueil {
                 vBox.setStyle("-fx-background-color: #3a3a3a;");
                 gameInfoController.getTagGridPane().add(vBox, 0, compteurGame);
                 compteurGame++; }
-
 
         }
     }
