@@ -1,101 +1,156 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
 
-<VBox alignment="TOP_CENTER" prefHeight="1056.0" prefWidth="1020.0" style="-fx-background-color: #323232;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sae_201.PageJeuController">
-    <children>
-        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="1600.0" style="-fx-background-color: #000000;">
+<VBox prefHeight="986.0" prefWidth="1225.0" style="-fx-background-color: #323232;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sae_201.PageJeuController">
+   <children>
+        <HBox prefHeight="75.0" prefWidth="1225.0" style="-fx-background-color: #000000;">
             <children>
-                <ImageView fx:id="logoImageView" fitHeight="100.0" fitWidth="111.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../../Desktop/Cours/SAE201_D/src/main/resources/com/example/sae201_d/Images/LOGO.png" />
-               </image></ImageView>
-                <Label fx:id="titleLabel" prefHeight="35.0" prefWidth="164.0" style="-fx-font-size: 24px;" text="GreenLog" textFill="white" />
-                <Pane prefWidth="318.0" />
-                <TextField fx:id="searchTextField" prefHeight="31.0" prefWidth="160.0" promptText="Recherche ..." style="-fx-background-color: #3C3C3C; -fx-text-fill: white;" />
-                <Pane prefWidth="255.0" />
-                <Pane prefWidth="194.0" />
-                <ImageView fx:id="loginImageView" fitHeight="82.0" fitWidth="108.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../../Desktop/Cours/SAE_201/src/main/resources/com/example/sae_201/Images/compte.png" />
-               </image></ImageView>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                      <ImageView fx:id="logoImageView" fitHeight="80.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/LOGO.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="118.0" prefWidth="906.0">
+               <children>
+                      <Label fx:id="titleLabel" style="-fx-font-size: 24px;" text="GreenLog" textFill="white">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                      <Pane prefHeight="80.0" prefWidth="150.0" />
+                      <TextField fx:id="searchTextField" prefHeight="26.0" prefWidth="300.0" promptText="Recherche ..." />
+                      <Pane prefHeight="80.0" prefWidth="250.0" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                      <ImageView fx:id="loginImageView" fitHeight="73.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Images/compte.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
             </children>
         </HBox>
-      <AnchorPane prefHeight="0.0" prefWidth="1020.0" />
-      <HBox prefHeight="60.0" prefWidth="200.0" style="-fx-background-color: #484848;">
+      <HBox prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #484848;">
          <children>
-            <AnchorPane prefHeight="0.0" prefWidth="20.0" />
-                <Button fx:id="mesJeuxButton" onAction="#handleMesJeuxButtonAction" prefHeight="42.0" prefWidth="81.0" style="-fx-background-color: #484848; -fx-text-fill: WHITE;" text="Mes Jeux" />
-            <AnchorPane prefHeight="0.0" prefWidth="20.0" />
-                <Button fx:id="tagsButton" onAction="#handleTagsButtonAction" prefHeight="43.0" prefWidth="51.0" style="-fx-background-color: #484848; -fx-text-fill: WHITE;" text="Tags" />
-            <AnchorPane prefHeight="0.0" prefWidth="20.0" />
-                <Button fx:id="creerTagButton" onAction="#handleCreerTagButtonAction" prefHeight="44.0" prefWidth="105.0" style="-fx-background-color: #484848; -fx-text-fill: WHITE;" text="Créer un Tag" />
+            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #484848;" text="Mes Jeux" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Pane prefHeight="30.0" prefWidth="10.0" />
+            <Button mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: #484848;" text="Tags" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Pane prefHeight="30.0" prefWidth="10.0" />
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="127.0" style="-fx-background-color: #484848;" text="Créer un Tag" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
          </children>
       </HBox>
-        <ImageView fx:id="bannerImageView" fitHeight="150.0" fitWidth="1020.0" pickOnBounds="true" preserveRatio="true" />
-        <HBox alignment="TOP_LEFT" prefHeight="600.0" prefWidth="1600.0" spacing="20.0">
-            <padding>
-                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-            </padding>
-            <children>
-                <VBox fx:id="leftContainer" prefWidth="600.0" spacing="10.0">
-                    <children>
-                        <Label fx:id="descriptionLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="DESCRIPTION:" textFill="white" />
-                        <TextArea fx:id="descriptionTextArea" editable="false" prefHeight="150.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-control-inner-background: #2e2e2e; -fx-background-color: #2e2e2e; -fx-border-color: transparent;" wrapText="true" />
-                        <Label fx:id="aboutGameLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="A propos du jeu" textFill="white" />
-                        <TextArea fx:id="aboutGameTextArea" editable="false" prefHeight="150.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-control-inner-background: #2e2e2e; -fx-background-color: #2e2e2e; -fx-border-color: transparent;" wrapText="true" />
-                        <Button fx:id="moreInfoButton" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" text="Voir plus" />
-                        <Separator fx:id="separator1" orientation="HORIZONTAL" />
-                        <VBox fx:id="authorDateContainer" spacing="5.0">
-                            <children>
-                                <Label fx:id="authorDateLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Auteur et date" textFill="white" />
-                                <Label fx:id="releaseDateLabel" style="-fx-font-size: 14px;" text="Date de sortie :" textFill="white" />
-                                <Label fx:id="releaseDateText" style="-fx-font-size: 14px;" text="" textFill="white" />
-                                <Label fx:id="authorLabel" style="-fx-font-size: 14px;" text="Auteur :" textFill="white" />
-                                <Label fx:id="authorText" style="-fx-font-size: 14px;" text="" textFill="white" />
-                                <Label fx:id="developersLabel" style="-fx-font-size: 14px;" text="Développeurs de :" textFill="white" />
-                                <Label fx:id="developersText1" style="-fx-font-size: 14px;" text="• " textFill="white" />
-                                <Label fx:id="developersText2" style="-fx-font-size: 14px;" text="• " textFill="white" />
-                                <Label fx:id="developersText3" style="-fx-font-size: 14px;" text="• " textFill="white" />
-                            </children>
-                        </VBox>
-                        <Separator fx:id="separator2" orientation="HORIZONTAL" />
-                        <VBox fx:id="requirementsContainer" spacing="5.0">
-                            <children>
-                                <Label fx:id="requirementsLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Configuration requise" textFill="white" />
-                                <Label fx:id="minimumLabel" style="-fx-font-size: 14px;" text="Minimale" textFill="white" />
-                                <Label fx:id="minimumOSLabel" style="-fx-font-size: 14px;" text="OS: " textFill="white" />
-                                <Label fx:id="minimumProcessorLabel" style="-fx-font-size: 14px;" text="Processeur: " textFill="white" />
-                                <Label fx:id="minimumMemoryLabel" style="-fx-font-size: 14px;" text="Mémoire: " textFill="white" />
-                                <Label fx:id="minimumGraphicsLabel" style="-fx-font-size: 14px;" text="Carte graphique: " textFill="white" />
-                                <Label fx:id="minimumStorageLabel" style="-fx-font-size: 14px;" text="Stockage: " textFill="white" />
-                                <Label fx:id="recommendedLabel" style="-fx-font-size: 14px;" text="Recommandée" textFill="white" />
-                                <Label fx:id="recommendedOSLabel" style="-fx-font-size: 14px;" text="OS: " textFill="white" />
-                                <Label fx:id="recommendedProcessorLabel" style="-fx-font-size: 14px;" text="Processeur: " textFill="white" />
-                                <Label fx:id="recommendedMemoryLabel" style="-fx-font-size: 14px;" text="Mémoire: " textFill="white" />
-                                <Label fx:id="recommendedGraphicsLabel" style="-fx-font-size: 14px;" text="Carte graphique: " textFill="white" />
-                                <Label fx:id="recommendedStorageLabel" style="-fx-font-size: 14px;" text="Stockage: " textFill="white" />
-                            </children>
-                        </VBox>
-                    </children>
-                </VBox>
-                <VBox fx:id="rightContainer" prefWidth="300.0" spacing="10.0">
-                    <children>
-                        <Label fx:id="generalRatingLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="AVIS GENERAUX" textFill="white" />
-                        <Label fx:id="ratingValueLabel" style="-fx-font-size: 36px;" text="XX" textFill="white" />
-                        <VBox fx:id="tagsContainer" spacing="5.0">
-                            <children>
-                                <Label fx:id="tagsLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Tags" textFill="white" />
-                            </children>
-                        </VBox>
-                    </children>
-                </VBox>
-            </children>
-        </HBox>
-    </children>
+      <ScrollPane hbarPolicy="NEVER" pannable="true" prefWidth="1225.0" vbarPolicy="NEVER">
+         <content>
+            <VBox alignment="TOP_CENTER" prefHeight="1050.0" prefWidth="1225.0" style="-fx-background-color: #323232;">
+                <children>
+                    <ImageView fx:id="bannerImageView" fitHeight="68.0" fitWidth="1020.0" pickOnBounds="true" preserveRatio="true" />
+                    <HBox alignment="TOP_LEFT" prefHeight="978.0" prefWidth="1276.0" spacing="20.0">
+                        <padding>
+                            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                        </padding>
+                        <children>
+                            <VBox fx:id="leftContainer" prefHeight="950.0" prefWidth="850.0" spacing="10.0">
+                                <children>
+                                    <Label fx:id="descriptionLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="DESCRIPTION:" textFill="white" />
+                              <WebView fx:id="webDescView" prefHeight="182.0" prefWidth="850.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-control-inner-background: #2e2e2e; -fx-background-color: #2e2e2e; -fx-border-color: none;" styleClass="background-color: gray; color: white" />
+                                    <Label fx:id="aboutGameLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="A propos du jeu" textFill="white" />
+                                    <TextArea fx:id="aboutGameTextArea" editable="false" prefHeight="150.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-control-inner-background: #2e2e2e; -fx-background-color: #2e2e2e; -fx-border-color: transparent;" wrapText="true" />
+                                    <Button fx:id="moreInfoButton" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" text="Voir plus" />
+                                    <Separator fx:id="separator1" orientation="HORIZONTAL" />
+                                    <VBox fx:id="authorDateContainer" spacing="5.0">
+                                        <children>
+                                            <Label fx:id="authorDateLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Auteur et date" textFill="white" />
+                                            <Label fx:id="releaseDateLabel" style="-fx-font-size: 14px;" text="Plateforme disponible : " textFill="white" />
+                                    <GridPane fx:id="plateformeGridPane" prefHeight="46.0" prefWidth="774.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                    </GridPane>
+                                            <Label fx:id="authorLabel" style="-fx-font-size: 14px;" text="Éditeur :" textFill="white" />
+                                    <GridPane fx:id="editorGridPane" prefHeight="50.0" prefWidth="774.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                    </GridPane>
+                                            <Label fx:id="developersLabel" style="-fx-font-size: 14px;" text="Développeurs :" textFill="white" />
+                                    <GridPane fx:id="devGridPane" prefHeight="44.0" prefWidth="774.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                    </GridPane>
+                                        </children>
+                                    </VBox>
+                                    <Separator fx:id="separator2" orientation="HORIZONTAL" />
+                                    <VBox fx:id="requirementsContainer" spacing="5.0">
+                                        <children>
+                                            <Label fx:id="requirementsLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Configuration requise" textFill="white" />
+                                    <GridPane fx:id="requirementGridPane" prefHeight="32.0" prefWidth="774.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                    </GridPane>
+                                        </children>
+                                    </VBox>
+                                </children>
+                            </VBox>
+                            <VBox fx:id="rightContainer" prefWidth="300.0" spacing="10.0">
+                                <children>
+                                    <Label fx:id="generalRatingLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="AVIS GENERAUX" textFill="white" />
+                                    <Label fx:id="ratingValueLabel" style="-fx-font-size: 36px;" text="x,x" textFill="white" />
+                                    <Label fx:id="ratingScaleLabel" style="-fx-font-size: 14px;" text="x/5 étoiles" textFill="white" />
+                                    <VBox fx:id="tagsContainer" spacing="5.0">
+                                        <children>
+                                            <Label fx:id="tagsLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Tags" textFill="white" />
+                                    <GridPane fx:id="tagGridPane">
+                                      <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                    </GridPane>
+                                        </children>
+                                    </VBox>
+                                </children>
+                            </VBox>
+                        </children>
+                    </HBox>
+                </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
 </VBox>

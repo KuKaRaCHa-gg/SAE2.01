@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Platform {
     @JsonProperty("platform")
     private InfoPlatform platform;
-    @JsonProperty("requirements_en")
+    @JsonProperty("requirements")
     private InfoRequirement requirement;
 
     public String getPlatformName(){

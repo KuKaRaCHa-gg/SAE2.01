@@ -2,22 +2,28 @@ package com.example.sae_201;
 
 
 
+import apiManagement.APIGameManager;
 import apiManagement.APITendanceManager;
 import apiManagement.GameNotFoundException;
 import gameModel.Game;
 import gameModel.MyGames;
 import javafx.application.Platform;
+import javafx.beans.property.DoubleProperty;
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.value.ObservableValue;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Paint;
+import javafx.stage.Stage;
 import persistence.PersistenceBySerialization;
 import result.Result;
 
@@ -123,60 +129,161 @@ public class accueil {
     private MyGames model;
     private PersistentModelManager persistentModelManager;
     private APITendanceManager apiTendanceManager;
+    private APIGameManager apiGameManager;
     private Result result;
+    private Scene scene;
+    private Stage stage;
+    private PageJeuController gameInfoController;
+    private int compteur = 0;
+    private int compteur2 = 0;
+
+    private Stage modalChargement;
 
     public accueil(){
         super();
         apiTendanceManager = new APITendanceManager();
+        apiGameManager = new APIGameManager();
         model = new MyGames();
         persistentModelManager = new PersistenceBySerialization();
     }
 
-    public void initialization() throws GameNotFoundException {
-        int compteur = 0;
-        int compteur2 = 0;
-        List<Game> newGames;
-        newGames = apiTendanceManager.getMultipleGames();
+    public void setChargement(Stage modalChargement) {
+        this.modalChargement = modalChargement;
+    }
 
-        // Ajoute tous les nouveaux jeux au modèle
-        for (Game game : newGames) {
-            model.addGame(game);
-            VBox vBox = new VBox();
-            Label label = new Label(game.getName());
-            label.setTextFill(Paint.valueOf("white"));
-            ImageView image = new ImageView(new Image (game.getImageURL(), gridPane.getPrefWidth()/5,100,true,true));
-            vBox.getChildren().add(image);
-            vBox.getChildren().add(label);
-            vBox.setOnMouseClicked(new EventHandler<MouseEvent>() {
-                @Override
-                public void handle(MouseEvent mouseEvent) {
-                    System.out.println(game.getName());
+    public void setNewScene(Scene gamePage) {
+        this.scene = gamePage;
+    }
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
+    public void initialization() {
+        Task<Void> initTask = new Task<>() {
+            @Override
+            protected Void call() throws Exception {
+                List<Game> newGames = apiTendanceManager.getMultipleGames();
+
+                for (Game game : newGames) {
+                    model.addGame(game);
+                    Platform.runLater(() -> {
+                        VBox vBox = new VBox();
+                        Label label = new Label(game.getName());
+                        label.setTextFill(Paint.valueOf("white"));
+                        ImageView image = new ImageView(new Image(game.getImageURL(), gridPane.getPrefWidth() / 4, 250, true, true));
+                        vBox.getChildren().add(image);
+                        vBox.getChildren().add(label);
+                        vBox.setOnMouseClicked(mouseEvent -> {
+                            jeuSelectionner(game.getId());
+                            Stage stage = (Stage) vBox.getScene().getWindow();
+                            stage.setScene(scene);
+                        });
+                        gridPane.add(vBox, compteur, compteur2);
+                        if (compteur == 3) {
+                            compteur = 0;
+                            compteur2++;
+                        } else {
+                            compteur++;
+                        }
+                    });
                 }
-            });
-            gridPane.add(vBox, compteur, compteur2);
-            if (compteur == 3) {
-                compteur = 0;
-                compteur2++;
-            } else {
-                compteur++;
+                persistentModelManager.save(model);
+                return null;
             }
+
+            @Override
+            protected void succeeded() {
+                Platform.runLater(() -> {
+                    if (modalChargement != null) {
+                        modalChargement.close();
+                    }
+                    if (stage != null) {
+                        stage.show();
+                    }
+                });
+            }
+
+            @Override
+            protected void failed() {
+                Platform.runLater(() -> {
+                    if (modalChargement != null) {
+                        modalChargement.close();
+                    }
+                    // Optionnel : Afficher un message d'erreur ou effectuer d'autres actions en cas d'échec
+                });
+            }
+        };
+
+        new Thread(initTask).start();
+    }
+
+    private void jeuSelectionner(int id) {
+        List<Game> selectionGame = apiGameManager.getInfoGame(id);
+        for (Game game : selectionGame) {
+            int compteurGame = 0;
+            gameInfoController.getRatingValueLabel().setText(game.getRate());
+            gameInfoController.getRatingScaleLabel().setText(game.getRate() + "/5 étoiles");
+            String htmlContent = "<html>" +
+                    "<head>" +
+                    "<style>" +
+                    "body { background-color: #2e2e2e; color: white; }" +
+                    "p { color: white; }" +
+                    "</style>" +
+                    "</head>" +
+                    "<body>" + game.getDescription() + "</body>" +
+                    "</html>";
+            gameInfoController.getWebDescView().getEngine().loadContent(htmlContent);
+
+            gameInfoController.getBannerImageView().setImage(new Image(game.getImageURL()));
+            VBox vBox1 = new VBox();
+            Label label1 = new Label(game.getPlatforms()[0].getRequirementMinimum());
+            label1.setTextFill(Paint.valueOf("white"));
+            vBox1.getChildren().add(label1);
+            gameInfoController.getRequirementGridPane().add(label1, 0,0);
+            vBox1 = new VBox();
+            label1 = new Label(game.getPlatforms()[0].getRequirementRecommended());
+            label1.setTextFill(Paint.valueOf("white"));
+            vBox1.getChildren().add(label1);
+            gameInfoController.getRequirementGridPane().add(label1, 0,1);
+
+            for (int i = 0; i<game.getPlatforms().length; i++) {
+                VBox vBox = new VBox();
+                Label label = new Label(game.getPlatforms()[i].getPlatformName());
+                label.setTextFill(Paint.valueOf("white"));
+                vBox.getChildren().add(label);
+                gameInfoController.getPlateformeGridPane().add(vBox, 0, compteurGame);
+                compteurGame++; }
+
+            compteurGame = 0;
+            for (int j = 0; j<game.getPublishers().length; j++){
+                VBox vBox = new VBox();
+                Label label = new Label(game.getPublishers()[j].getName());
+                label.setTextFill(Paint.valueOf("white"));
+                vBox.getChildren().add(label);
+                gameInfoController.getEditorGridPane().add(vBox, 0, compteurGame);
+                compteurGame++; }
+
+            compteurGame = 0;
+            for(int k = 0; k<game.getDevelopers().length; k++){
+                VBox vBox = new VBox();
+                Label label = new Label(game.getDevelopers()[k].getName());
+                label.setTextFill(Paint.valueOf("white"));
+                vBox.getChildren().add(label);
+                gameInfoController.getDevGridPane().add(vBox, 0, compteurGame);
+                compteurGame++; }
+            
+            compteurGame = 0;
+            for (int m = 0;m<game.getTags().length; m++){
+                Button vBox = new Button();
+                vBox.setTextFill(Paint.valueOf("white"));
+                vBox.setText(game.getTags()[m].getName());
+                vBox.setStyle("-fx-background-color: #3a3a3a;");
+                gameInfoController.getTagGridPane().add(vBox, 0, compteurGame);
+                compteurGame++; }
+
         }
-        persistentModelManager.save(model);
-
     }
-
-
-    public void onTestClicked(javafx.event.ActionEvent event) {
-        ajoutRecLabel.setOpacity(1);
-        gameLabel1.setOpacity(1);
-        gameLabel2.setOpacity(1);
-        gameLabel3.setOpacity(1);
-        gameLabel4.setOpacity(1);
-        gameLabel5.setOpacity(1);
-        textBienvenu.setOpacity(0);
-
-    }
-
 
     public void handleMesJeuxButtonAction(ActionEvent event) {
     }
@@ -185,5 +292,9 @@ public class accueil {
     }
 
     public void handleTagsButtonAction(ActionEvent event) {
+    }
+
+    public void setGameController(PageJeuController gameInfoController) {
+        this.gameInfoController = gameInfoController;
     }
 }
