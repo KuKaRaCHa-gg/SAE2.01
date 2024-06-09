@@ -282,6 +282,7 @@ public class accueil {
                 gameInfoController.getTagGridPane().add(vBox, 0, compteurGame);
                 compteurGame++; }
 
+
         }
     }
 
