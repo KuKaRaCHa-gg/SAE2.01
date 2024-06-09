@@ -142,6 +142,8 @@ public class accueil {
     private rechercheController searchGameController;
     private int compteur = 0;
     private int compteur2 = 0;
+    private int compteurX = 0;
+    private int compteurY = 0;
 
     private Stage modalChargement;
 
@@ -309,12 +311,12 @@ public class accueil {
                     Stage stage = (Stage) vBox.getScene().getWindow();
                 });
                 System.out.println(game.getName());
-                searchGameController.getGridRecherchePane().add(vBox, compteur, compteur2);
-                if (compteur == 3) {
-                    compteur = 0;
-                    compteur2++;
+                searchGameController.getGridRecherchePane().add(vBox, compteurX, compteurY);
+                if (compteurX == 3) {
+                    compteurX = 0;
+                    compteurY++;
                 } else {
-                    compteur++;
+                    compteurX++;
                 }
             });
 
