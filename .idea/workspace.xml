@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="La recherche de jeu par titre marche (quasi) !!!!" />
+    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="La recherche de jeu par titre marche !!!!">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/apiManagement/APIRechercheManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/apiManagement/APIRechercheManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/Recherche.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/Recherche.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/Recherche.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/Recherche.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saveFile" beforeDir="false" afterPath="$PROJECT_DIR$/saveFile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/apiManagement/APIRechercheManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiManagement/APIRechercheManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/apiManagement/APITendanceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiManagement/APITendanceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/rechercheController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/rechercheController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/Recherche.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/Recherche.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -372,7 +383,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717946692572</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="La recherche de jeu par titre marche !!!!">
+      <option name="closed" value="true" />
+      <created>1717946889042</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1717946889042</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -387,7 +406,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Mis en place des package pour l'api" />
     <MESSAGE value="Changement dans l'interface de l'acceuil et ajout du logo dans l'icone de l'application" />
     <MESSAGE value="Quelque changement de l'interface accueil" />
     <MESSAGE value="Header de selection mis en place dans l'interface" />
@@ -412,6 +430,7 @@
     <MESSAGE value="Début de la recherche de jeu par titre" />
     <MESSAGE value="La recherche de jeu par titre avance mais pas opperationelle encore" />
     <MESSAGE value="La recherche de jeu par titre marche (quasi) !!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="La recherche de jeu par titre marche (quasi) !!!!" />
+    <MESSAGE value="La recherche de jeu par titre marche !!!!" />
+    <option name="LAST_COMMIT_MESSAGE" value="La recherche de jeu par titre marche !!!!" />
   </component>
 </project>

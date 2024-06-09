@@ -24,7 +24,7 @@ public class APITendanceManager {
                 .uri(URI.create("https://api.rawg.io/api/games"
                         + "?key=03aefea4690c4af5828591dca83a3c8f"
                         + "&ordering=-added"
-                        + "&page_size=10"))
+                        + "&page_size=12"))
                 .method("GET", HttpRequest.BodyPublishers.noBody())
                 .build();
         HttpResponse<String> response;

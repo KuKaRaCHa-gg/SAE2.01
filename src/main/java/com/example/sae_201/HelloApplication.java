@@ -59,6 +59,10 @@ public class HelloApplication extends Application {
             rechercheController searchGameController = fxmlsearchLoader.getController();
             toSearchController.setSearchController(searchGameController);
 
+            rechercheController searchToJeu = (rechercheController) fxmlsearchLoader.getController();
+            searchToJeu.setNewScene(gamePage);
+            searchToJeu.setStage(stage);
+
 
         } catch (Exception e) {
             e.printStackTrace();

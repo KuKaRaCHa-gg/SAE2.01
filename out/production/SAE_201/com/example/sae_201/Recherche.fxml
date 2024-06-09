@@ -80,29 +80,20 @@
                         <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="1049.0">
                            <children>
                               <Pane prefHeight="70.0" prefWidth="26.0" />
-                              <HBox fx:id="alphaLabel" prefHeight="70.0" prefWidth="278.0">
+                              <HBox fx:id="alphaLabel" prefHeight="70.0" prefWidth="572.0">
                                  <children>
                                     <Label text="V" textFill="#a5a5a5">
                                        <font>
                                           <Font size="48.0" />
                                        </font>
                                     </Label>
-                                    <Label prefHeight="56.0" prefWidth="295.0" text="Tendances " textFill="WHITE">
+                                    <Label prefHeight="56.0" prefWidth="526.0" text="Résultat de votre Recherche" textFill="WHITE">
                                        <font>
                                           <Font size="24.0" />
                                        </font>
                                     </Label>
                                  </children>
                               </HBox>
-                              <VBox alignment="CENTER" prefHeight="70.0" prefWidth="528.0">
-                                 <children>
-                                    <Label alignment="CENTER" prefHeight="27.0" prefWidth="457.0" text="Retrouver les jeux en tendances ici" textFill="WHITE">
-                                       <font>
-                                          <Font size="18.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                              </VBox>
                            </children>
                         </HBox>
                         <GridPane fx:id="gridRecherchePane" hgap="50.0" prefHeight="400.0" prefWidth="1020.0" vgap="50.0">
