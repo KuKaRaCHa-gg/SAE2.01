@@ -1,0 +1,249 @@
+Index: src/main/java/com/example/sae_201/pageJeuController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/sae_201/pageJeuController.java b/src/main/java/com/example/sae_201/pageJeuController.java
+deleted file mode 100644
+--- a/src/main/java/com/example/sae_201/pageJeuController.java	(revision 9f6e84b970e18bc8c48d3466b9ff6e7acb17e53b)
++++ /dev/null	(revision 9f6e84b970e18bc8c48d3466b9ff6e7acb17e53b)
+@@ -1,239 +0,0 @@
+-package com.example.sae_201;
+-
+-import javafx.fxml.FXML;
+-import javafx.scene.control.*;
+-import javafx.scene.image.ImageView;
+-import javafx.scene.layout.GridPane;
+-import javafx.scene.layout.VBox;
+-import javafx.scene.web.WebView;
+-import javafx.stage.Stage;
+-
+-public class PageJeuController {
+-
+-    @FXML
+-    private Label aboutGameLabel;
+-
+-    @FXML
+-    private TextArea aboutGameTextArea;
+-
+-    @FXML
+-    private Button adventureTagButton;
+-
+-    @FXML
+-    private VBox authorDateContainer;
+-
+-    @FXML
+-    private Label authorDateLabel;
+-
+-    @FXML
+-    private Label authorLabel;
+-
+-    @FXML
+-    private Label authorText;
+-
+-    @FXML
+-    private ImageView bannerImageView;
+-
+-    @FXML
+-    private Label descriptionLabel;
+-
+-    @FXML
+-    private TextArea descriptionTextArea;
+-
+-    @FXML
+-    private Label developersLabel;
+-
+-    @FXML
+-    private Label developersText1;
+-
+-    @FXML
+-    private Label developersText2;
+-
+-    @FXML
+-    private Label developersText3;
+-
+-    @FXML
+-    private Button freeToPlayTagButton;
+-
+-    @FXML
+-    private Label generalRatingLabel;
+-
+-    @FXML
+-    private VBox leftContainer;
+-
+-    @FXML
+-    private ImageView loginImageView;
+-
+-    @FXML
+-    private ImageView logoImageView;
+-
+-    @FXML
+-    private Label minimumGraphicsLabel;
+-
+-    @FXML
+-    private Label minimumLabel;
+-
+-    @FXML
+-    private Label minimumMemoryLabel;
+-
+-    @FXML
+-    private Label minimumOSLabel;
+-
+-    @FXML
+-    private Label minimumProcessorLabel;
+-
+-    @FXML
+-    private Label minimumStorageLabel;
+-
+-    @FXML
+-    private Button moreInfoButton;
+-
+-    @FXML
+-    private Button multiplayerTagButton;
+-
+-    @FXML
+-    private Label ratingScaleLabel;
+-
+-    @FXML
+-    private Label ratingValueLabel;
+-
+-
+-    @FXML
+-    private GridPane tagGridPane;
+-
+-    @FXML
+-    private GridPane plateformeGridPane;
+-
+-    @FXML
+-    private GridPane devGridPane;
+-
+-    @FXML
+-    private GridPane editorGridPane;
+-
+-    @FXML
+-    private GridPane requirementGridPane;
+-
+-    @FXML
+-    private Label recommendedGraphicsLabel;
+-
+-    @FXML
+-    private Label recommendedLabel;
+-
+-    @FXML
+-    private Label recommendedMemoryLabel;
+-
+-    @FXML
+-    private Label recommendedOSLabel;
+-
+-    @FXML
+-    private Label recommendedProcessorLabel;
+-
+-    @FXML
+-    private Label recommendedStorageLabel;
+-
+-    @FXML
+-    private Label releaseDateLabel;
+-
+-    @FXML
+-    private Label releaseDateText;
+-
+-    @FXML
+-    private VBox requirementsContainer;
+-
+-    @FXML
+-    private Label requirementsLabel;
+-
+-    @FXML
+-    private VBox rightContainer;
+-
+-    @FXML
+-    private Button rpgTagButton;
+-
+-    @FXML
+-    private TextField searchTextField;
+-
+-    @FXML
+-    private Separator separator1;
+-
+-    @FXML
+-    private Separator separator2;
+-
+-    @FXML
+-    private VBox tagsContainer;
+-
+-    @FXML
+-    private Label tagsLabel;
+-
+-    @FXML
+-    private Label titleLabel;
+-
+-    @FXML
+-    private WebView webDescView;
+-
+-
+-    private Stage stage;
+-
+-    @FXML
+-    private void initialize() {
+-        // Initialize the controller
+-    }
+-
+-    @FXML
+-    private void handleMesJeuxButtonAction() {
+-        NavigationUtil.navigateTo(stage, "accueil.fxml");
+-    }
+-
+-    @FXML
+-    private void handleTagsButtonAction() {
+-        NavigationUtil.navigateTo(stage, "RechercheParTAG.fxml");
+-    }
+-
+-    @FXML
+-    private void handleCreerTagButtonAction() {
+-        NavigationUtil.navigateTo(stage, "Recherche.fxml");
+-    }
+-
+-    public void setStage(Stage stage) {
+-        this.stage = stage;
+-    }
+-
+-    public Label getRatingValueLabel(){
+-        return ratingValueLabel;
+-    }
+-
+-    public TextArea getDescriptionTextArea() {
+-        return descriptionTextArea;
+-    }
+-
+-    public ImageView getBannerImageView() {
+-        return bannerImageView;
+-    }
+-
+-    public Label getRatingScaleLabel() {
+-        return ratingScaleLabel;
+-    }
+-
+-    public GridPane getTagGridPane() {
+-        return tagGridPane;
+-    }
+-
+-    public GridPane getDevGridPane() {
+-        return devGridPane;
+-    }
+-
+-    public GridPane getPlateformeGridPane() {
+-        return plateformeGridPane;
+-    }
+-
+-    public GridPane getEditorGridPane() {
+-        return editorGridPane;
+-    }
+-
+-    public GridPane getRequirementGridPane() {
+-        return requirementGridPane;
+-    }
+-
+-    public WebView getWebDescView() {
+-        return webDescView;
+-    }
+-}
