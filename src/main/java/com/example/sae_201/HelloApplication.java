@@ -64,6 +64,15 @@ public class HelloApplication extends Application {
             searchToJeu.setStage(stage);
 
             searchToJeu.setGameController(gameInfoController);
+            gameInfoController.setSearchController(searchGameController);
+
+            PageJeuController jeuToSearch = (PageJeuController) fxmlgameLoader.getController();
+            jeuToSearch.setNewScene(searchPage);
+            jeuToSearch.setStage(stage);
+
+            PageJeuController jeuToJeu = (PageJeuController) fxmlgameLoader.getController();
+            jeuToJeu.setThisScene(gamePage);
+            jeuToJeu.setStage(stage);
 
 
         } catch (Exception e) {

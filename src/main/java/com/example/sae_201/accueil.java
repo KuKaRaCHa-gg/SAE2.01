@@ -302,7 +302,7 @@ public class accueil {
                 VBox vBox = new VBox();
                 Label label = new Label(game.getName());
                 label.setTextFill(Paint.valueOf("white"));
-                ImageView image = new ImageView(new Image(game.getImageURL(), gridPane.getPrefWidth() / 4, 250, true, true));
+                ImageView image = new ImageView(new Image(game.getImageURL(), searchGameController.getGridRecherchePane().getPrefWidth() / 4, 250, true, true));
                 vBox.getChildren().add(image);
                 vBox.getChildren().add(label);
                 vBox.setOnMouseClicked(mouseEvent -> {
