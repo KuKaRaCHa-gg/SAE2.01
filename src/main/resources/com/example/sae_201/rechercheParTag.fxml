@@ -9,7 +9,7 @@
 
 <VBox alignment="TOP_CENTER" prefHeight="720.0" prefWidth="1020.0" style="-fx-background-color: #323232;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sae_201.accueil">
     <children>
-        <HBox prefHeight="75.0" prefWidth="1020.0" style="-fx-background-color: #000000;">
+        <HBox prefHeight="100.0" prefWidth="1020.0" style="-fx-background-color: #000000;">
             <children>
                 <HBox prefHeight="100.0" prefWidth="200.0">
                     <children>
@@ -40,12 +40,16 @@
                 </HBox>
             </children>
         </HBox>
-        <Pane prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #484848;">
+      <HBox prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #484848;">
          <children>
-                <Button fx:id="mesJeuxButton" layoutX="75.0" layoutY="-1.0" onAction="#handleMesJeuxButtonAction" text="Mes Jeux" />
-                <Button fx:id="tagsButton" layoutX="166.0" layoutY="-1.0" onAction="#handleTagsButtonAction" text="Tags" />
-                <Button fx:id="creerTagButton" layoutX="236.0" layoutY="-1.0" onAction="#handleCreerTagButtonAction" text="Créer un Tag" />
-         </children></Pane>
+            <AnchorPane prefHeight="20.0" prefWidth="20.0" />
+                <Button fx:id="mesJeuxButton" onAction="#handleMesJeuxButtonAction" prefHeight="59.0" prefWidth="81.0" style="-fx-background-color: #484848; -fx-text-fill: WHITE;" text="Mes Jeux" />
+            <AnchorPane prefHeight="20.0" prefWidth="20.0" />
+                <Button fx:id="tagsButton" onAction="#handleTagsButtonAction" prefHeight="57.0" prefWidth="51.0" style="-fx-background-color: #484848; -fx-text-fill: WHITE;" text="Tags" />
+            <AnchorPane prefHeight="20.0" prefWidth="20.0" />
+                <Button fx:id="creerTagButton" onAction="#handleCreerTagButtonAction" prefHeight="58.0" prefWidth="105.0" style="-fx-background-color: #484848; -fx-text-fill: WHITE;" text="Créer un Tag" />
+         </children>
+      </HBox>
         <HBox alignment="BASELINE_CENTER" prefHeight="33.0" prefWidth="1020.0">
             <children>
                 <Pane prefHeight="50.0" prefWidth="50.0" />

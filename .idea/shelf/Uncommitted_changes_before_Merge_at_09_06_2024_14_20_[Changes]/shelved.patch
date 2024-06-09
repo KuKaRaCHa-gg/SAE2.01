@@ -1,0 +1,557 @@
+Index: src/main/java/com/example/sae_201/accueil.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.sae_201;\r\n\r\n\r\n\r\nimport apiManagement.APITendanceManager;\r\nimport apiManagement.GameNotFoundException;\r\nimport gameModel.Game;\r\nimport gameModel.MyGames;\r\nimport javafx.application.Platform;\r\nimport javafx.event.ActionEvent;\r\nimport javafx.event.EventHandler;\r\nimport javafx.fxml.FXML;\r\nimport javafx.scene.control.Label;\r\nimport javafx.scene.image.Image;\r\nimport javafx.scene.image.ImageView;\r\nimport javafx.scene.input.MouseEvent;\r\nimport javafx.scene.layout.GridPane;\r\nimport javafx.scene.layout.HBox;\r\nimport javafx.scene.layout.VBox;\r\nimport javafx.scene.paint.Paint;\r\nimport persistence.PersistenceBySerialization;\r\nimport result.Result;\r\n\r\nimport java.util.List;\r\n\r\n\r\npublic class accueil {\r\n\r\n    @FXML\r\n    private HBox ajoutRecLabel;\r\n\r\n    @FXML\r\n    private HBox alphaLabel;\r\n\r\n    @FXML\r\n    private ImageView gameImage1;\r\n\r\n    @FXML\r\n    private ImageView gameImage10;\r\n\r\n    @FXML\r\n    private ImageView gameImage2;\r\n\r\n    @FXML\r\n    private ImageView gameImage3;\r\n\r\n    @FXML\r\n    private ImageView gameImage4;\r\n\r\n    @FXML\r\n    private ImageView gameImage5;\r\n\r\n    @FXML\r\n    private ImageView gameImage6;\r\n\r\n    @FXML\r\n    private ImageView gameImage7;\r\n\r\n    @FXML\r\n    private ImageView gameImage8;\r\n\r\n    @FXML\r\n    private ImageView gameImage9;\r\n\r\n    @FXML\r\n    private Label gameLabel1;\r\n\r\n    @FXML\r\n    private Label gameLabel10;\r\n\r\n    @FXML\r\n    private Label gameLabel2;\r\n\r\n    @FXML\r\n    private Label gameLabel3;\r\n\r\n    @FXML\r\n    private Label gameLabel4;\r\n\r\n    @FXML\r\n    private Label gameLabel5;\r\n\r\n    @FXML\r\n    private Label gameLabel6;\r\n\r\n    @FXML\r\n    private Label gameLabel7;\r\n\r\n    @FXML\r\n    private Label gameLabel8;\r\n\r\n    @FXML\r\n    private Label gameLabel9;\r\n\r\n    @FXML\r\n    private ImageView image;\r\n\r\n\r\n\r\n    @FXML\r\n    private ImageView imageTendance1;\r\n\r\n    @FXML\r\n    private ImageView imageTendance2;\r\n\r\n    @FXML\r\n    private ImageView imageTendance3;\r\n\r\n    @FXML\r\n    private ImageView imageTendance4;\r\n\r\n    @FXML\r\n    private ImageView imageTendance5;\r\n\r\n    //private ImageView['imageTendance1']\r\n\r\n    @FXML\r\n    private GridPane gridPane;\r\n\r\n    @FXML\r\n    private VBox textBienvenu;\r\n\r\n    private MyGames model;\r\n    private PersistentModelManager persistentModelManager;\r\n    private APITendanceManager apiTendanceManager;\r\n    private Result result;\r\n\r\n    public accueil(){\r\n        super();\r\n        apiTendanceManager = new APITendanceManager();\r\n        model = new MyGames();\r\n        persistentModelManager = new PersistenceBySerialization();\r\n    }\r\n\r\n    public void initialization() throws GameNotFoundException {\r\n        int compteur = 0;\r\n        int compteur2 = 0;\r\n        List<Game> newGames;\r\n        newGames = apiTendanceManager.getMultipleGames();\r\n\r\n        // Ajoute tous les nouveaux jeux au modèle\r\n        for (Game game : newGames) {\r\n            model.addGame(game);\r\n            VBox vBox = new VBox();\r\n            Label label = new Label(game.getName());\r\n            label.setTextFill(Paint.valueOf(\"white\"));\r\n            ImageView image = new ImageView(new Image (game.getImageURL(), gridPane.getPrefWidth()/5,100,true,true));\r\n            vBox.getChildren().add(image);\r\n            vBox.getChildren().add(label);\r\n            vBox.setOnMouseClicked(new EventHandler<MouseEvent>() {\r\n                @Override\r\n                public void handle(MouseEvent mouseEvent) {\r\n                    System.out.println(game.getName());\r\n                }\r\n            });\r\n            gridPane.add(vBox, compteur, compteur2);\r\n            if (compteur == 3) {\r\n                compteur = 0;\r\n                compteur2++;\r\n            } else {\r\n                compteur++;\r\n            }\r\n        }\r\n        persistentModelManager.save(model);\r\n\r\n    }\r\n\r\n\r\n    public void onTestClicked(javafx.event.ActionEvent event) {\r\n        ajoutRecLabel.setOpacity(1);\r\n        gameLabel1.setOpacity(1);\r\n        gameLabel2.setOpacity(1);\r\n        gameLabel3.setOpacity(1);\r\n        gameLabel4.setOpacity(1);\r\n        gameLabel5.setOpacity(1);\r\n        textBienvenu.setOpacity(0);\r\n\r\n    }\r\n\r\n\r\n    public void handleMesJeuxButtonAction(ActionEvent event) {\r\n    }\r\n\r\n    public void handleCreerTagButtonAction(ActionEvent event) {\r\n    }\r\n\r\n    public void handleTagsButtonAction(ActionEvent event) {\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/sae_201/accueil.java b/src/main/java/com/example/sae_201/accueil.java
+--- a/src/main/java/com/example/sae_201/accueil.java	(revision 7d37066cda19fb3b76d1dd40abba3ffb66ba29c1)
++++ b/src/main/java/com/example/sae_201/accueil.java	(date 1717935645607)
+@@ -1,28 +1,25 @@
+ package com.example.sae_201;
+ 
+-
+-
+ import apiManagement.APITendanceManager;
+ import apiManagement.GameNotFoundException;
+ import gameModel.Game;
+ import gameModel.MyGames;
+-import javafx.application.Platform;
+ import javafx.event.ActionEvent;
+-import javafx.event.EventHandler;
+ import javafx.fxml.FXML;
++import javafx.scene.Scene;
+ import javafx.scene.control.Label;
+ import javafx.scene.image.Image;
+ import javafx.scene.image.ImageView;
+-import javafx.scene.input.MouseEvent;
+ import javafx.scene.layout.GridPane;
+ import javafx.scene.layout.HBox;
+ import javafx.scene.layout.VBox;
+ import javafx.scene.paint.Paint;
++import javafx.stage.Stage;
+ import persistence.PersistenceBySerialization;
+-import result.Result;
+-
+ import java.util.List;
+-
++import javafx.fxml.FXMLLoader;
++import javafx.scene.Parent;
++import java.io.IOException;
+ 
+ public class accueil {
+ 
+@@ -95,8 +92,6 @@
+     @FXML
+     private ImageView image;
+ 
+-
+-
+     @FXML
+     private ImageView imageTendance1;
+ 
+@@ -112,8 +107,6 @@
+     @FXML
+     private ImageView imageTendance5;
+ 
+-    //private ImageView['imageTendance1']
+-
+     @FXML
+     private GridPane gridPane;
+ 
+@@ -123,7 +116,7 @@
+     private MyGames model;
+     private PersistentModelManager persistentModelManager;
+     private APITendanceManager apiTendanceManager;
+-    private Result result;
++    private Stage stage;
+ 
+     public accueil(){
+         super();
+@@ -132,13 +125,12 @@
+         persistentModelManager = new PersistenceBySerialization();
+     }
+ 
+-    public void initialization() throws GameNotFoundException {
++    @FXML
++    public void initialize() throws GameNotFoundException {
+         int compteur = 0;
+         int compteur2 = 0;
+-        List<Game> newGames;
+-        newGames = apiTendanceManager.getMultipleGames();
++        List<Game> newGames = apiTendanceManager.getMultipleGames();
+ 
+-        // Ajoute tous les nouveaux jeux au modèle
+         for (Game game : newGames) {
+             model.addGame(game);
+             VBox vBox = new VBox();
+@@ -147,12 +139,6 @@
+             ImageView image = new ImageView(new Image (game.getImageURL(), gridPane.getPrefWidth()/5,100,true,true));
+             vBox.getChildren().add(image);
+             vBox.getChildren().add(label);
+-            vBox.setOnMouseClicked(new EventHandler<MouseEvent>() {
+-                @Override
+-                public void handle(MouseEvent mouseEvent) {
+-                    System.out.println(game.getName());
+-                }
+-            });
+             gridPane.add(vBox, compteur, compteur2);
+             if (compteur == 3) {
+                 compteur = 0;
+@@ -162,28 +148,46 @@
+             }
+         }
+         persistentModelManager.save(model);
+-
+-    }
+-
+-
+-    public void onTestClicked(javafx.event.ActionEvent event) {
+-        ajoutRecLabel.setOpacity(1);
+-        gameLabel1.setOpacity(1);
+-        gameLabel2.setOpacity(1);
+-        gameLabel3.setOpacity(1);
+-        gameLabel4.setOpacity(1);
+-        gameLabel5.setOpacity(1);
+-        textBienvenu.setOpacity(0);
+-
+     }
+ 
+-
++    @FXML
+     public void handleMesJeuxButtonAction(ActionEvent event) {
+-    }
+-
+-    public void handleCreerTagButtonAction(ActionEvent event) {
++        navigateTo("accueil.fxml");
+     }
+ 
++    @FXML
+     public void handleTagsButtonAction(ActionEvent event) {
++        navigateTo("rechercheParTag.fxml");
++    }
++
++    @FXML
++    public void handleCreerTagButtonAction(ActionEvent event) {
++        navigateTo("CreerTag.fxml");
++    }
++
++    public void setNewScene(Scene gamePage) {
++        this.stage.setScene(gamePage);
++    }
++
++    public void setStage(Stage stage) {
++        this.stage = stage;
++    }
++
++    public void navigateTo(String fxmlFile) {
++        try {
++            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlFile));
++            Parent root = fxmlLoader.load();
++            Scene scene = new Scene(root, 1225, 745);
++            accueil controller = fxmlLoader.getController();
++            controller.setStage(stage);
++            stage.setScene(scene);
++            stage.setTitle("Accueil");
++            stage.show();
++        } catch (IOException e) {
++            e.printStackTrace();
++        }
++    }
++
++    public void initialization() {
+     }
+ }
+Index: src/main/java/com/example/sae_201/RechercheParTag.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.sae_201;\r\n\r\npublic class RechercheParTag {\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/sae_201/RechercheParTag.java b/src/main/java/com/example/sae_201/RechercheParTag.java
+--- a/src/main/java/com/example/sae_201/RechercheParTag.java	(revision 7d37066cda19fb3b76d1dd40abba3ffb66ba29c1)
++++ b/src/main/java/com/example/sae_201/RechercheParTag.java	(date 1717935645606)
+@@ -1,4 +1,13 @@
+ package com.example.sae_201;
+ 
++import javafx.stage.Stage;
++
+ public class RechercheParTag {
++    private Stage stage;
++
++    public void setStage(Stage stage) {
++        this.stage = stage;
++    }
++
++    // Autres méthodes et logique du contrôleur...
+ }
+Index: src/main/java/com/example/sae_201/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.sae_201;\r\n\r\nimport javafx.application.Application;\r\nimport javafx.stage.Stage;\r\n\r\npublic class Main extends Application {\r\n\r\n    @Override\r\n    public void start(Stage primaryStage) {\r\n        NavigationUtil.navigateTo(primaryStage, \"accueil.fxml\");\r\n    }\r\n\r\n    public static void main(String[] args) {\r\n        launch(args);\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/sae_201/Main.java b/src/main/java/com/example/sae_201/Main.java
+--- a/src/main/java/com/example/sae_201/Main.java	(revision 7d37066cda19fb3b76d1dd40abba3ffb66ba29c1)
++++ b/src/main/java/com/example/sae_201/Main.java	(date 1717935645605)
+@@ -2,15 +2,45 @@
+ 
+ import javafx.application.Application;
+ import javafx.stage.Stage;
++import javafx.scene.Scene;
++import javafx.scene.Parent;
++import javafx.fxml.FXMLLoader;
++import javafx.scene.control.Alert;
++import javafx.scene.control.Alert.AlertType;
++import java.io.IOException;
+ 
+ public class Main extends Application {
+ 
+     @Override
+     public void start(Stage primaryStage) {
+-        NavigationUtil.navigateTo(primaryStage, "accueil.fxml");
++        navigateTo(primaryStage, "accueil.fxml");
+     }
+ 
+     public static void main(String[] args) {
+         launch(args);
+     }
++
++    private void navigateTo(Stage stage, String fxmlFile) {
++        try {
++            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxmlFile));
++            Parent root = fxmlLoader.load();
++            Scene scene = new Scene(root, 1225, 745);
++            accueil controller = fxmlLoader.getController();
++            controller.setStage(stage);
++            stage.setScene(scene);
++            stage.setTitle("Accueil");
++            stage.show();
++        } catch (IOException e) {
++            showAlert("Erreur de chargement", "Impossible de charger le fichier FXML", e.getMessage());
++            e.printStackTrace();
++        }
++    }
++
++    private void showAlert(String title, String header, String content) {
++        Alert alert = new Alert(AlertType.ERROR);
++        alert.setTitle(title);
++        alert.setHeaderText(header);
++        alert.setContentText(content);
++        alert.showAndWait();
++    }
+ }
+Index: src/main/resources/com/example/sae_201/accueil.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import java.lang.*?>\r\n<?import javafx.scene.control.*?>\r\n<?import javafx.scene.image.*?>\r\n<?import javafx.scene.layout.*?>\r\n<?import javafx.scene.text.*?>\r\n<?import javafx.scene.control.Button?>\r\n<?import javafx.scene.control.Label?>\r\n<?import javafx.scene.control.ScrollPane?>\r\n<?import javafx.scene.control.TextField?>\r\n<?import javafx.scene.image.Image?>\r\n<?import javafx.scene.image.ImageView?>\r\n<?import javafx.scene.layout.ColumnConstraints?>\r\n<?import javafx.scene.layout.GridPane?>\r\n<?import javafx.scene.layout.HBox?>\r\n<?import javafx.scene.layout.Pane?>\r\n<?import javafx.scene.layout.VBox?>\r\n<?import javafx.scene.text.Font?>\r\n\r\n<VBox alignment=\"TOP_CENTER\" prefHeight=\"745.0\" prefWidth=\"1225.0\" style=\"-fx-background-color: #484848;\" xmlns=\"http://javafx.com/javafx/8\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.sae_201.accueil\">\r\n   <children>\r\n      <HBox prefHeight=\"100.0\" prefWidth=\"1020.0\" style=\"-fx-background-color: #000000;\">\r\n         <children>\r\n            <HBox prefHeight=\"100.0\" prefWidth=\"200.0\">\r\n               <children>\r\n                  <ImageView fitHeight=\"80.0\" fitWidth=\"100.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\r\n                     <image>\r\n                        <Image url=\"@Images/LOGO.png\" />\r\n                     </image>\r\n                  </ImageView>\r\n               </children>\r\n            </HBox>\r\n            <HBox alignment=\"CENTER\" prefHeight=\"80.0\" prefWidth=\"945.0\">\r\n               <children>\r\n                  <Label text=\"GreenLog\" textFill=\"WHITE\">\r\n                     <font>\r\n                        <Font size=\"25.0\" />\r\n                     </font>\r\n                  </Label>\r\n                  <Pane prefHeight=\"100.0\" prefWidth=\"159.0\" />\r\n                  <TextField prefHeight=\"26.0\" prefWidth=\"300.0\" promptText=\"Recherche ...\" />\r\n                  <Pane prefHeight=\"80.0\" prefWidth=\"55.0\" />\r\n               </children>\r\n            </HBox>\r\n            <HBox alignment=\"TOP_RIGHT\" prefHeight=\"100.0\" prefWidth=\"200.0\">\r\n               <children>\r\n                  <ImageView fitHeight=\"73.0\" fitWidth=\"320.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\r\n                     <image>\r\n                        <Image url=\"@Images/compte.png\" />\r\n                     </image>\r\n                  </ImageView>\r\n               </children>\r\n            </HBox>\r\n         </children>\r\n      </HBox>\r\n      <HBox prefHeight=\"40.0\" prefWidth=\"200.0\" style=\"-fx-background-color: #484848;\">\r\n         <children>\r\n            <Pane prefHeight=\"39.0\" prefWidth=\"20.0\" />\r\n            <Button mnemonicParsing=\"false\" prefHeight=\"26.0\" prefWidth=\"100.0\" style=\"-fx-background-color: #484848;\" text=\"Mes Jeux\" textFill=\"WHITE\">\r\n               <font>\r\n                  <Font size=\"18.0\" />\r\n               </font>\r\n            </Button>\r\n            <Pane prefHeight=\"30.0\" prefWidth=\"10.0\" />\r\n            <Pane prefHeight=\"39.0\" prefWidth=\"20.0\" />\r\n            <Button mnemonicParsing=\"false\" prefHeight=\"39.0\" prefWidth=\"78.0\" style=\"-fx-background-color: #484848;\" text=\"Tags\" textFill=\"WHITE\">\r\n               <font>\r\n                  <Font size=\"18.0\" />\r\n               </font>\r\n            </Button>\r\n            <Pane prefHeight=\"30.0\" prefWidth=\"10.0\" />\r\n            <Pane prefHeight=\"30.0\" prefWidth=\"10.0\" />\r\n            <Button mnemonicParsing=\"false\" prefHeight=\"40.0\" prefWidth=\"127.0\" style=\"-fx-background-color: #484848;\" text=\"Créer un Tag\" textFill=\"WHITE\">\r\n               <font>\r\n                  <Font size=\"18.0\" />\r\n               </font>\r\n            </Button>\r\n         </children>\r\n      </HBox>\r\n      <ScrollPane hbarPolicy=\"NEVER\" hmax=\"200.0\" pannable=\"true\" prefHeight=\"651.0\" prefWidth=\"1225.0\" style=\"-fx-background-color: #323232;\" vbarPolicy=\"NEVER\" vmax=\"200.0\">\r\n         <content>\r\n            <VBox alignment=\"TOP_CENTER\" prefHeight=\"634.0\" prefWidth=\"1225.0\" style=\"-fx-background-color: #323232;\">\r\n               <children>\r\n                  <VBox alignment=\"TOP_CENTER\" prefHeight=\"534.0\" prefWidth=\"1225.0\" style=\"-fx-background-color: #323232;\">\r\n                     <children>\r\n                        <HBox alignment=\"CENTER\" prefHeight=\"52.0\" prefWidth=\"1020.0\">\r\n                           <children>\r\n                              <VBox fx:id=\"textBienvenu\" prefHeight=\"70.0\" prefWidth=\"528.0\">\r\n                                 <children>\r\n                                    <Label prefHeight=\"27.0\" prefWidth=\"457.0\" text=\"Bienvenue sur GreenLog rechercher et classer vos\" textFill=\"WHITE\">\r\n                                       <font>\r\n                                          <Font size=\"18.0\" />\r\n                                       </font>\r\n                                    </Label>\r\n                                    <Label prefHeight=\"27.0\" prefWidth=\"510.0\" text=\"jeu favoris (ou pas) et trouver les par tag que vous aurez fais\" textFill=\"WHITE\">\r\n                                       <font>\r\n                                          <Font size=\"18.0\" />\r\n                                       </font>\r\n                                    </Label>\r\n                                    <Label prefHeight=\"27.0\" prefWidth=\"510.0\" text=\"Commencer par ajouter un jeu,\" textFill=\"WHITE\">\r\n                                       <font>\r\n                                          <Font size=\"18.0\" />\r\n                                       </font>\r\n                                    </Label>\r\n                                 </children>\r\n                              </VBox>\r\n                           </children>\r\n                        </HBox>\r\n                        <Pane prefHeight=\"35.0\" prefWidth=\"1020.0\" />\r\n                        <HBox alignment=\"CENTER_LEFT\" prefHeight=\"70.0\" prefWidth=\"1049.0\">\r\n                           <children>\r\n                              <Pane prefHeight=\"70.0\" prefWidth=\"26.0\" />\r\n                              <HBox fx:id=\"alphaLabel\" prefHeight=\"70.0\" prefWidth=\"278.0\">\r\n                                 <children>\r\n                                    <Label text=\"V\" textFill=\"#a5a5a5\">\r\n                                       <font>\r\n                                          <Font size=\"48.0\" />\r\n                                       </font>\r\n                                    </Label>\r\n                                    <Label prefHeight=\"56.0\" prefWidth=\"295.0\" text=\"Tendances \" textFill=\"WHITE\">\r\n                                       <font>\r\n                                          <Font size=\"24.0\" />\r\n                                       </font>\r\n                                    </Label>\r\n                                 </children>\r\n                              </HBox>\r\n                              <VBox alignment=\"CENTER\" prefHeight=\"70.0\" prefWidth=\"528.0\">\r\n                                 <children>\r\n                                    <Label alignment=\"CENTER\" prefHeight=\"27.0\" prefWidth=\"457.0\" text=\"Retrouver les jeux en tendances ici\" textFill=\"WHITE\">\r\n                                       <font>\r\n                                          <Font size=\"18.0\" />\r\n                                       </font>\r\n                                    </Label>\r\n                                 </children>\r\n                              </VBox>\r\n                           </children>\r\n                        </HBox>\r\n                        <GridPane fx:id=\"gridPane\" hgap=\"50.0\" prefHeight=\"360.0\" prefWidth=\"1225.0\" vgap=\"50.0\">\r\n                          <columnConstraints>\r\n                            <ColumnConstraints hgrow=\"SOMETIMES\" minWidth=\"10.0\" prefWidth=\"100.0\" />\r\n                          </columnConstraints>\r\n                        </GridPane>\r\n                     </children>\r\n                  </VBox>\r\n               </children>\r\n            </VBox>\r\n         </content>\r\n      </ScrollPane>\r\n   </children>\r\n</VBox>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/sae_201/accueil.fxml b/src/main/resources/com/example/sae_201/accueil.fxml
+--- a/src/main/resources/com/example/sae_201/accueil.fxml	(revision 7d37066cda19fb3b76d1dd40abba3ffb66ba29c1)
++++ b/src/main/resources/com/example/sae_201/accueil.fxml	(date 1717935645608)
+@@ -39,13 +39,13 @@
+                      </font>
+                   </Label>
+                   <Pane prefHeight="100.0" prefWidth="159.0" />
+-                  <TextField prefHeight="26.0" prefWidth="300.0" promptText="Recherche ..." />
++                  <TextField fx:id="searchTextField" prefHeight="26.0" prefWidth="300.0" promptText="Recherche ..." />
+                   <Pane prefHeight="80.0" prefWidth="55.0" />
+                </children>
+             </HBox>
+             <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                <children>
+-                  <ImageView fitHeight="73.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true">
++                  <ImageView fx:id="loginImageView" fitHeight="73.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                         <Image url="@Images/compte.png" />
+                      </image>
+@@ -57,21 +57,21 @@
+       <HBox prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #484848;">
+          <children>
+             <Pane prefHeight="39.0" prefWidth="20.0" />
+-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #484848;" text="Mes Jeux" textFill="WHITE">
++            <Button fx:id="mesJeuxButton" onAction="#handleMesJeuxButtonAction" mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #484848;" text="Mes Jeux" textFill="WHITE">
+                <font>
+                   <Font size="18.0" />
+                </font>
+             </Button>
+             <Pane prefHeight="30.0" prefWidth="10.0" />
+             <Pane prefHeight="39.0" prefWidth="20.0" />
+-            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="78.0" style="-fx-background-color: #484848;" text="Tags" textFill="WHITE">
++            <Button fx:id="tagsButton" onAction="#handleTagsButtonAction" mnemonicParsing="false" prefHeight="39.0" prefWidth="78.0" style="-fx-background-color: #484848;" text="Tags" textFill="WHITE">
+                <font>
+                   <Font size="18.0" />
+                </font>
+             </Button>
+             <Pane prefHeight="30.0" prefWidth="10.0" />
+             <Pane prefHeight="30.0" prefWidth="10.0" />
+-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="127.0" style="-fx-background-color: #484848;" text="Créer un Tag" textFill="WHITE">
++            <Button fx:id="creerTagButton" onAction="#handleCreerTagButtonAction" mnemonicParsing="false" prefHeight="40.0" prefWidth="127.0" style="-fx-background-color: #484848;" text="Créer un Tag" textFill="WHITE">
+                <font>
+                   <Font size="18.0" />
+                </font>
+@@ -137,9 +137,9 @@
+                            </children>
+                         </HBox>
+                         <GridPane fx:id="gridPane" hgap="50.0" prefHeight="360.0" prefWidth="1225.0" vgap="50.0">
+-                          <columnConstraints>
+-                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+-                          </columnConstraints>
++                           <columnConstraints>
++                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
++                           </columnConstraints>
+                         </GridPane>
+                      </children>
+                   </VBox>
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"e0c726b3-c5af-401d-896c-47a945972e82\" name=\"Changes\" comment=\"Daniil YO JE CORRIGER LES FXML\" />\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Interface\" />\r\n        <option value=\"FxmlFile\" />\r\n        <option value=\"Class\" />\r\n        <option value=\"JavaFXApplication\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_BRANCH_BY_REPOSITORY\">\r\n      <map>\r\n        <entry key=\"$PROJECT_DIR$\" value=\"Daniil\" />\r\n      </map>\r\n    </option>\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"GitHubPullRequestSearchHistory\">{\r\n  &quot;lastFilter&quot;: {\r\n    &quot;state&quot;: &quot;OPEN&quot;,\r\n    &quot;assignee&quot;: &quot;MattisGoom64&quot;\r\n  }\r\n}</component>\r\n  <component name=\"GitToolBoxStore\">\r\n    <option name=\"projectConfigVersion\" value=\"5\" />\r\n    <option name=\"recentBranches\">\r\n      <RecentBranches>\r\n        <option name=\"branchesForRepo\">\r\n          <list>\r\n            <RecentBranchesForRepo>\r\n              <option name=\"branches\">\r\n                <list>\r\n                  <RecentBranch>\r\n                    <option name=\"branchName\" value=\"Mattis\" />\r\n                    <option name=\"lastUsedInstant\" value=\"1716965647\" />\r\n                  </RecentBranch>\r\n                  <RecentBranch>\r\n                    <option name=\"branchName\" value=\"master\" />\r\n                    <option name=\"lastUsedInstant\" value=\"1716965632\" />\r\n                  </RecentBranch>\r\n                </list>\r\n              </option>\r\n              <option name=\"repositoryRootUrl\" value=\"file://$PROJECT_DIR$\" />\r\n            </RecentBranchesForRepo>\r\n          </list>\r\n        </option>\r\n      </RecentBranches>\r\n    </option>\r\n  </component>\r\n  <component name=\"GithubPullRequestsUISettings\">{\r\n  &quot;selectedUrlAndAccountId&quot;: {\r\n    &quot;url&quot;: &quot;https://github.com/KuKaRaCHa-gg/SAE2.01.git&quot;,\r\n    &quot;accountId&quot;: &quot;facc958c-4d13-4b3d-b215-8972981d61a6&quot;\r\n  }\r\n}</component>\r\n  <component name=\"ProjectColorInfo\">{\r\n  &quot;customColor&quot;: &quot;&quot;,\r\n  &quot;associatedIndex&quot;: 3\r\n}</component>\r\n  <component name=\"ProjectId\" id=\"2h86xgtxxaxHzzbziUWYjrfsZMQ\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">{\r\n  &quot;keyToString&quot;: {\r\n    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,\r\n    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,\r\n    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,\r\n    &quot;git-widget-placeholder&quot;: &quot;Daniil&quot;,\r\n    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;19&quot;,\r\n    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,\r\n    &quot;last_directory_selection&quot;: &quot;C:/Users/10/Documents/GitHub/SAE2.01 Gestion Jeu/SAE2.01/src/main/java/com/example/sae_201&quot;,\r\n    &quot;last_opened_file_path&quot;: &quot;C:/Users/danii/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/javafx-sdk-19.0.2.1/lib/javafx.web.jar&quot;,\r\n    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,\r\n    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,\r\n    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;\r\n  }\r\n}</component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CreateClassDialog.RecentsKey\">\r\n      <recent name=\"gameModel\" />\r\n    </key>\r\n    <key name=\"CopyFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\10\\Documents\\GitHub\\SAE2.01 Gestion Jeu\\SAE2.01\\src\\main\\resources\\com\\example\\sae_201\" />\r\n    </key>\r\n    <key name=\"MoveFile.RECENT_KEYS\">\r\n      <recent name=\"C:\\Users\\danii\\Documents\\GitHub\\SAE2.01\\src\\main\\resources\\com\\example\\sae_201\" />\r\n    </key>\r\n    <key name=\"CopyClassDialog.RECENTS_KEY\">\r\n      <recent name=\"com.example.sae_201\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"HelloApplication\" type=\"Application\" factoryName=\"Application\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"com.example.sae_201.HelloApplication\" />\r\n      <module name=\"SAE_201\" />\r\n      <extension name=\"coverage\">\r\n        <pattern>\r\n          <option name=\"PATTERN\" value=\"com.example.sae_201.*\" />\r\n          <option name=\"ENABLED\" value=\"true\" />\r\n        </pattern>\r\n      </extension>\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"Application.HelloApplication\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"e0c726b3-c5af-401d-896c-47a945972e82\" name=\"Changes\" comment=\"\" />\r\n      <created>1716963609438</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1716963609438</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"Ajout des page\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716965045418</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716965045418</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Logo mis en place\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1716965964826</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1716965964826</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Mis en place des package pour l'api\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717230932728</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717230932728</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"Changement dans l'interface de l'acceuil et ajout du logo dans l'icone de l'application\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717232004431</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717232004431</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"Quelque changement de l'interface accueil\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717232921218</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717232921218</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Quelque changement de l'interface accueil\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717233038633</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717233038633</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00007\" summary=\"Header de selection mis en place dans l'interface\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717242131440</created>\r\n      <option name=\"number\" value=\"00007\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00007\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717242131440</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00008\" summary=\"Creation des classes pour faire les recherches des jeux\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717415618396</created>\r\n      <option name=\"number\" value=\"00008\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00008\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717415618396</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00009\" summary=\"Creation des classes pour faire la persistence du projet, la sauvegarde local\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717415887241</created>\r\n      <option name=\"number\" value=\"00009\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00009\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717415887241</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00010\" summary=\"Encore des erreur mais sa s&quot;ouvre\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717424574544</created>\r\n      <option name=\"number\" value=\"00010\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00010\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717424574544</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00011\" summary=\"Corriger de l'erreur mais encore quelque erreur\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717425889981</created>\r\n      <option name=\"number\" value=\"00011\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00011\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717425889981</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00012\" summary=\"ça marche ! enfin... presque\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717426660908</created>\r\n      <option name=\"number\" value=\"00012\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00012\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717426660908</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00013\" summary=\"Correction en plus mais pas fini\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717427980271</created>\r\n      <option name=\"number\" value=\"00013\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00013\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717427980271</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00014\" summary=\"Ouais bah, si sa pete c'est la faute a noé\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717674552367</created>\r\n      <option name=\"number\" value=\"00014\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00014\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717674552367</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00015\" summary=\"Ouais bah, si sa pete c'est la faute a noé\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717674936334</created>\r\n      <option name=\"number\" value=\"00015\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00015\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717674936334</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00016\" summary=\"Ouais bah, si sa pete c'est la faute a daniil\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717679286757</created>\r\n      <option name=\"number\" value=\"00016\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00016\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717679286757</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00017\" summary=\"Daniil\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717681053645</created>\r\n      <option name=\"number\" value=\"00017\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00017\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717681053645</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00018\" summary=\"Daniil\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717681305332</created>\r\n      <option name=\"number\" value=\"00018\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00018\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717681305332</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00019\" summary=\"Daniil YO JE CORRIGER LES FXML\">\r\n      <option name=\"closed\" value=\"true\" />\r\n      <created>1717686080988</created>\r\n      <option name=\"number\" value=\"00019\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00019\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1717686080988</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"20\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <MESSAGE value=\"Ajout des page\" />\r\n    <MESSAGE value=\"Test\" />\r\n    <MESSAGE value=\"Logo mis en place\" />\r\n    <MESSAGE value=\"Mis en place des package pour l'api\" />\r\n    <MESSAGE value=\"Changement dans l'interface de l'acceuil et ajout du logo dans l'icone de l'application\" />\r\n    <MESSAGE value=\"Quelque changement de l'interface accueil\" />\r\n    <MESSAGE value=\"Header de selection mis en place dans l'interface\" />\r\n    <MESSAGE value=\"Creation des classes pour faire les recherches des jeux\" />\r\n    <MESSAGE value=\"Creation des classes pour faire la persistence du projet, la sauvegarde local\" />\r\n    <MESSAGE value=\"Encore des erreur mais sa s&quot;ouvre\" />\r\n    <MESSAGE value=\"Corriger de l'erreur mais encore quelque erreur\" />\r\n    <MESSAGE value=\"ça marche ! enfin... presque\" />\r\n    <MESSAGE value=\"Correction en plus mais pas fini\" />\r\n    <MESSAGE value=\"Ouais bah, si sa pete c'est la faute a noé\" />\r\n    <MESSAGE value=\"Ouais bah, si sa pete c'est la faute a daniil\" />\r\n    <MESSAGE value=\"Daniil\" />\r\n    <MESSAGE value=\"Daniil YO JE CORRIGER LES FXML\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Daniil YO JE CORRIGER LES FXML\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 7d37066cda19fb3b76d1dd40abba3ffb66ba29c1)
++++ b/.idea/workspace.xml	(date 1717935645604)
+@@ -4,7 +4,19 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Daniil YO JE CORRIGER LES FXML" />
++    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Daniil YO JE CORRIGER LES FXML">
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/CreerTag.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeu.java" afterDir="false" />
++      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/Recherche.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/Main.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/NavigationUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/NavigationUtil.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/RechercheParTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/RechercheParTag.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/CreerTag.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/CreerTag.fxml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/RechercheParTAG.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/RechercheParTAG.fxml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/accueil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/accueil.fxml" afterDir="false" />
++    </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+@@ -15,8 +27,8 @@
+       <list>
+         <option value="Interface" />
+         <option value="FxmlFile" />
++        <option value="JavaFXApplication" />
+         <option value="Class" />
+-        <option value="JavaFXApplication" />
+       </list>
+     </option>
+   </component>
+@@ -92,6 +104,7 @@
+ }</component>
+   <component name="RecentsManager">
+     <key name="CreateClassDialog.RecentsKey">
++      <recent name="com.example.sae_201" />
+       <recent name="gameModel" />
+     </key>
+     <key name="CopyFile.RECENT_KEYS">
+Index: src/main/java/com/example/sae_201/CreerTag.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/sae_201/CreerTag.java b/src/main/java/com/example/sae_201/CreerTag.java
+new file mode 100644
+--- /dev/null	(date 1717935645604)
++++ b/src/main/java/com/example/sae_201/CreerTag.java	(date 1717935645604)
+@@ -0,0 +1,13 @@
++package com.example.sae_201;
++
++import javafx.stage.Stage;
++
++public class CreerTag {
++    private Stage stage;
++
++    public void setStage(Stage stage) {
++        this.stage = stage;
++    }
++
++    // Autres méthodes et logique du contrôleur...
++}
+Index: src/main/java/com/example/sae_201/NavigationUtil.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.sae_201;\r\n\r\nimport javafx.fxml.FXMLLoader;\r\nimport javafx.scene.Scene;\r\nimport javafx.stage.Stage;\r\n\r\nimport java.io.IOException;\r\n\r\npublic class NavigationUtil {\r\n\r\n    public static void navigateTo(Stage stage, String fxmlFile) {\r\n        try {\r\n            FXMLLoader loader = new FXMLLoader(NavigationUtil.class.getResource(fxmlFile));\r\n            Scene scene = new Scene(loader.load());\r\n            Object controller = loader.getController();\r\n            if (controller instanceof MainScreenController) {\r\n                ((MainScreenController) controller).setStage(stage);\r\n            } else if (controller instanceof HelloController) {\r\n                ((HelloController) controller).setStage(stage);\r\n            } else if (controller instanceof PageJeuController) {\r\n                ((PageJeuController) controller).setStage(stage);\r\n            }\r\n            stage.setScene(scene);\r\n            stage.show();\r\n        } catch (IOException e) {\r\n            e.printStackTrace();\r\n        }\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/sae_201/NavigationUtil.java b/src/main/java/com/example/sae_201/NavigationUtil.java
+--- a/src/main/java/com/example/sae_201/NavigationUtil.java	(revision 7d37066cda19fb3b76d1dd40abba3ffb66ba29c1)
++++ b/src/main/java/com/example/sae_201/NavigationUtil.java	(date 1717935645605)
+@@ -1,25 +1,32 @@
+ package com.example.sae_201;
+ 
+ import javafx.fxml.FXMLLoader;
++import javafx.scene.Parent;
+ import javafx.scene.Scene;
+ import javafx.stage.Stage;
+-
+ import java.io.IOException;
+ 
+ public class NavigationUtil {
+ 
+     public static void navigateTo(Stage stage, String fxmlFile) {
+         try {
+-            FXMLLoader loader = new FXMLLoader(NavigationUtil.class.getResource(fxmlFile));
+-            Scene scene = new Scene(loader.load());
+-            Object controller = loader.getController();
+-            if (controller instanceof MainScreenController) {
+-                ((MainScreenController) controller).setStage(stage);
+-            } else if (controller instanceof HelloController) {
+-                ((HelloController) controller).setStage(stage);
+-            } else if (controller instanceof PageJeuController) {
+-                ((PageJeuController) controller).setStage(stage);
++            FXMLLoader fxmlLoader = new FXMLLoader(NavigationUtil.class.getResource(fxmlFile));
++            Parent root = fxmlLoader.load();
++            Scene scene = new Scene(root, 1225, 745);
++            Object controller = fxmlLoader.getController();
++
++            if (controller instanceof accueil) {
++                ((accueil) controller).setStage(stage);
++            } else if (controller instanceof CreerTag) {
++                ((CreerTag) controller).setStage(stage);
++            } else if (controller instanceof PageJeu) {
++                ((PageJeu) controller).setStage(stage);
++            } else if (controller instanceof Recherche) {
++                ((Recherche) controller).setStage(stage);
++            } else if (controller instanceof RechercheParTag) {
++                ((RechercheParTag) controller).setStage(stage);
+             }
++
+             stage.setScene(scene);
+             stage.show();
+         } catch (IOException e) {
+Index: src/main/java/com/example/sae_201/Recherche.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/sae_201/Recherche.java b/src/main/java/com/example/sae_201/Recherche.java
+new file mode 100644
+--- /dev/null	(date 1717935645606)
++++ b/src/main/java/com/example/sae_201/Recherche.java	(date 1717935645606)
+@@ -0,0 +1,13 @@
++package com.example.sae_201;
++
++import javafx.stage.Stage;
++
++public class Recherche {
++    private Stage stage;
++
++    public void setStage(Stage stage) {
++        this.stage = stage;
++    }
++
++    // Autres méthodes et logique du contrôleur...
++}
+Index: src/main/java/com/example/sae_201/PageJeu.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/sae_201/PageJeu.java b/src/main/java/com/example/sae_201/PageJeu.java
+new file mode 100644
+--- /dev/null	(date 1717935645606)
++++ b/src/main/java/com/example/sae_201/PageJeu.java	(date 1717935645606)
+@@ -0,0 +1,13 @@
++package com.example.sae_201;
++
++import javafx.stage.Stage;
++
++public class PageJeu {
++    private Stage stage;
++
++    public void setStage(Stage stage) {
++        this.stage = stage;
++    }
++
++    // Autres méthodes et logique du contrôleur...
++}
+Index: src/main/resources/com/example/sae_201/CreerTag.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import javafx.scene.control.*?>\r\n<?import javafx.scene.image.*?>\r\n<?import javafx.scene.layout.*?>\r\n<?import javafx.scene.text.Font?>\r\n\r\n<VBox alignment=\"TOP_CENTER\" prefHeight=\"900.0\" prefWidth=\"1020.0\" style=\"-fx-background-color: #323232;\" xmlns=\"http://javafx.com/javafx/19\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.sae_201.CreerTagController\">\r\n    <children>\r\n        <HBox alignment=\"CENTER_LEFT\" prefHeight=\"75.0\" prefWidth=\"1600.0\" style=\"-fx-background-color: #000000;\">\r\n            <children>\r\n                <ImageView fx:id=\"logoImageView\" fitHeight=\"60.0\" fitWidth=\"60.0\" pickOnBounds=\"true\" preserveRatio=\"true\" />\r\n                <Label fx:id=\"titleLabel\" prefHeight=\"35.0\" prefWidth=\"164.0\" style=\"-fx-font-size: 24px;\" text=\"GreenLog\" textFill=\"white\" />\r\n                <Pane prefWidth=\"318.0\" />\r\n                <TextField fx:id=\"searchTextField\" prefHeight=\"31.0\" prefWidth=\"160.0\" promptText=\"Recherche ...\" style=\"-fx-background-color: #3C3C3C; -fx-text-fill: white;\" />\r\n                <Pane prefWidth=\"255.0\" />\r\n                <Button fx:id=\"tagButton\" mnemonicParsing=\"false\" prefHeight=\"39.0\" prefWidth=\"175.0\" style=\"-fx-background-color: #3a3a3a; -fx-text-fill: white;\" text=\"TAG+\" />\r\n                <Pane prefWidth=\"194.0\" />\r\n                <ImageView fx:id=\"loginImageView\" fitHeight=\"60.0\" fitWidth=\"60.0\" pickOnBounds=\"true\" preserveRatio=\"true\" />\r\n            </children>\r\n        </HBox>\r\n        <Pane prefHeight=\"30.0\" prefWidth=\"200.0\" style=\"-fx-background-color: #484848;\">\r\n            <children>\r\n                <Button fx:id=\"mesJeuxButton\" layoutX=\"38.0\" layoutY=\"1.0\" onAction=\"#handleMesJeuxButtonAction\" text=\"Mes Jeux\" />\r\n                <Button fx:id=\"tagsButton\" layoutX=\"129.0\" layoutY=\"1.0\" onAction=\"#handleTagsButtonAction\" text=\"Tags\" />\r\n                <Button fx:id=\"creerTagButton\" layoutX=\"190.0\" layoutY=\"1.0\" onAction=\"#handleCreerTagButtonAction\" text=\"Créer un Tag\" />\r\n            </children>\r\n        </Pane>\r\n        <Label fx:id=\"titreCreerTag\" prefHeight=\"176.0\" prefWidth=\"533.0\" text=\"Créer un tag\" textAlignment=\"CENTER\" textFill=\"WHITE\">\r\n            <font>\r\n                <Font size=\"94.0\" />\r\n            </font>\r\n        </Label>\r\n        <VBox prefHeight=\"619.0\" prefWidth=\"1020.0\">\r\n            <children>\r\n                <Pane prefHeight=\"200.0\" prefWidth=\"200.0\">\r\n                    <children>\r\n                        <TextField fx:id=\"ecrireNomTag\" alignment=\"CENTER\" layoutX=\"183.0\" layoutY=\"50.0\" prefHeight=\"71.0\" prefWidth=\"658.0\" promptText=\"Nom du tag\" style=\"-fx-background-color: #323232; -fx-border-color: #ffffff;\">\r\n                            <font>\r\n                                <Font size=\"32.0\" />\r\n                            </font>\r\n                        </TextField>\r\n                    </children>\r\n                </Pane>\r\n                <Pane prefHeight=\"292.0\" prefWidth=\"1020.0\">\r\n                    <children>\r\n                        <TextField fx:id=\"ecrireDescTag\" alignment=\"TOP_LEFT\" layoutX=\"65.0\" prefHeight=\"250.0\" prefWidth=\"905.0\" promptText=\"Description\" style=\"-fx-background-color: #323232; -fx-border-color: #ffffff;\">\r\n                            <font>\r\n                                <Font size=\"39.0\" />\r\n                            </font>\r\n                        </TextField>\r\n                    </children>\r\n                </Pane>\r\n                <Pane prefHeight=\"200.0\" prefWidth=\"200.0\">\r\n                    <children>\r\n                        <Button fx:id=\"creerTagButton\" layoutX=\"805.0\" layoutY=\"8.0\" mnemonicParsing=\"false\" prefHeight=\"31.0\" prefWidth=\"161.0\" style=\"-fx-border-radius: 180;\" text=\"CRÉER\" textFill=\"#58c358\" onAction=\"#handleCreerTagButtonAction\">\r\n                            <font>\r\n                                <Font size=\"22.0\" />\r\n                            </font>\r\n                        </Button>\r\n                    </children>\r\n                </Pane>\r\n            </children>\r\n        </VBox>\r\n    </children>\r\n</VBox>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/sae_201/CreerTag.fxml b/src/main/resources/com/example/sae_201/CreerTag.fxml
+--- a/src/main/resources/com/example/sae_201/CreerTag.fxml	(revision 7d37066cda19fb3b76d1dd40abba3ffb66ba29c1)
++++ b/src/main/resources/com/example/sae_201/CreerTag.fxml	(date 1717935645607)
+@@ -1,11 +1,13 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ 
++<?import java.lang.*?>
++<?import javafx.scene.text.*?>
+ <?import javafx.scene.control.*?>
+ <?import javafx.scene.image.*?>
+ <?import javafx.scene.layout.*?>
+ <?import javafx.scene.text.Font?>
+ 
+-<VBox alignment="TOP_CENTER" prefHeight="900.0" prefWidth="1020.0" style="-fx-background-color: #323232;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sae_201.CreerTagController">
++<VBox alignment="TOP_CENTER" prefHeight="900.0" prefWidth="1020.0" style="-fx-background-color: #323232;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sae_201.CreerTagController">
+     <children>
+         <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="1600.0" style="-fx-background-color: #000000;">
+             <children>
+@@ -14,7 +16,6 @@
+                 <Pane prefWidth="318.0" />
+                 <TextField fx:id="searchTextField" prefHeight="31.0" prefWidth="160.0" promptText="Recherche ..." style="-fx-background-color: #3C3C3C; -fx-text-fill: white;" />
+                 <Pane prefWidth="255.0" />
+-                <Button fx:id="tagButton" mnemonicParsing="false" prefHeight="39.0" prefWidth="175.0" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" text="TAG+" />
+                 <Pane prefWidth="194.0" />
+                 <ImageView fx:id="loginImageView" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
+             </children>
+@@ -53,7 +54,7 @@
+                 </Pane>
+                 <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+-                        <Button fx:id="creerTagButton" layoutX="805.0" layoutY="8.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="161.0" style="-fx-border-radius: 180;" text="CRÉER" textFill="#58c358" onAction="#handleCreerTagButtonAction">
++                        <Button fx:id="creerTagButton" layoutX="805.0" layoutY="8.0" mnemonicParsing="false" onAction="#handleCreerTagButtonAction" prefHeight="31.0" prefWidth="161.0" style="-fx-border-radius: 180;" text="CRÉER" textFill="#58c358">
+                             <font>
+                                 <Font size="22.0" />
+                             </font>
+Index: src/main/resources/com/example/sae_201/RechercheParTAG.fxml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n\r\n<?import java.lang.*?>\r\n<?import javafx.geometry.*?>\r\n<?import javafx.scene.control.*?>\r\n<?import javafx.scene.image.*?>\r\n<?import javafx.scene.layout.*?>\r\n<?import javafx.scene.text.*?>\r\n\r\n<VBox alignment=\"TOP_CENTER\" prefHeight=\"720.0\" prefWidth=\"1020.0\" style=\"-fx-background-color: #323232;\" xmlns=\"http://javafx.com/javafx/8\" xmlns:fx=\"http://javafx.com/fxml/1\" fx:controller=\"com.example.sae_201.accueil\">\r\n    <children>\r\n        <HBox prefHeight=\"100.0\" prefWidth=\"1020.0\" style=\"-fx-background-color: #000000;\">\r\n            <children>\r\n                <HBox prefHeight=\"100.0\" prefWidth=\"200.0\">\r\n                    <children>\r\n                        <ImageView fx:id=\"logoImageView\" fitHeight=\"80.0\" fitWidth=\"100.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\r\n                            <image>\r\n                                <Image url=\"@Images/LOGO.png\" />\r\n                            </image>\r\n                        </ImageView>\r\n                    </children>\r\n                </HBox>\r\n                <HBox alignment=\"CENTER\" prefHeight=\"80.0\" prefWidth=\"981.0\">\r\n                    <children>\r\n                        <Pane prefHeight=\"80.0\" prefWidth=\"250.0\" />\r\n                        <TextField fx:id=\"searchTextField\" prefHeight=\"26.0\" prefWidth=\"300.0\" promptText=\"Recherche ...\" />\r\n                        <Pane prefHeight=\"80.0\" prefWidth=\"200.0\" />\r\n                        <Button fx:id=\"tagButton\" mnemonicParsing=\"false\" prefHeight=\"31.0\" prefWidth=\"68.0\" text=\"+ Tag\" />\r\n                        <Pane prefHeight=\"80.0\" prefWidth=\"55.0\" />\r\n                    </children>\r\n                </HBox>\r\n                <HBox alignment=\"TOP_RIGHT\" prefHeight=\"100.0\" prefWidth=\"200.0\">\r\n                    <children>\r\n                        <ImageView fx:id=\"accountImageView\" fitHeight=\"73.0\" fitWidth=\"320.0\" pickOnBounds=\"true\" preserveRatio=\"true\">\r\n                            <image>\r\n                                <Image url=\"@Images/compte.png\" />\r\n                            </image>\r\n                        </ImageView>\r\n                    </children>\r\n                </HBox>\r\n            </children>\r\n        </HBox>\r\n      <HBox prefHeight=\"50.0\" prefWidth=\"200.0\" style=\"-fx-background-color: #484848;\">\r\n         <children>\r\n            <AnchorPane prefHeight=\"20.0\" prefWidth=\"20.0\" />\r\n                <Button fx:id=\"mesJeuxButton\" onAction=\"#handleMesJeuxButtonAction\" prefHeight=\"59.0\" prefWidth=\"81.0\" style=\"-fx-background-color: #484848; -fx-text-fill: WHITE;\" text=\"Mes Jeux\" />\r\n            <AnchorPane prefHeight=\"20.0\" prefWidth=\"20.0\" />\r\n                <Button fx:id=\"tagsButton\" onAction=\"#handleTagsButtonAction\" prefHeight=\"57.0\" prefWidth=\"51.0\" style=\"-fx-background-color: #484848; -fx-text-fill: WHITE;\" text=\"Tags\" />\r\n            <AnchorPane prefHeight=\"20.0\" prefWidth=\"20.0\" />\r\n                <Button fx:id=\"creerTagButton\" onAction=\"#handleCreerTagButtonAction\" prefHeight=\"58.0\" prefWidth=\"105.0\" style=\"-fx-background-color: #484848; -fx-text-fill: WHITE;\" text=\"Créer un Tag\" />\r\n         </children>\r\n      </HBox>\r\n        <HBox alignment=\"BASELINE_CENTER\" prefHeight=\"33.0\" prefWidth=\"1020.0\">\r\n            <children>\r\n                <Pane prefHeight=\"50.0\" prefWidth=\"50.0\" />\r\n                <MenuButton fx:id=\"tagsMenuButton\" mnemonicParsing=\"false\" prefHeight=\"50.0\" prefWidth=\"150.0\" style=\"-fx-background-color: black;\" text=\"Mes Tags\" textFill=\"WHITE\">\r\n                    <items>\r\n                        <MenuItem mnemonicParsing=\"false\" text=\"Action 1\" />\r\n                        <MenuItem mnemonicParsing=\"false\" text=\"Action 2\" />\r\n                    </items>\r\n                </MenuButton>\r\n                <Pane prefHeight=\"50.0\" prefWidth=\"50.0\" />\r\n                <MenuButton fx:id=\"platformMenuButton\" mnemonicParsing=\"false\" prefHeight=\"50.0\" prefWidth=\"150.0\" style=\"-fx-background-color: black;\" text=\"Plateforme\" textFill=\"WHITE\">\r\n                    <items>\r\n                        <MenuItem mnemonicParsing=\"false\" text=\"Action 1\" />\r\n                        <MenuItem mnemonicParsing=\"false\" text=\"Action 2\" />\r\n                    </items>\r\n                </MenuButton>\r\n                <Pane prefHeight=\"50.0\" prefWidth=\"50.0\" />\r\n                <MenuButton fx:id=\"genreMenuButton\" mnemonicParsing=\"false\" prefHeight=\"50.0\" prefWidth=\"150.0\" style=\"-fx-background-color: black;\" text=\"Genre\" textFill=\"WHITE\">\r\n                    <items>\r\n                        <MenuItem mnemonicParsing=\"false\" text=\"Action 1\" />\r\n                        <MenuItem mnemonicParsing=\"false\" text=\"Action 2\" />\r\n                    </items>\r\n                </MenuButton>\r\n                <Pane prefHeight=\"50.0\" prefWidth=\"50.0\" />\r\n                <MenuButton fx:id=\"reviewMenuButton\" mnemonicParsing=\"false\" prefHeight=\"50.0\" prefWidth=\"150.0\" style=\"-fx-background-color: black;\" text=\"Avis\" textFill=\"WHITE\">\r\n                    <items>\r\n                        <MenuItem mnemonicParsing=\"false\" text=\"Action 1\" />\r\n                        <MenuItem mnemonicParsing=\"false\" text=\"Action 2\" />\r\n                    </items>\r\n                </MenuButton>\r\n            </children>\r\n        </HBox>\r\n        <HBox prefHeight=\"164.0\" prefWidth=\"1020.0\">\r\n            <children>\r\n                <Pane prefHeight=\"164.0\" prefWidth=\"30.0\" />\r\n                <VBox prefHeight=\"200.0\" prefWidth=\"200.0\">\r\n                    <children>\r\n                        <ImageView fx:id=\"gameImageView1\" fitHeight=\"150.0\" fitWidth=\"200.0\" pickOnBounds=\"true\" preserveRatio=\"true\" />\r\n                        <Label fx:id=\"gameLabel1\" opacity=\"0.0\" text=\"Jeu 1\" textFill=\"WHITE\" />\r\n                    </children>\r\n                </VBox>\r\n                <Pane prefHeight=\"164.0\" prefWidth=\"30.0\" />\r\n                <VBox prefHeight=\"200.0\" prefWidth=\"200.0\">\r\n                    <children>\r\n                        <ImageView fx:id=\"gameImageView2\" fitHeight=\"150.0\" fitWidth=\"200.0\" pickOnBounds=\"true\" preserveRatio=\"true\" />\r\n                        <Label fx:id=\"gameLabel2\" opacity=\"0.0\" text=\"Jeu 2\" textFill=\"WHITE\" />\r\n                    </children>\r\n                </VBox>\r\n                <Pane prefHeight=\"164.0\" prefWidth=\"30.0\" />\r\n                <VBox prefHeight=\"200.0\" prefWidth=\"200.0\">\r\n                    <children>\r\n                        <ImageView fx:id=\"gameImageView3\" fitHeight=\"150.0\" fitWidth=\"200.0\" pickOnBounds=\"true\" preserveRatio=\"true\" />\r\n                        <Label fx:id=\"gameLabel3\" opacity=\"0.0\" text=\"Jeu 3\" textFill=\"WHITE\" />\r\n                    </children>\r\n                </VBox>\r\n                <Pane prefHeight=\"164.0\" prefWidth=\"30.0\" />\r\n                <VBox prefHeight=\"200.0\" prefWidth=\"200.0\">\r\n                    <children>\r\n                        <ImageView fx:id=\"gameImageView4\" fitHeight=\"150.0\" fitWidth=\"200.0\" pickOnBounds=\"true\" preserveRatio=\"true\" />\r\n                        <Label fx:id=\"gameLabel4\" opacity=\"0.0\" text=\"Jeu 4\" textFill=\"WHITE\" />\r\n                    </children>\r\n                </VBox>\r\n                <Pane prefHeight=\"164.0\" prefWidth=\"30.0\" />\r\n                <VBox prefHeight=\"200.0\" prefWidth=\"200.0\">\r\n                    <children>\r\n                        <ImageView fx:id=\"gameImageView5\" fitHeight=\"150.0\" fitWidth=\"200.0\" pickOnBounds=\"true\" preserveRatio=\"true\" />\r\n                        <Label fx:id=\"gameLabel5\" opacity=\"0.0\" text=\"Jeu 5\" textFill=\"WHITE\" />\r\n                    </children>\r\n                </VBox>\r\n            </children>\r\n        </HBox>\r\n        <HBox prefHeight=\"164.0\" prefWidth=\"1020.0\">\r\n            <children>\r\n                <Pane prefHeight=\"164.0\" prefWidth=\"30.0\" />\r\n                <VBox prefHeight=\"200.0\" prefWidth=\"200.0\">\r\n                    <children>\r\n                        <ImageView fx:id=\"gameImageView6\" fitHeight=\"150.0\" fitWidth=\"200.0\" pickOnBounds=\"true\" preserveRatio=\"true\" />\r\n                        <Label fx:id=\"gameLabel6\" opacity=\"0.0\" text=\"Jeu 6\" textFill=\"WHITE\" />\r\n                    </children>\r\n                </VBox>\r\n                <Pane prefHeight=\"164.0\" prefWidth=\"30.0\" />\r\n                <VBox prefHeight=\"200.0\" prefWidth=\"200.0\">\r\n                    <children>\r\n                        <ImageView fx:id=\"gameImageView7\" fitHeight=\"150.0\" fitWidth=\"200.0\" pickOnBounds=\"true\" preserveRatio=\"true\" />\r\n                        <Label fx:id=\"gameLabel7\" opacity=\"0.0\" text=\"Jeu 7\" textFill=\"WHITE\" />\r\n                    </children>\r\n                </VBox>\r\n                <Pane prefHeight=\"164.0\" prefWidth=\"30.0\" />\r\n                <VBox prefHeight=\"200.0\" prefWidth=\"200.0\">\r\n                    <children>\r\n                        <ImageView fx:id=\"gameImageView8\" fitHeight=\"150.0\" fitWidth=\"200.0\" pickOnBounds=\"true\" preserveRatio=\"true\" />\r\n                        <Label fx:id=\"gameLabel8\" opacity=\"0.0\" text=\"Jeu 8\" textFill=\"WHITE\" />\r\n                    </children>\r\n                </VBox>\r\n                <Pane prefHeight=\"164.0\" prefWidth=\"30.0\" />\r\n                <VBox prefHeight=\"200.0\" prefWidth=\"200.0\">\r\n                    <children>\r\n                        <ImageView fx:id=\"gameImageView9\" fitHeight=\"150.0\" fitWidth=\"200.0\" pickOnBounds=\"true\" preserveRatio=\"true\" />\r\n                        <Label fx:id=\"gameLabel9\" opacity=\"0.0\" text=\"Jeu 9\" textFill=\"WHITE\" />\r\n                    </children>\r\n                </VBox>\r\n                <Pane prefHeight=\"164.0\" prefWidth=\"30.0\" />\r\n                <VBox prefHeight=\"200.0\" prefWidth=\"200.0\">\r\n                    <children>\r\n                        <ImageView fx:id=\"gameImageView10\" fitHeight=\"150.0\" fitWidth=\"200.0\" pickOnBounds=\"true\" preserveRatio=\"true\" />\r\n                        <Label fx:id=\"gameLabel10\" opacity=\"0.0\" text=\"Jeu 10\" textFill=\"WHITE\" />\r\n                    </children>\r\n                </VBox>\r\n            </children>\r\n        </HBox>\r\n    </children>\r\n</VBox>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/com/example/sae_201/RechercheParTAG.fxml b/src/main/resources/com/example/sae_201/RechercheParTAG.fxml
+--- a/src/main/resources/com/example/sae_201/RechercheParTAG.fxml	(revision 7d37066cda19fb3b76d1dd40abba3ffb66ba29c1)
++++ b/src/main/resources/com/example/sae_201/RechercheParTAG.fxml	(date 1717935645608)
+@@ -40,16 +40,16 @@
+                 </HBox>
+             </children>
+         </HBox>
+-      <HBox prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #484848;">
+-         <children>
+-            <AnchorPane prefHeight="20.0" prefWidth="20.0" />
++        <HBox fx:id="ajoutRecLabel" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #484848;">
++            <children>
++                <AnchorPane prefHeight="20.0" prefWidth="20.0" />
+                 <Button fx:id="mesJeuxButton" onAction="#handleMesJeuxButtonAction" prefHeight="59.0" prefWidth="81.0" style="-fx-background-color: #484848; -fx-text-fill: WHITE;" text="Mes Jeux" />
+-            <AnchorPane prefHeight="20.0" prefWidth="20.0" />
++                <AnchorPane prefHeight="20.0" prefWidth="20.0" />
+                 <Button fx:id="tagsButton" onAction="#handleTagsButtonAction" prefHeight="57.0" prefWidth="51.0" style="-fx-background-color: #484848; -fx-text-fill: WHITE;" text="Tags" />
+-            <AnchorPane prefHeight="20.0" prefWidth="20.0" />
++                <AnchorPane prefHeight="20.0" prefWidth="20.0" />
+                 <Button fx:id="creerTagButton" onAction="#handleCreerTagButtonAction" prefHeight="58.0" prefWidth="105.0" style="-fx-background-color: #484848; -fx-text-fill: WHITE;" text="Créer un Tag" />
+-         </children>
+-      </HBox>
++            </children>
++        </HBox>
+         <HBox alignment="BASELINE_CENTER" prefHeight="33.0" prefWidth="1020.0">
+             <children>
+                 <Pane prefHeight="50.0" prefWidth="50.0" />
