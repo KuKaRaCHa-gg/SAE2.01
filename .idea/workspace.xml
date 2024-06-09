@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Début de la recherche de jeu par titre">
+    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="La recherche de jeu par titre avance mais pas opperationelle encore">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/SAE_201/apiManagement/APIRechercheManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/apiManagement/APIRechercheManager.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/apiManagement/APIRechercheManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiManagement/APIRechercheManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/rechercheController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/rechercheController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/accueil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/accueil.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -364,7 +361,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717943171700</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="La recherche de jeu par titre avance mais pas opperationelle encore">
+      <option name="closed" value="true" />
+      <created>1717945772550</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1717945772550</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -379,7 +384,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Test" />
     <MESSAGE value="Logo mis en place" />
     <MESSAGE value="Mis en place des package pour l'api" />
     <MESSAGE value="Changement dans l'interface de l'acceuil et ajout du logo dans l'icone de l'application" />
@@ -404,6 +408,7 @@
     <MESSAGE value="Je push (si ça pete c'est la faute a daniil)" />
     <MESSAGE value="Le requirement s'affiche parfaitement" />
     <MESSAGE value="Début de la recherche de jeu par titre" />
-    <option name="LAST_COMMIT_MESSAGE" value="Début de la recherche de jeu par titre" />
+    <MESSAGE value="La recherche de jeu par titre avance mais pas opperationelle encore" />
+    <option name="LAST_COMMIT_MESSAGE" value="La recherche de jeu par titre avance mais pas opperationelle encore" />
   </component>
 </project>

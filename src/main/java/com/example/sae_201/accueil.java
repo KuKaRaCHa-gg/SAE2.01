@@ -307,8 +307,8 @@ public class accueil {
                 vBox.setOnMouseClicked(mouseEvent -> {
                     jeuSelectionner(game.getId());
                     Stage stage = (Stage) vBox.getScene().getWindow();
-                    stage.setScene(scene);
                 });
+                System.out.println(game.getName());
                 searchGameController.getGridRecherchePane().add(vBox, compteur, compteur2);
                 if (compteur == 3) {
                     compteur = 0;
@@ -320,6 +320,7 @@ public class accueil {
 
 
         }
+        searchGameController.getEntrySearch().setText(searchedText);
         Stage stage = (Stage) entryAccueil.getScene().getWindow();
         stage.setScene(searchScene);
 
