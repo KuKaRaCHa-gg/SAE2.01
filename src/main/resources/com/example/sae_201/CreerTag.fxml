@@ -23,7 +23,7 @@
             <children>
                 <Button fx:id="mesJeuxButton" layoutX="38.0" layoutY="1.0" onAction="#handleMesJeuxButtonAction" text="Mes Jeux" />
                 <Button fx:id="tagsButton" layoutX="129.0" layoutY="1.0" onAction="#handleTagsButtonAction" text="Tags" />
-                <Button fx:id="creerTagButton" layoutX="190.0" layoutY="1.0" onAction="#handleCreerTagButtonAction" text="Créer un Tag" />
+                <Button fx:id="creerTagNavButton" layoutX="190.0" layoutY="1.0" onAction="#handleCreerTagButtonAction" text="Créer un Tag" />
             </children>
         </Pane>
         <Label fx:id="titreCreerTag" prefHeight="176.0" prefWidth="533.0" text="Créer un tag" textAlignment="CENTER" textFill="WHITE">
@@ -35,7 +35,7 @@
             <children>
                 <Pane prefHeight="200.0" prefWidth="200.0">
                     <children>
-                        <TextField fx:id="ecrireNomTag" alignment="CENTER" layoutX="183.0" layoutY="50.0" prefHeight="71.0" prefWidth="658.0" promptText="Nom du tag" style="-fx-background-color: #323232; -fx-border-color: #ffffff;">
+                        <TextField fx:id="ecrireNomTag" alignment="CENTER" layoutX="183.0" layoutY="50.0" prefHeight="71.0" prefWidth="658.0" promptText="Nom du tag" style="-fx-background-color: #323232; -fx-border-color: #ffffff; -fx-text-fill: white;">
                             <font>
                                 <Font size="32.0" />
                             </font>
@@ -44,7 +44,7 @@
                 </Pane>
                 <Pane prefHeight="292.0" prefWidth="1020.0">
                     <children>
-                        <TextField fx:id="ecrireDescTag" alignment="TOP_LEFT" layoutX="65.0" prefHeight="250.0" prefWidth="905.0" promptText="Description" style="-fx-background-color: #323232; -fx-border-color: #ffffff;">
+                        <TextField fx:id="ecrireDescTag" alignment="TOP_LEFT" layoutX="65.0" prefHeight="250.0" prefWidth="905.0" promptText="Description" style="-fx-background-color: #323232; -fx-border-color: #ffffff; -fx-text-fill: white;">
                             <font>
                                 <Font size="39.0" />
                             </font>
@@ -53,6 +53,7 @@
                 </Pane>
                 <Pane prefHeight="200.0" prefWidth="200.0">
                     <children>
+                        <ColorPicker fx:id="colorPicker" layoutX="65.0" layoutY="8.0" prefHeight="31.0" prefWidth="161.0" />
                         <Button fx:id="creerTagButton" layoutX="805.0" layoutY="8.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="161.0" style="-fx-border-radius: 180;" text="CRÉER" textFill="#58c358" onAction="#handleCreerTagButtonAction">
                             <font>
                                 <Font size="22.0" />
