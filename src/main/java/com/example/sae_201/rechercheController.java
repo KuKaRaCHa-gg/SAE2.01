@@ -12,6 +12,9 @@ public class rechercheController {
     private GridPane gridRecherchePane;
 
 
+    public GridPane getGridRecherchePane() {
+        return gridRecherchePane;
+    }
 
 
 

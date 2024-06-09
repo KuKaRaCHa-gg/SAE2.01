@@ -49,6 +49,16 @@ public class HelloApplication extends Application {
             PageJeuController gameInfoController = fxmlgameLoader.getController();
             toJeuController.setGameController(gameInfoController);
 
+            FXMLLoader fxmlsearchLoader = new FXMLLoader(HelloApplication.class.getResource("Recherche.fxml"));
+            Parent searchRoot = fxmlsearchLoader.load();
+            Scene searchPage = new Scene(searchRoot, 1225,745);
+            accueil toSearchController = (accueil) fxmlLoader.getController();
+            toSearchController.setSearchScene(searchPage);
+            toSearchController.setSearchStage(stage);
+
+            rechercheController searchGameController = fxmlsearchLoader.getController();
+            toSearchController.setSearchController(searchGameController);
+
 
         } catch (Exception e) {
             e.printStackTrace();

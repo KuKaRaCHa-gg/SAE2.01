@@ -3,24 +3,21 @@ package com.example.sae_201;
 
 
 import apiManagement.APIGameManager;
+import apiManagement.APIRechercheManager;
 import apiManagement.APITendanceManager;
 import apiManagement.GameNotFoundException;
 import gameModel.Game;
 import gameModel.MyGames;
 import javafx.application.Platform;
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.value.ObservableValue;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Text;
@@ -128,14 +125,21 @@ public class accueil {
     @FXML
     private VBox textBienvenu;
 
+    @FXML
+    private TextField entryAccueil;
+
     private MyGames model;
     private PersistentModelManager persistentModelManager;
     private APITendanceManager apiTendanceManager;
     private APIGameManager apiGameManager;
+    private APIRechercheManager apiRechercheManager;
     private Result result;
     private Scene scene;
     private Stage stage;
+    private Scene searchScene;
+    private Stage searchStage;
     private PageJeuController gameInfoController;
+    private rechercheController searchGameController;
     private int compteur = 0;
     private int compteur2 = 0;
 
@@ -145,21 +149,11 @@ public class accueil {
         super();
         apiTendanceManager = new APITendanceManager();
         apiGameManager = new APIGameManager();
+        apiRechercheManager = new APIRechercheManager();
         model = new MyGames();
         persistentModelManager = new PersistenceBySerialization();
     }
 
-    public void setChargement(Stage modalChargement) {
-        this.modalChargement = modalChargement;
-    }
-
-    public void setNewScene(Scene gamePage) {
-        this.scene = gamePage;
-    }
-
-    public void setStage(Stage stage) {
-        this.stage = stage;
-    }
 
     public void initialization() {
         Task<Void> initTask = new Task<>() {
@@ -293,6 +287,44 @@ public class accueil {
         }
     }
 
+    public void onActionAccueil() throws GameNotFoundException {
+    String searchedText = entryAccueil.getText();
+
+		if (searchedText.isBlank()){
+                return; }
+
+        List<Game> researchGame = apiRechercheManager.getInfoGame(searchedText);
+
+        for (Game game : researchGame) {
+            model.addGame(game);
+            Platform.runLater(() -> {
+                VBox vBox = new VBox();
+                Label label = new Label(game.getName());
+                label.setTextFill(Paint.valueOf("white"));
+                ImageView image = new ImageView(new Image(game.getImageURL(), gridPane.getPrefWidth() / 4, 250, true, true));
+                vBox.getChildren().add(image);
+                vBox.getChildren().add(label);
+                vBox.setOnMouseClicked(mouseEvent -> {
+                    jeuSelectionner(game.getId());
+                    Stage stage = (Stage) vBox.getScene().getWindow();
+                    stage.setScene(scene);
+                });
+                searchGameController.getGridRecherchePane().add(vBox, compteur, compteur2);
+                if (compteur == 3) {
+                    compteur = 0;
+                    compteur2++;
+                } else {
+                    compteur++;
+                }
+            });
+
+
+        }
+        Stage stage = (Stage) entryAccueil.getScene().getWindow();
+        stage.setScene(searchScene);
+
+    }
+
     public void handleMesJeuxButtonAction(ActionEvent event) {
     }
 
@@ -302,7 +334,31 @@ public class accueil {
     public void handleTagsButtonAction(ActionEvent event) {
     }
 
+    public void setChargement(Stage modalChargement) {
+        this.modalChargement = modalChargement;
+    }
+
+    public void setNewScene(Scene gamePage) {
+        this.scene = gamePage;
+    }
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
+    }
+
     public void setGameController(PageJeuController gameInfoController) {
         this.gameInfoController = gameInfoController;
+    }
+
+    public void setSearchController(rechercheController researchGameController) {
+        this.searchGameController = researchGameController;
+    }
+
+    public void setSearchScene(Scene searchPage) {
+        this.searchScene = searchPage;
+    }
+
+    public void setSearchStage(Stage stage) {
+        this.searchStage = stage;
     }
 }

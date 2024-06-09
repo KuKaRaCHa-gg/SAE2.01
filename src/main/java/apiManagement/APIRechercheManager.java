@@ -7,21 +7,30 @@ import gameModel.Game;
 import result.Result;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.net.URI;
+import java.net.URLEncoder;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 
 public class APIRechercheManager {
 
-    public List<Game> getInfoGame(String textSearch){
+    public List<Game> getInfoGame(String textSearch)throws GameNotFoundException{
         List<Game> gamesList = new ArrayList<>();
+        String searchedEncoded = "";
+        try {
+            searchedEncoded = URLEncoder.encode(textSearch, StandardCharsets.UTF_8.toString());
+        } catch (UnsupportedEncodingException e2) {
+            e2.printStackTrace();
+        }
 //https://api.rawg.io/api/games?key=03aefea4690c4af5828591dca83a3c8f&search=sonic&page_size=10&ordering=-added
         HttpRequest newRequest = HttpRequest.newBuilder()
                 .uri(URI.create("https://api.rawg.io/api/games?key=03aefea4690c4af5828591dca83a3c8f"
-                + "&search=" + textSearch + "&page_size=10&ordering=-added"))
+                + "&search=" + searchedEncoded + "&page_size=10&ordering=-added"))
                 .method("GET", HttpRequest.BodyPublishers.noBody())
                 .build();
         HttpResponse<String> newResponse;
