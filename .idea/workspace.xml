@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="La page Jeu est relier a la page de recherche">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Les pages accueil, PageJeu et search jeu sont parfaitement lié !">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/rechercheController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/rechercheController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -409,7 +406,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717962394076</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Les pages accueil, PageJeu et search jeu sont parfaitement lié !">
+      <option name="closed" value="true" />
+      <created>1717964244171</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1717964244171</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -424,7 +429,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Creation des classes pour faire les recherches des jeux" />
     <MESSAGE value="Creation des classes pour faire la persistence du projet, la sauvegarde local" />
     <MESSAGE value="Encore des erreur mais sa s&quot;ouvre" />
     <MESSAGE value="Corriger de l'erreur mais encore quelque erreur" />
@@ -449,6 +453,7 @@
     <MESSAGE value="Les jeu de la recherche de jeu par titre envoie vers leurs page !" />
     <MESSAGE value="La parti recherche a eu une ptite mise a jour, ont peu rechercher des jeu sur la page recherche (en grosse beta encore)" />
     <MESSAGE value="La page Jeu est relier a la page de recherche" />
-    <option name="LAST_COMMIT_MESSAGE" value="La page Jeu est relier a la page de recherche" />
+    <MESSAGE value="Les pages accueil, PageJeu et search jeu sont parfaitement lié !" />
+    <option name="LAST_COMMIT_MESSAGE" value="Les pages accueil, PageJeu et search jeu sont parfaitement lié !" />
   </component>
 </project>

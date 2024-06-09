@@ -269,6 +269,9 @@ public class PageJeuController {
 
         List<Game> researchGame = apiRechercheManager.getInfoGame(searchedText);
 
+        compteurX = 0;
+        compteurY = 0;
+        searchGameController.getGridRecherchePane().getChildren().clear();
         for (Game game : researchGame) {
             Platform.runLater(() -> {
                 VBox vBox = new VBox();
@@ -293,6 +296,7 @@ public class PageJeuController {
             });
 
         }
+        searchTextField.setText("");
         searchGameController.getEntrySearch().setText(searchedText);
         Stage stage = (Stage) searchTextField.getScene().getWindow();
         stage.setScene(searchPage);
@@ -301,6 +305,12 @@ public class PageJeuController {
 
     public void jeuSelectionner(int id) {
         List<Game> selectionGame = apiGameManager.getInfoGame(id);
+
+        getRequirementGridPane().getChildren().clear();
+        getPlateformeGridPane().getChildren().clear();
+        getTagGridPane().getChildren().clear();
+        getDevGridPane().getChildren().clear();
+        getEditorGridPane().getChildren().clear();
         for (Game game : selectionGame) {
             int compteurGame = 0;
             getRatingValueLabel().setText(game.getRate());
@@ -315,8 +325,8 @@ public class PageJeuController {
                     "<body>" + game.getDescription() + "</body>" +
                     "</html>";
             getWebDescView().getEngine().loadContent(htmlContent);
-
             getBannerImageView().setImage(new Image(game.getImageURL()));
+
             VBox vBox1 = new VBox();
             Text text1 = new Text(game.getPlatforms()[0].getRequirementMinimum());
             text1.setFill(Paint.valueOf("white"));
