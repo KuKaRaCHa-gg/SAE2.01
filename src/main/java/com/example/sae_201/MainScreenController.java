@@ -6,13 +6,19 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-public class HelloController {
+public class MainScreenController {
 
     @FXML
-    private ImageView LOGO;
+    private ImageView logoImageView;
 
     @FXML
     private TextField searchTextField;
+
+    @FXML
+    private Button tagButton;
+
+    @FXML
+    private ImageView accountImageView;
 
     @FXML
     private Button mesJeuxButton;
