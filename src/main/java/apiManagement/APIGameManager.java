@@ -46,10 +46,7 @@ public class APIGameManager {
             game.setPublishers(detailedResult.getPublishers());
             game.setDevelopers(detailedResult.getDevelopers());
             game.setTags(detailedResult.getTags());
-            for (int i = 0; i<detailedResult.getTags().length; i++){
-            //System.out.println(detailedResult.getPlatforms()[i].getPlatformName());
-            System.out.println(game.getTags()[i].getName());
-            }
+
             System.out.println(game.getDescription());
             System.out.println(game.getRate());
             System.out.println(game.getName());

@@ -180,6 +180,7 @@ public class accueil {
                         vBox.getChildren().add(label);
                         vBox.setOnMouseClicked(mouseEvent -> {
                             jeuSelectionner(game.getId());
+                            gameInfoController.getCurrentGame().setId(game.getId());
                             Stage stage = (Stage) vBox.getScene().getWindow();
                             stage.setScene(scene);
                         });
@@ -297,7 +298,7 @@ public class accueil {
                 gameInfoController.getTagGridPane().add(vBox, 0, compteurGame);
                 compteurGame++; }
 
-            gameInfoController.getCurrentGame().setId(game.getId());
+
             gameInfoController.getCurrentGame().setName(game.getName());
             gameInfoController.getCurrentGame().setImageURL(game.getImageURL());
 

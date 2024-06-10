@@ -78,6 +78,7 @@ public class MesJeuController {
                     vBox.getChildren().add(label);
                     vBox.setOnMouseClicked(mouseEvent -> {
                         jeuSelectionner(game.getId());
+                        gameInfoController.getCurrentGame().setId(game.getId());
                         Stage stage = (Stage) vBox.getScene().getWindow();
                         stage.setScene(scene);
                     });

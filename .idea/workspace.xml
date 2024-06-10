@@ -4,13 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Page Bibliothèque relier a toute les pages">
+    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Ajout de jeu en beta mais fonctionnel">
+      <change afterPath="$PROJECT_DIR$/src/main/java/gameModel/FileManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/MesJeuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/MesJeuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/PageJeuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/PageJeuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/rechercheController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/rechercheController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/apiManagement/APIGameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiManagement/APIGameManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/MesJeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/MesJeuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/PageJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/PageJeu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/rechercheController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/rechercheController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -443,7 +449,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718018246052</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Ajout de jeu en beta mais fonctionnel">
+      <option name="closed" value="true" />
+      <created>1718038347600</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1718038347600</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -458,7 +472,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ça marche ! enfin... presque" />
     <MESSAGE value="Correction en plus mais pas fini" />
     <MESSAGE value="Ouais bah, si sa pete c'est la faute a noé" />
     <MESSAGE value="Ouais bah, si sa pete c'est la faute a daniil" />
@@ -483,15 +496,25 @@
     <MESSAGE value="Ta pas interet d'avoir cassé le truc daniil" />
     <MESSAGE value="commencement de MesJeu" />
     <MESSAGE value="Page Bibliothèque relier a toute les pages" />
-    <option name="LAST_COMMIT_MESSAGE" value="Page Bibliothèque relier a toute les pages" />
+    <MESSAGE value="Ajout de jeu en beta mais fonctionnel" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout de jeu en beta mais fonctionnel" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/sae_201/MesJeuController.java</url>
-          <line>103</line>
+          <line>104</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java</url>
+          <line>285</line>
+          <properties class="com.example.sae_201.PageJeuController" method="onActionJeu">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

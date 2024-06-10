@@ -19,6 +19,7 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
+import persistence.PersistenceBySerialization;
 
 import java.util.List;
 
@@ -196,6 +197,7 @@ public class PageJeuController {
     private Scene biblioPage;
     private Stage biblioStage;
     private MesJeuController biblioController;
+    private PersistentModelManager persistentModelManager;
 
     @FXML
     private void initialize() {
@@ -206,6 +208,8 @@ public class PageJeuController {
         apiRechercheManager = new APIRechercheManager();
         apiGameManager = new APIGameManager();
         currentGame = new Game();
+        model = new MyGames();
+        persistentModelManager = new PersistenceBySerialization();
     }
 
     @FXML
@@ -229,6 +233,7 @@ public class PageJeuController {
     private int compteur = 0;
     private int compteur2 = 0;
     private Game currentGame;
+    private MyGames model;
 
 
     public Game getCurrentGame(){
@@ -276,6 +281,7 @@ public class PageJeuController {
     }
 
 
+
     @FXML
     void onActionJeu(ActionEvent event) throws GameNotFoundException {
         String searchedText = searchTextField.getText();
@@ -298,6 +304,7 @@ public class PageJeuController {
                 vBox.getChildren().add(label);
                 vBox.setOnMouseClicked(mouseEvent -> {
                     jeuSelectionner(game.getId());
+                    getCurrentGame().setId(game.getId());
                     Stage stage = (Stage) vBox.getScene().getWindow();
                     stage.setScene(scene);
                 });
@@ -406,6 +413,8 @@ public class PageJeuController {
         Button btn = (Button)event.getSource();
         Stage stage = (Stage) btn.getScene().getWindow();
         stage.setScene(biblioPage);
+        persistentModelManager.load();
+
     }
 
     @FXML
@@ -415,25 +424,24 @@ public class PageJeuController {
         }
 
 
-            System.out.println(currentGame.getId() + currentGame.getName() + currentGame.getImageURL());
-            VBox vBox = new VBox();
-            Label label = new Label(currentGame.getName());
-            label.setTextFill(Paint.valueOf("white"));
-            ImageView image = new ImageView(new Image(currentGame.getImageURL(), biblioController.getGridRecherchePane().getPrefWidth() / 4, 250, true, true));
-            vBox.getChildren().add(image);
-            vBox.getChildren().add(label);
-            vBox.setOnMouseClicked(mouseEvent -> {
-                jeuSelectionner(currentGame.getId());
-                Stage stage = (Stage) vBox.getScene().getWindow();
-                stage.setScene(scene);
-            });
-            biblioController.getGridRecherchePane().add(vBox, compteur, compteur2);
-            if (compteur == 3) {
-                compteur = 0;
-                compteur2++;
-            } else {
-                compteur++;
-            }
+        VBox vBox = new VBox();
+        Label label = new Label(currentGame.getName());
+        label.setTextFill(Paint.valueOf("white"));
+        ImageView image = new ImageView(new Image(currentGame.getImageURL(), biblioController.getGridRecherchePane().getPrefWidth() / 4, 250, true, true));
+        vBox.getChildren().add(image);
+        vBox.getChildren().add(label);
+        vBox.setOnMouseClicked(mouseEvent -> {
+            jeuSelectionner(currentGame.getId());
+            Stage stage = (Stage) vBox.getScene().getWindow();
+            stage.setScene(scene);
+        });
+        biblioController.getGridRecherchePane().add(vBox, compteur, compteur2);
+        if (compteur == 3) {
+            compteur = 0;
+            compteur2++;
+        } else {
+            compteur++;
+        }
 
     }
 
