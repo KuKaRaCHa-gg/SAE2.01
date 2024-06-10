@@ -13,14 +13,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <VBox alignment="TOP_CENTER" prefHeight="745.0" prefWidth="1225.0" style="-fx-background-color: #484848;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sae_201.rechercheController">
    <children>
       <HBox prefHeight="75.0" prefWidth="1020.0" style="-fx-background-color: #000000;">
          <children>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <ImageView fitHeight="80.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="logoToAccueil" fitHeight="80.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Images/LOGO.png" />
                      </image>
@@ -52,7 +51,7 @@
       </HBox>
       <HBox prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #484848;">
          <children>
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #484848;" text="Mes Jeux" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#mesJeuOnAction" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #484848;" text="Mes Jeux" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>

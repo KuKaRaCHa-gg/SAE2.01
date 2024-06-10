@@ -13,8 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<VBox alignment="TOP_CENTER" prefHeight="745.0" prefWidth="1225.0" style="-fx-background-color: #484848;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="TOP_CENTER" prefHeight="745.0" prefWidth="1225.0" style="-fx-background-color: #484848;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sae_201.MesJeuController">
    <children>
       <HBox prefHeight="75.0" prefWidth="1020.0" style="-fx-background-color: #000000;">
          <children>
@@ -87,7 +86,7 @@
                                           <Font size="48.0" />
                                        </font>
                                     </Label>
-                                    <Label prefHeight="56.0" prefWidth="526.0" text="Résultat de votre Recherche" textFill="WHITE">
+                                    <Label prefHeight="56.0" prefWidth="526.0" text="Votre Bibliothéque de Jeu" textFill="WHITE">
                                        <font>
                                           <Font size="24.0" />
                                        </font>

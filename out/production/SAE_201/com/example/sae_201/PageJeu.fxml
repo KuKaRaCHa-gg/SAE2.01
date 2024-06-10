@@ -56,7 +56,7 @@
         </HBox>
       <HBox prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #484848;">
          <children>
-            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #484848;" text="Mes Jeux" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#mesJeuOnAction" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #484848;" text="Mes Jeux" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
