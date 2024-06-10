@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Ta pas interet d'avoir cassé le truc daniil">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/MesJeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/MesJeuController.java" afterDir="false" />
+    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="commencement de MesJeu">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -424,7 +422,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718002661874</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="commencement de MesJeu">
+      <option name="closed" value="true" />
+      <created>1718003282558</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1718003282558</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -439,7 +445,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Encore des erreur mais sa s&quot;ouvre" />
     <MESSAGE value="Corriger de l'erreur mais encore quelque erreur" />
     <MESSAGE value="ça marche ! enfin... presque" />
     <MESSAGE value="Correction en plus mais pas fini" />
@@ -464,7 +469,8 @@
     <MESSAGE value="La page Jeu est relier a la page de recherche" />
     <MESSAGE value="Les pages accueil, PageJeu et search jeu sont parfaitement lié !" />
     <MESSAGE value="Ta pas interet d'avoir cassé le truc daniil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ta pas interet d'avoir cassé le truc daniil" />
+    <MESSAGE value="commencement de MesJeu" />
+    <option name="LAST_COMMIT_MESSAGE" value="commencement de MesJeu" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

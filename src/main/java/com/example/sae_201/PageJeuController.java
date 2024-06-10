@@ -78,7 +78,7 @@ public class PageJeuController {
     private ImageView loginImageView;
 
     @FXML
-    private ImageView logoImageView;
+    private ImageView logoToAccueil;
 
     @FXML
     private Label minimumGraphicsLabel;
