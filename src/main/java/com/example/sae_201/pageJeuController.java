@@ -192,6 +192,8 @@ public class PageJeuController {
     private Scene searchPage;
     private APIGameManager apiGameManager;
     private Scene scene;
+    private Scene biblioPage;
+    private Stage biblioStage;
 
     @FXML
     private void initialize() {
@@ -379,6 +381,21 @@ public class PageJeuController {
                 compteurGame++; }
 
         }
+    }
+
+    @FXML
+    void mesJeuOnAction(ActionEvent event) {
+        Button btn = (Button)event.getSource();
+        Stage stage = (Stage) btn.getScene().getWindow();
+        stage.setScene(biblioPage);
+    }
+
+    public void setBliblioScene(Scene biblioPage) {
+        this.biblioPage = biblioPage;
+    }
+
+    public void setBiblioStage(Stage stage) {
+        this.biblioStage = stage;
     }
 
 

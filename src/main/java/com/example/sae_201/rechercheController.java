@@ -43,6 +43,8 @@ public class rechercheController {
     private int compteurY = 0;
     private APIGameManager apiGameManager;
     private PageJeuController gameInfoController;
+    private Scene biblioPage;
+    private Stage biblioStage;
 
 
     public GridPane getGridRecherchePane() {
@@ -184,6 +186,21 @@ public class rechercheController {
                 compteurGame++; }
 
         }
+    }
+
+    @FXML
+    void mesJeuOnAction(ActionEvent event) {
+        Button btn = (Button)event.getSource();
+        Stage stage = (Stage) btn.getScene().getWindow();
+        stage.setScene(biblioPage);
+    }
+
+    public void setBliblioScene(Scene biblioPage) {
+        this.biblioPage = biblioPage;
+    }
+
+    public void setBiblioStage(Stage stage) {
+        this.biblioStage = stage;
     }
 
     public void setGameController(PageJeuController gameInfoController) {

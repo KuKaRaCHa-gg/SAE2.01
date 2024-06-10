@@ -128,6 +128,9 @@ public class accueil {
     @FXML
     private TextField entryAccueil;
 
+    @FXML
+    private Button mesJeuxButton;
+
     private MyGames model;
     private PersistentModelManager persistentModelManager;
     private APITendanceManager apiTendanceManager;
@@ -146,6 +149,8 @@ public class accueil {
     private int compteurY = 0;
 
     private Stage modalChargement;
+    private Scene biblioPage;
+    private Stage biblioStage;
 
     public accueil(){
         super();
@@ -295,6 +300,16 @@ public class accueil {
         }
     }
 
+
+    @FXML
+    void mesJeuOnAction(ActionEvent event) {
+        Button btn = (Button)event.getSource();
+        Stage stage = (Stage) btn.getScene().getWindow();
+        stage.setScene(biblioPage);
+    }
+
+
+
     public void onActionAccueil() throws GameNotFoundException {
     String searchedText = entryAccueil.getText();
 
@@ -373,5 +388,13 @@ public class accueil {
 
     public void setSearchStage(Stage stage) {
         this.searchStage = stage;
+    }
+
+    public void setBliblioScene(Scene biblioPage) {
+        this.biblioPage = biblioPage;
+    }
+
+    public void setBiblioStage(Stage stage) {
+        this.biblioStage = stage;
     }
 }
