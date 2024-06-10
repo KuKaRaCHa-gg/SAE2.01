@@ -99,6 +99,9 @@ public class HelloApplication extends Application {
             jeuToJeu.setThisScene(gamePage);
             jeuToJeu.setStage(stage);
 
+            MesJeuController biblioController = fxmlBiblioLoader.getController();
+            jeuToJeu.setBiblioController(biblioController);
+
 
         } catch (Exception e) {
             e.printStackTrace();

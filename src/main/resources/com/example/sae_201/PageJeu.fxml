@@ -73,6 +73,15 @@
                   <Font size="18.0" />
                </font>
             </Button>
+            <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="814.0">
+               <children>
+                  <Button fx:id="pageAjout" mnemonicParsing="false" onAction="#onAjoutClicked" prefHeight="18.0" prefWidth="106.0" style="-fx-background-color: lightgreen;" text="Ajouter le Jeu">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
          </children>
       </HBox>
       <ScrollPane hbarPolicy="NEVER" pannable="true" prefWidth="1225.0" vbarPolicy="NEVER">

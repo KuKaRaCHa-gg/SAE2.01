@@ -4,6 +4,7 @@ import apiManagement.APIGameManager;
 import apiManagement.APIRechercheManager;
 import apiManagement.GameNotFoundException;
 import gameModel.Game;
+import gameModel.MyGames;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -194,6 +195,7 @@ public class PageJeuController {
     private Scene scene;
     private Scene biblioPage;
     private Stage biblioStage;
+    private MesJeuController biblioController;
 
     @FXML
     private void initialize() {
@@ -203,6 +205,7 @@ public class PageJeuController {
     public PageJeuController(){
         apiRechercheManager = new APIRechercheManager();
         apiGameManager = new APIGameManager();
+        currentGame = new Game();
     }
 
     @FXML
@@ -221,6 +224,16 @@ public class PageJeuController {
     }
 
 
+    @FXML
+    private Button pageAjout;
+    private int compteur = 0;
+    private int compteur2 = 0;
+    private Game currentGame;
+
+
+    public Game getCurrentGame(){
+        return currentGame;
+    }
 
     public Label getRatingValueLabel(){
         return ratingValueLabel;
@@ -261,6 +274,7 @@ public class PageJeuController {
     public WebView getWebDescView() {
         return webDescView;
     }
+
 
     @FXML
     void onActionJeu(ActionEvent event) throws GameNotFoundException {
@@ -380,6 +394,10 @@ public class PageJeuController {
                 getTagGridPane().add(vBox, 0, compteurGame);
                 compteurGame++; }
 
+            getCurrentGame().setId(game.getId());
+            getCurrentGame().setName(game.getName());
+            getCurrentGame().setImageURL(game.getImageURL());
+
         }
     }
 
@@ -389,6 +407,36 @@ public class PageJeuController {
         Stage stage = (Stage) btn.getScene().getWindow();
         stage.setScene(biblioPage);
     }
+
+    @FXML
+    void onAjoutClicked(ActionEvent event) {
+        if (currentGame == null) {
+            return; // Aucun jeu n'est actuellement sélectionné
+        }
+
+
+            System.out.println(currentGame.getId() + currentGame.getName() + currentGame.getImageURL());
+            VBox vBox = new VBox();
+            Label label = new Label(currentGame.getName());
+            label.setTextFill(Paint.valueOf("white"));
+            ImageView image = new ImageView(new Image(currentGame.getImageURL(), biblioController.getGridRecherchePane().getPrefWidth() / 4, 250, true, true));
+            vBox.getChildren().add(image);
+            vBox.getChildren().add(label);
+            vBox.setOnMouseClicked(mouseEvent -> {
+                jeuSelectionner(currentGame.getId());
+                Stage stage = (Stage) vBox.getScene().getWindow();
+                stage.setScene(scene);
+            });
+            biblioController.getGridRecherchePane().add(vBox, compteur, compteur2);
+            if (compteur == 3) {
+                compteur = 0;
+                compteur2++;
+            } else {
+                compteur++;
+            }
+
+    }
+
 
     public void setBliblioScene(Scene biblioPage) {
         this.biblioPage = biblioPage;
@@ -401,6 +449,10 @@ public class PageJeuController {
 
     public void setSearchController(rechercheController searchGameController) {
         this.searchGameController = searchGameController;
+    }
+
+    public void setBiblioController(MesJeuController biblioController) {
+        this.biblioController = biblioController;
     }
 
     public void setStage(Stage stage) {

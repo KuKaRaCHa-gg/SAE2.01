@@ -52,6 +52,10 @@ public class MesJeuController {
 
     }
 
+    public GridPane getGridRecherchePane(){
+        return gridRecherchePane;
+    }
+
     @FXML
     void onActionRecherche(ActionEvent event) throws GameNotFoundException {
             String searchedText = entrySearch.getText();
@@ -170,6 +174,10 @@ public class MesJeuController {
                 vBox.setStyle("-fx-background-color: #3a3a3a;");
                 gameInfoController.getTagGridPane().add(vBox, 0, compteurGame);
                 compteurGame++; }
+
+            gameInfoController.getCurrentGame().setId(game.getId());
+            gameInfoController.getCurrentGame().setName(game.getName());
+            gameInfoController.getCurrentGame().setImageURL(game.getImageURL());
 
         }
     }
