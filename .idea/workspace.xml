@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Les pages accueil, PageJeu et search jeu sont parfaitement lié !">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/MesJeuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/mesJeu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/PageJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/PageJeu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/PageJeuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/PageJeuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/rechercheController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/rechercheController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/PageJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/PageJeu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/rechercheController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/rechercheController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/PageJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/PageJeu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

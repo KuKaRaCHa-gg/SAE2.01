@@ -31,6 +31,9 @@ public class rechercheController {
     private GridPane gridRecherchePane;
 
     @FXML
+    private ImageView logoToAccueil;
+
+    @FXML
     private TextField entrySearch;
     private Scene scene;
     private Stage stage;
