@@ -4,27 +4,18 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-@SuppressWarnings("serial")
 public class MyGames implements Serializable {
-
-    private List<Game> allGames;
+    private List<Game> games;
 
     public MyGames() {
-        super();
-        allGames = new ArrayList<>();
+        games = new ArrayList<>();
     }
 
-    public void addGame(Game newGame) {
-        allGames.add(newGame);
+    public void addGame(Game game) {
+        games.add(game);
     }
 
-    public List<Game> getAllGames() {
-        return allGames;
+    public List<Game> getGames() {
+        return games;
     }
-
-    public void removeGame(Game game) {
-        allGames.remove(game);
-    }
-
-
 }
