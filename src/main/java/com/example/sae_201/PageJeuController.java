@@ -8,6 +8,7 @@ import gameModel.MyGames;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -197,11 +198,18 @@ public class PageJeuController {
     private Scene biblioPage;
     private Stage biblioStage;
     private MesJeuController biblioController;
-    private PersistentModelManager persistentModelManager;
+    private PersistenceBySerialization persistentModelManager;
+    private List<Game> savedGames;
+    private static final String FILE_PATH = "mes_jeux.ser";
 
     @FXML
     private void initialize() {
-        // Initialize the controller
+        savedGames = persistentModelManager.loadGames();
+        populateMesJeux();
+    }
+
+    private void saveGames() {
+        persistentModelManager.saveGames(savedGames);
     }
 
     public PageJeuController(){
@@ -210,6 +218,7 @@ public class PageJeuController {
         currentGame = new Game();
         model = new MyGames();
         persistentModelManager = new PersistenceBySerialization();
+        gameCompte = 0;
     }
 
     @FXML
@@ -234,6 +243,7 @@ public class PageJeuController {
     private int compteur2 = 0;
     private Game currentGame;
     private MyGames model;
+    private int gameCompte;
 
 
     public Game getCurrentGame(){
@@ -299,7 +309,8 @@ public class PageJeuController {
                 VBox vBox = new VBox();
                 Label label = new Label(game.getName());
                 label.setTextFill(Paint.valueOf("white"));
-                ImageView image = new ImageView(new Image(game.getImageURL(), searchGameController.getGridRecherchePane().getPrefWidth() / 4, 250, true, true));
+                ImageView image = new ImageView(new Image(game.getImageURL(), 1000, 250, true, true));
+                image.setViewport(new Rectangle2D(image.getImage().getWidth()/2 - 268 /2 ,0,268, 268));
                 vBox.getChildren().add(image);
                 vBox.getChildren().add(label);
                 vBox.setOnMouseClicked(mouseEvent -> {
@@ -413,21 +424,23 @@ public class PageJeuController {
         Button btn = (Button)event.getSource();
         Stage stage = (Stage) btn.getScene().getWindow();
         stage.setScene(biblioPage);
-        persistentModelManager.load();
-
     }
 
     @FXML
     void onAjoutClicked(ActionEvent event) {
+
         if (currentGame == null) {
             return; // Aucun jeu n'est actuellement sélectionné
         }
 
+        savedGames.add(currentGame);
+        saveGames();
 
         VBox vBox = new VBox();
         Label label = new Label(currentGame.getName());
         label.setTextFill(Paint.valueOf("white"));
-        ImageView image = new ImageView(new Image(currentGame.getImageURL(), biblioController.getGridRecherchePane().getPrefWidth() / 4, 250, true, true));
+        ImageView image = new ImageView(new Image(currentGame.getImageURL(), 1000, 250, true, true));
+        image.setViewport(new Rectangle2D(image.getImage().getWidth()/2 - 268 /2 ,0,268, 268));
         vBox.getChildren().add(image);
         vBox.getChildren().add(label);
         vBox.getProperties().put("gameId", currentGame.getId());
@@ -444,6 +457,7 @@ public class PageJeuController {
         } else {
             compteur++;
         }
+
 
     }
 
@@ -481,4 +495,31 @@ public class PageJeuController {
     public void setThisScene(Scene scene) {
         this.scene = scene;
     }
+
+    private void populateMesJeux() {
+        for (Game game : savedGames) {
+            VBox vBox = new VBox();
+            Label label = new Label(game.getName());
+            label.setTextFill(Paint.valueOf("white"));
+            ImageView image = new ImageView(new Image(game.getImageURL(), 1000, 250, true, true));
+            image.setViewport(new Rectangle2D(image.getImage().getWidth() / 2 - 268 / 2, 0, 268, 268));
+            vBox.getChildren().add(image);
+            vBox.getChildren().add(label);
+            vBox.getProperties().put("gameId", game.getId());
+            vBox.setOnMouseClicked(mouseEvent -> {
+                int gameId = Integer.parseInt(String.valueOf(getGameNameFromVBox(vBox)));
+                jeuSelectionner(gameId);
+                Stage stage = (Stage) vBox.getScene().getWindow();
+                stage.setScene(scene);
+            });
+            biblioController.getGridRecherchePane().add(vBox, compteur, compteur2);
+            if (compteur == 3) {
+                compteur = 0;
+                compteur2++;
+            } else {
+                compteur++;
+            }
+        }
+    }
+
 }
