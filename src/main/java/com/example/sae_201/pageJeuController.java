@@ -211,22 +211,6 @@ public class pageJeuController {
     }
 
     @FXML
-    private void handleMesJeuxButtonAction() {
-        NavigationUtil.navigateTo(stage, "accueil.fxml");
-    }
-
-    @FXML
-    private void handleTagsButtonAction() {
-        NavigationUtil.navigateTo(stage, "RechercheParTAG.fxml");
-    }
-
-    @FXML
-    private void handleCreerTagButtonAction() {
-        NavigationUtil.navigateTo(stage, "Recherche.fxml");
-    }
-
-
-    @FXML
     private Button pageAjout;
     private int compteur = 0;
     private int compteur2 = 0;

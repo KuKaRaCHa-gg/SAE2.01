@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Daniiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiil">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/MesJeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/MesJeuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java" beforeDir="false" />
+    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="PageJeu to pageJeu car voila le merge pue">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/NavigationUtil.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -472,7 +471,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718096582687</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="PageJeu to pageJeu car voila le merge pue">
+      <option name="closed" value="true" />
+      <created>1718098613667</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1718098613667</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -487,7 +494,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Daniil" />
     <MESSAGE value="ça marche pour le moment" />
     <MESSAGE value="Le projet marche pour le moment, des chose importer et tous et tous" />
     <MESSAGE value="Mis a jour de l'API et Platform semi fonctionnel" />
@@ -512,7 +518,8 @@
     <MESSAGE value="Ajout de jeu encore Beta" />
     <MESSAGE value="L'ajout de jeu marche !" />
     <MESSAGE value="Daniiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Daniiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiil" />
+    <MESSAGE value="PageJeu to pageJeu car voila le merge pue" />
+    <option name="LAST_COMMIT_MESSAGE" value="PageJeu to pageJeu car voila le merge pue" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
