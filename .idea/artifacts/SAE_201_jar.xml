@@ -1,0 +1,50 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="SAE_201:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/SAE_201_jar</output-path>
+    <root id="archive" name="SAE_201.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="module-output" name="SAE_201" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/javafx-sdk-19.0.2.1/lib/javafx-swt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/javafx-sdk-19.0.2.1/lib/javafx.base.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/javafx-sdk-19.0.2.1/lib/javafx.controls.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/javafx-sdk-19.0.2.1/lib/javafx.fxml.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/javafx-sdk-19.0.2.1/lib/javafx.graphics.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/javafx-sdk-19.0.2.1/lib/javafx.media.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/javafx-sdk-19.0.2.1/lib/javafx.swing.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/javafx-sdk-19.0.2.1/lib/javafx.web.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/Jar Jackson-20240517/jackson-annotations-2.17.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/Jar Jackson-20240517/jackson-core-2.17.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/Jar Jackson-20240517/jackson-databind-2.17.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/Jar Jackson-20240517/jackson-datatype-jsr310-2.17.1.jar" path-in-jar="/" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/appletviewer.policy" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/breakgen.dll" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/breakgen64.dll" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/breakgen64a.dll" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/brokenPlugins.db" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/elevator.exe" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/format.bat" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/fsnotifier-wsl" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/fsnotifier.exe" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/idea.bat" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/idea.ico" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/idea.properties" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/idea.svg" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/idea - version portable.bat" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/idea64.exe" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/idea64.exe.vmoptions" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/inspect.bat" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/launcher.exe" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/ltedit.bat" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/msvcp140.dll" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/repair.exe" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/restarter.exe" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/runnerw.exe" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/WinProcessListHelper.exe" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/WinShellIntegrationBridge.dll" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/wslhash" />
+      <element id="file-copy" path="$USER_HOME$/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/wslproxy" />
+    </root>
+  </artifact>
+</component>

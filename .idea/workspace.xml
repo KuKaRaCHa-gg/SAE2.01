@@ -9,20 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Nettoyage du code partielle">
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/MainJar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/apiManagement/APIRechercheManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiManagement/APIRechercheManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/apiManagement/APITendanceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiManagement/APITendanceManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/CreerTag.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/CreerTag.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/PageJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/PageJeu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/Recherche.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/Recherche.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/accueil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/accueil.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/mesJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/mesJeu.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="final" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,7 +91,6 @@
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/10/Documents/GitHub/SAE2.01 Gestion Jeu/SAE2.01/src/main/java/com/example/sae_201",
@@ -507,7 +493,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718124808615</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="final">
+      <option name="closed" value="true" />
+      <created>1718126953840</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1718126953840</updated>
+    </task>
+    <task id="LOCAL-00046" summary="final">
+      <option name="closed" value="true" />
+      <created>1718127911785</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1718127911785</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -522,7 +524,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Mis a jour de l'API et Platform semi fonctionnel" />
     <MESSAGE value="L'app a un ecran de chargement presque fonctionnel (manque juste la page fxml)" />
     <MESSAGE value="L'ecran de chargement est fonctionnel (mais bug a certain moment)" />
     <MESSAGE value="Plateforme, editeur et developeur mis, et la description est mieux maintenant (merci la WebView)" />
@@ -547,7 +548,8 @@
     <MESSAGE value="Mattis merge into DAniil" />
     <MESSAGE value="creation et sauvgarde des tag deplacement entre FXML" />
     <MESSAGE value="Nettoyage du code partielle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nettoyage du code partielle" />
+    <MESSAGE value="final" />
+    <option name="LAST_COMMIT_MESSAGE" value="final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
