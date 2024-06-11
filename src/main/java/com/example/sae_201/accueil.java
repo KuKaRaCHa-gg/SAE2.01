@@ -33,40 +33,7 @@ import java.util.List;
 public class accueil {
 
     @FXML
-    private HBox ajoutRecLabel;
-
-    @FXML
     private HBox alphaLabel;
-
-    @FXML
-    private ImageView gameImage1;
-
-    @FXML
-    private ImageView gameImage10;
-
-    @FXML
-    private ImageView gameImage2;
-
-    @FXML
-    private ImageView gameImage3;
-
-    @FXML
-    private ImageView gameImage4;
-
-    @FXML
-    private ImageView gameImage5;
-
-    @FXML
-    private ImageView gameImage6;
-
-    @FXML
-    private ImageView gameImage7;
-
-    @FXML
-    private ImageView gameImage8;
-
-    @FXML
-    private ImageView gameImage9;
 
     @FXML
     private Label gameLabel1;
@@ -97,28 +64,6 @@ public class accueil {
 
     @FXML
     private Label gameLabel9;
-
-    @FXML
-    private ImageView image;
-
-
-
-    @FXML
-    private ImageView imageTendance1;
-
-    @FXML
-    private ImageView imageTendance2;
-
-    @FXML
-    private ImageView imageTendance3;
-
-    @FXML
-    private ImageView imageTendance4;
-
-    @FXML
-    private ImageView imageTendance5;
-
-    //private ImageView['imageTendance1']
 
     @FXML
     private GridPane gridPane;
@@ -218,7 +163,6 @@ public class accueil {
                     if (modalChargement != null) {
                         modalChargement.close();
                     }
-                    // Optionnel : Afficher un message d'erreur ou effectuer d'autres actions en cas d'échec
                 });
             }
         };
@@ -311,15 +255,12 @@ public class accueil {
         }
     }
 
-
     @FXML
     void mesJeuOnAction(ActionEvent event) {
         Button btn = (Button)event.getSource();
         Stage stage = (Stage) btn.getScene().getWindow();
         stage.setScene(biblioPage);
     }
-
-
 
     public void onActionAccueil() throws GameNotFoundException {
     String searchedText = entryAccueil.getText();
@@ -369,15 +310,6 @@ public class accueil {
         Button btn = (Button)event.getSource();
         Stage stage = (Stage) btn.getScene().getWindow();
         stage.setScene(createTAGPage);
-    }
-
-    public void handleMesJeuxButtonAction(ActionEvent event) {
-    }
-
-    public void handleCreerTagButtonAction(ActionEvent event) {
-    }
-
-    public void handleTagsButtonAction(ActionEvent event) {
     }
 
     public void setChargement(Stage modalChargement) {

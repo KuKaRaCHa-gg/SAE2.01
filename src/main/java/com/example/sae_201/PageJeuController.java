@@ -30,15 +30,6 @@ import java.util.List;
 public class PageJeuController {
 
     @FXML
-    private Label aboutGameLabel;
-
-    @FXML
-    private TextArea aboutGameTextArea;
-
-    @FXML
-    private Button adventureTagButton;
-
-    @FXML
     private VBox authorDateContainer;
 
     @FXML
@@ -46,9 +37,6 @@ public class PageJeuController {
 
     @FXML
     private Label authorLabel;
-
-    @FXML
-    private Label authorText;
 
     @FXML
     private ImageView bannerImageView;
@@ -63,18 +51,6 @@ public class PageJeuController {
     private Label developersLabel;
 
     @FXML
-    private Label developersText1;
-
-    @FXML
-    private Label developersText2;
-
-    @FXML
-    private Label developersText3;
-
-    @FXML
-    private Button freeToPlayTagButton;
-
-    @FXML
     private Label generalRatingLabel;
 
     @FXML
@@ -85,30 +61,6 @@ public class PageJeuController {
 
     @FXML
     private ImageView logoToAccueil;
-
-    @FXML
-    private Label minimumGraphicsLabel;
-
-    @FXML
-    private Label minimumLabel;
-
-    @FXML
-    private Label minimumMemoryLabel;
-
-    @FXML
-    private Label minimumOSLabel;
-
-    @FXML
-    private Label minimumProcessorLabel;
-
-    @FXML
-    private Label minimumStorageLabel;
-
-    @FXML
-    private Button moreInfoButton;
-
-    @FXML
-    private Button multiplayerTagButton;
 
     @FXML
     private Label ratingScaleLabel;
@@ -132,28 +84,7 @@ public class PageJeuController {
     private GridPane requirementGridPane;
 
     @FXML
-    private Label recommendedGraphicsLabel;
-
-    @FXML
-    private Label recommendedLabel;
-
-    @FXML
-    private Label recommendedMemoryLabel;
-
-    @FXML
-    private Label recommendedOSLabel;
-
-    @FXML
-    private Label recommendedProcessorLabel;
-
-    @FXML
-    private Label recommendedStorageLabel;
-
-    @FXML
     private Label releaseDateLabel;
-
-    @FXML
-    private Label releaseDateText;
 
     @FXML
     private VBox requirementsContainer;
@@ -163,9 +94,6 @@ public class PageJeuController {
 
     @FXML
     private VBox rightContainer;
-
-    @FXML
-    private Button rpgTagButton;
 
     @FXML
     private TextField searchTextField;
@@ -207,8 +135,6 @@ public class PageJeuController {
     private int compteur = 0;
     private int compteur2 = 0;
     private Game currentGame;
-    private MyGames model;
-    private int gameCompte;
     private Scene createTAGPage;
     private Stage createStage;
 
@@ -216,8 +142,6 @@ public class PageJeuController {
         apiRechercheManager = new APIRechercheManager();
         apiGameManager = new APIGameManager();
         currentGame = new Game();
-        model = new MyGames();
-        gameCompte = 0;
     }
 
     public Game getCurrentGame(){
@@ -405,7 +329,7 @@ public class PageJeuController {
     void onAjoutClicked(ActionEvent event) {
 
         if (currentGame == null) {
-            return; // Aucun jeu n'est actuellement sélectionné
+            return;
         }
 
         VBox vBox = new VBox();
@@ -463,65 +387,11 @@ public class PageJeuController {
         this.scene = scene;
     }
 
-    private void populateMesJeux() {
-        for (Game game : savedGames) {
-            VBox vBox = new VBox();
-            Label label = new Label(game.getName());
-            label.setTextFill(Paint.valueOf("white"));
-            ImageView image = new ImageView(new Image(game.getImageURL(), 1000, 250, true, true));
-            image.setViewport(new Rectangle2D(image.getImage().getWidth() / 2 - 268 / 2, 0, 268, 268));
-            vBox.getChildren().add(image);
-            vBox.getChildren().add(label);
-            vBox.getProperties().put("gameId", game.getId());
-            vBox.setOnMouseClicked(mouseEvent -> {
-                int gameId = (int) getGameNameFromVBox(vBox);
-                jeuSelectionner(gameId);
-                Stage stage = (Stage) vBox.getScene().getWindow();
-                stage.setScene(scene);
-            });
-            biblioController.getGridRecherchePane().add(vBox, compteur, compteur2);
-            if (compteur == 3) {
-                compteur = 0;
-                compteur2++;
-            } else {
-                compteur++;
-            }
-        }
-    }
-
-    @FXML
-    public void handleMesJeuxButtonAction(ActionEvent event) {
-        navigateTo(event, "mesJeux.fxml");
-    }
-
-    @FXML
-    public void handleCreerTagButtonAction(ActionEvent event) {
-        navigateTo(event, "CreerTag.fxml");
-    }
-
-    @FXML
-    public void handleTagsButtonAction(ActionEvent event) {
-        navigateTo(event, "RechercheParTAG.fxml");
-    }
-
-    private void navigateTo(ActionEvent event, String fxmlFile) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
-            Parent root = loader.load();
-            Scene scene = new Scene(root);
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(scene);
-            window.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("Erreur lors du chargement du fichier FXML : " + e.getMessage());
-        }
-    }
 
     // Méthode pour ajouter un tag à un jeu
     @FXML
     private void addTagToGame(ActionEvent event) {
-        String tagName = ((Button) event.getSource()).getText(); // Get the tag name from the button text
+        String tagName = ((Button) event.getSource()).getText();
         if (currentGame != null) {
             currentGame.addTag(tagName);
             System.out.println("Tag ajouté : " + tagName + " au jeu " + currentGame.getName());

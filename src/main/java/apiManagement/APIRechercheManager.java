@@ -28,7 +28,7 @@ public class APIRechercheManager {
         } catch (UnsupportedEncodingException e2) {
             e2.printStackTrace();
         }
-//https://api.rawg.io/api/games?key=03aefea4690c4af5828591dca83a3c8f&search=sonic&page_size=10&ordering=-added
+
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create("https://api.rawg.io/api/games?key=03aefea4690c4af5828591dca83a3c8f"
                 + "&search=" + searchedEncoded + "&page_size=12&ordering=-added"))

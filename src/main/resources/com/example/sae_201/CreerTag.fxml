@@ -53,7 +53,7 @@
                      </font>
                   </Button>
                   <Pane prefHeight="30.0" prefWidth="10.0" />
-                  <Button mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: #484848;" text="Tags" textFill="WHITE">
+                  <Button mnemonicParsing="false" opacity="0.2" prefWidth="100.0" style="-fx-background-color: #484848;" text="Tags" textFill="WHITE">
                      <font>
                         <Font size="18.0" />
                      </font>
