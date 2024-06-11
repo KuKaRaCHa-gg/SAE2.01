@@ -3,34 +3,30 @@ package com.example.sae_201;
 
 
 import apiManagement.APIGameManager;
+import apiManagement.APIRechercheManager;
 import apiManagement.APITendanceManager;
 import apiManagement.GameNotFoundException;
 import gameModel.Game;
 import gameModel.MyGames;
 import javafx.application.Platform;
-import javafx.beans.property.DoubleProperty;
-import javafx.beans.property.SimpleDoubleProperty;
-import javafx.beans.value.ObservableValue;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Paint;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import persistence.PersistenceBySerialization;
 import result.Result;
 
-import java.io.IOException;
 import java.util.List;
 
 
@@ -130,38 +126,43 @@ public class accueil {
     @FXML
     private VBox textBienvenu;
 
+    @FXML
+    private TextField entryAccueil;
+
+    @FXML
+    private Button mesJeuxButton;
+
     private MyGames model;
-    private PersistentModelManager persistentModelManager;
+    private PersistenceBySerialization persistentModelManager;
     private APITendanceManager apiTendanceManager;
     private APIGameManager apiGameManager;
+    private APIRechercheManager apiRechercheManager;
     private Result result;
     private Scene scene;
     private Stage stage;
+    private Scene searchScene;
+    private Stage searchStage;
     private PageJeuController gameInfoController;
+    private rechercheController searchGameController;
     private int compteur = 0;
     private int compteur2 = 0;
+    private int compteurX = 0;
+    private int compteurY = 0;
 
     private Stage modalChargement;
+    private Scene biblioPage;
+    private Stage biblioStage;
 
     public accueil(){
         super();
         apiTendanceManager = new APITendanceManager();
         apiGameManager = new APIGameManager();
+        apiRechercheManager = new APIRechercheManager();
         model = new MyGames();
         persistentModelManager = new PersistenceBySerialization();
+        gameInfoController = new PageJeuController();
     }
 
-    public void setChargement(Stage modalChargement) {
-        this.modalChargement = modalChargement;
-    }
-
-    public void setNewScene(Scene gamePage) {
-        this.scene = gamePage;
-    }
-
-    public void setStage(Stage stage) {
-        this.stage = stage;
-    }
 
     public void initialization() {
         Task<Void> initTask = new Task<>() {
@@ -175,11 +176,13 @@ public class accueil {
                         VBox vBox = new VBox();
                         Label label = new Label(game.getName());
                         label.setTextFill(Paint.valueOf("white"));
-                        ImageView image = new ImageView(new Image(game.getImageURL(), gridPane.getPrefWidth() / 4, 250, true, true));
+                        ImageView image = new ImageView(new Image(game.getImageURL(), 1000, 250, true, true));
+                        image.setViewport(new Rectangle2D(image.getImage().getWidth()/2 - 268 /2 ,0,268, 268));
                         vBox.getChildren().add(image);
                         vBox.getChildren().add(label);
                         vBox.setOnMouseClicked(mouseEvent -> {
                             jeuSelectionner(game.getId());
+                            gameInfoController.getCurrentGame().setId(game.getId());
                             Stage stage = (Stage) vBox.getScene().getWindow();
                             stage.setScene(scene);
                         });
@@ -192,7 +195,6 @@ public class accueil {
                         }
                     });
                 }
-                persistentModelManager.save(model);
                 return null;
             }
 
@@ -222,8 +224,14 @@ public class accueil {
         new Thread(initTask).start();
     }
 
-    private void jeuSelectionner(int id) {
+    public void jeuSelectionner(int id) {
         List<Game> selectionGame = apiGameManager.getInfoGame(id);
+
+        gameInfoController.getRequirementGridPane().getChildren().clear();
+        gameInfoController.getPlateformeGridPane().getChildren().clear();
+        gameInfoController.getTagGridPane().getChildren().clear();
+        gameInfoController.getDevGridPane().getChildren().clear();
+        gameInfoController. getEditorGridPane().getChildren().clear();
         for (Game game : selectionGame) {
             int compteurGame = 0;
             gameInfoController.getRatingValueLabel().setText(game.getRate());
@@ -239,17 +247,25 @@ public class accueil {
                     "</html>";
             gameInfoController.getWebDescView().getEngine().loadContent(htmlContent);
 
-            gameInfoController.getBannerImageView().setImage(new Image(game.getImageURL()));
+            Image image = new Image(game.getImageURL());
+            gameInfoController.getBannerImageView().setImage(image);
+            gameInfoController.getBannerImageView().setViewport(new Rectangle2D(0,image.getHeight()/2 - gameInfoController.getBannerImageView().getFitHeight()/2,image.getWidth(), gameInfoController.getBannerImageView().getFitHeight()));
+
             VBox vBox1 = new VBox();
-            Label label1 = new Label(game.getPlatforms()[0].getRequirementMinimum());
-            label1.setTextFill(Paint.valueOf("white"));
-            vBox1.getChildren().add(label1);
-            gameInfoController.getRequirementGridPane().add(label1, 0,0);
+            Text text1 = new Text(game.getPlatforms()[0].getRequirementMinimum());
+            text1.setFill(Paint.valueOf("white"));
+            TextFlow textFlow1 = new TextFlow(text1);
+            textFlow1.setMaxWidth(800);
+            vBox1.getChildren().add(textFlow1);
+            gameInfoController.getRequirementGridPane().add(vBox1, 0, 0);
+
             vBox1 = new VBox();
-            label1 = new Label(game.getPlatforms()[0].getRequirementRecommended());
-            label1.setTextFill(Paint.valueOf("white"));
-            vBox1.getChildren().add(label1);
-            gameInfoController.getRequirementGridPane().add(label1, 0,1);
+            Text text2 = new Text(game.getPlatforms()[0].getRequirementRecommended());
+            text2.setFill(Paint.valueOf("white"));
+            TextFlow textFlow2 = new TextFlow(text2);
+            textFlow2.setMaxWidth(800);
+            vBox1.getChildren().add(textFlow2);
+            gameInfoController.getRequirementGridPane().add(vBox1, 0, 1);
 
             for (int i = 0; i<game.getPlatforms().length; i++) {
                 VBox vBox = new VBox();
@@ -286,39 +302,109 @@ public class accueil {
                 gameInfoController.getTagGridPane().add(vBox, 0, compteurGame);
                 compteurGame++; }
 
+
+            gameInfoController.getCurrentGame().setName(game.getName());
+            gameInfoController.getCurrentGame().setImageURL(game.getImageURL());
+
         }
     }
 
+
     @FXML
+    void mesJeuOnAction(ActionEvent event) {
+        Button btn = (Button)event.getSource();
+        Stage stage = (Stage) btn.getScene().getWindow();
+        stage.setScene(biblioPage);
+    }
+
+
+
+    public void onActionAccueil() throws GameNotFoundException {
+    String searchedText = entryAccueil.getText();
+
+		if (searchedText.isBlank()){
+                return; }
+
+        List<Game> researchGame = apiRechercheManager.getInfoGame(searchedText);
+
+        compteurX = 0;
+        compteurY = 0;
+        searchGameController.getGridRecherchePane().getChildren().clear();
+        for (Game game : researchGame) {
+            model.addGame(game);
+            Platform.runLater(() -> {
+                VBox vBox = new VBox();
+                Label label = new Label(game.getName());
+                label.setTextFill(Paint.valueOf("white"));
+                ImageView image = new ImageView(new Image(game.getImageURL(), 1000, 250, true, true));
+                image.setViewport(new Rectangle2D(image.getImage().getWidth()/2 - 268 /2 ,0,268, 268));
+                vBox.getChildren().add(image);
+                vBox.getChildren().add(label);
+                vBox.setOnMouseClicked(mouseEvent -> {
+                    jeuSelectionner(game.getId());
+                    Stage stage = (Stage) vBox.getScene().getWindow();
+                    stage.setScene(scene);
+                });
+                System.out.println(game.getName());
+                searchGameController.getGridRecherchePane().add(vBox, compteurX, compteurY);
+                if (compteurX == 3) {
+                    compteurX = 0;
+                    compteurY++;
+                } else {
+                    compteurX++;
+                }
+            });
+
+
+        }
+        searchGameController.getEntrySearch().setText(searchedText);
+        Stage stage = (Stage) entryAccueil.getScene().getWindow();
+        stage.setScene(searchScene);
+
+    }
+
     public void handleMesJeuxButtonAction(ActionEvent event) {
-        navigateTo(event, "mesJeux.fxml");
     }
 
-    @FXML
     public void handleCreerTagButtonAction(ActionEvent event) {
-        navigateTo(event, "CreerTag.fxml");
     }
 
-    @FXML
     public void handleTagsButtonAction(ActionEvent event) {
-        navigateTo(event, "RechercheParTAG.fxml");
     }
 
-    private void navigateTo(ActionEvent event, String fxmlFile) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
-            Parent root = loader.load();
-            Scene scene = new Scene(root);
-            Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            window.setScene(scene);
-            window.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("Erreur lors du chargement du fichier FXML : " + e.getMessage());
-        }
+    public void setChargement(Stage modalChargement) {
+        this.modalChargement = modalChargement;
+    }
+
+    public void setNewScene(Scene gamePage) {
+        this.scene = gamePage;
+    }
+
+    public void setStage(Stage stage) {
+        this.stage = stage;
     }
 
     public void setGameController(PageJeuController gameInfoController) {
         this.gameInfoController = gameInfoController;
+    }
+
+    public void setSearchController(rechercheController researchGameController) {
+        this.searchGameController = researchGameController;
+    }
+
+    public void setSearchScene(Scene searchPage) {
+        this.searchScene = searchPage;
+    }
+
+    public void setSearchStage(Stage stage) {
+        this.searchStage = stage;
+    }
+
+    public void setBliblioScene(Scene biblioPage) {
+        this.biblioPage = biblioPage;
+    }
+
+    public void setBiblioStage(Stage stage) {
+        this.biblioStage = stage;
     }
 }

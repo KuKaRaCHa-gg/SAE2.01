@@ -4,8 +4,51 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="creation et sauvgarde des tag ( la couleur la decription et le nom)">
+    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Mattis merge into DAniil">
+      <change afterPath="$PROJECT_DIR$/mes_jeux.ser" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/SAE_201/apiManagement/APIRechercheManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/MesJeuController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/mesJeu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/rechercheController.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/SAE_201/gameModel/FileManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/mesJeu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/apiManagement/APIRechercheManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/MesJeuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/pageJeuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/rechercheController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/gameModel/FileManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/mesJeu.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/apiManagement/APIGameManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/apiManagement/APIGameManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/apiManagement/APITendanceManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/apiManagement/APITendanceManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/HelloApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/HelloApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/PageJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/PageJeu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/PageJeuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/PageJeuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/PersistentModelManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/Recherche.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/Recherche.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/RechercheParTag.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/RechercheParTag.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/rechercheParTag.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/rechercheParTag.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/persistence/PersistenceBySerialization.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/persistence/PersistenceBySerialization.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/PageJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/PageJeu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/Recherche.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/Recherche.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/accueil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/accueil.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/rechercheParTag.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/rechercheParTag.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/saveFile" beforeDir="false" afterPath="$PROJECT_DIR$/saveFile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/apiManagement/APIGameManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiManagement/APIGameManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/apiManagement/APITendanceManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiManagement/APITendanceManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PersistentModelManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/PersistenceBySerialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/PersistenceBySerialization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/PageJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/PageJeu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/Recherche.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/Recherche.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/accueil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/accueil.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,15 +59,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Mattis" />
+        <entry key="$PROJECT_DIR$" value="Daniil" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,6 +96,10 @@
                     <option name="lastUsedInstant" value="1717681654" />
                   </RecentBranch>
                   <RecentBranch>
+                    <option name="branchName" value="Daniil4" />
+                    <option name="lastUsedInstant" value="1717681639" />
+                  </RecentBranch>
+                  <RecentBranch>
                     <option name="branchName" value="master" />
                     <option name="lastUsedInstant" value="1716965632" />
                   </RecentBranch>
@@ -68,7 +115,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/KuKaRaCHa-gg/SAE2.01.git&quot;,
-    &quot;accountId&quot;: &quot;facc958c-4d13-4b3d-b215-8972981d61a6&quot;
+    &quot;accountId&quot;: &quot;d6fd0033-9e85-4d52-85ae-05d376c55987&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -80,20 +127,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Daniil&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/10/Documents/GitHub/SAE2.01 Gestion Jeu/SAE2.01/src/main/java/com/example/sae_201&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/10/Documents/JavaFX/Projet/MorpionJeu&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.HelloApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "Merging Daniil",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "C:/Users/10/Documents/GitHub/SAE2.01 Gestion Jeu/SAE2.01/src/main/java/com/example/sae_201",
+    "last_opened_file_path": "C:/Users/10/Documents/JavaFX/Projet/MorpionJeu",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.example.sae_201" />
@@ -327,23 +374,151 @@
       <option name="project" value="LOCAL" />
       <updated>1717862311270</updated>
     </task>
-    <task id="LOCAL-00025" summary="creation et sauvgarde des tag ( la couleur la decription et le nom)">
+    <task id="LOCAL-00025" summary="Les tags par défaut sont mis">
       <option name="closed" value="true" />
-      <created>1717951080935</created>
+      <created>1717866604859</created>
       <option name="number" value="00025" />
       <option name="presentableId" value="LOCAL-00025" />
       <option name="project" value="LOCAL" />
-      <updated>1717951080935</updated>
+      <updated>1717866604859</updated>
     </task>
-    <task id="LOCAL-00026" summary="creation et sauvgarde des tag ( la couleur la decription et le nom)">
+    <task id="LOCAL-00026" summary="Je push (si ça pete c'est la faute a daniil)">
       <option name="closed" value="true" />
-      <created>1718090603962</created>
+      <created>1717937241444</created>
       <option name="number" value="00026" />
       <option name="presentableId" value="LOCAL-00026" />
       <option name="project" value="LOCAL" />
-      <updated>1718090603962</updated>
+      <updated>1717937241444</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Le requirement s'affiche parfaitement">
+      <option name="closed" value="true" />
+      <created>1717940669526</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1717940669526</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Début de la recherche de jeu par titre">
+      <option name="closed" value="true" />
+      <created>1717943171700</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1717943171700</updated>
+    </task>
+    <task id="LOCAL-00029" summary="La recherche de jeu par titre avance mais pas opperationelle encore">
+      <option name="closed" value="true" />
+      <created>1717945772550</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1717945772550</updated>
+    </task>
+    <task id="LOCAL-00030" summary="La recherche de jeu par titre marche (quasi) !!!!">
+      <option name="closed" value="true" />
+      <created>1717946692572</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1717946692572</updated>
+    </task>
+    <task id="LOCAL-00031" summary="La recherche de jeu par titre marche !!!!">
+      <option name="closed" value="true" />
+      <created>1717946889042</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1717946889042</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Les jeu de la recherche de jeu par titre envoie vers leurs page !">
+      <option name="closed" value="true" />
+      <created>1717948303582</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1717948303582</updated>
+    </task>
+    <task id="LOCAL-00033" summary="La parti recherche a eu une ptite mise a jour, ont peu rechercher des jeu sur la page recherche (en grosse beta encore)">
+      <option name="closed" value="true" />
+      <created>1717953266115</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1717953266115</updated>
+    </task>
+    <task id="LOCAL-00034" summary="La page Jeu est relier a la page de recherche">
+      <option name="closed" value="true" />
+      <created>1717962394076</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1717962394076</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Les pages accueil, PageJeu et search jeu sont parfaitement lié !">
+      <option name="closed" value="true" />
+      <created>1717964244171</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1717964244171</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Ta pas interet d'avoir cassé le truc daniil">
+      <option name="closed" value="true" />
+      <created>1718002661874</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1718002661874</updated>
+    </task>
+    <task id="LOCAL-00037" summary="commencement de MesJeu">
+      <option name="closed" value="true" />
+      <created>1718003282558</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1718003282558</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Page Bibliothèque relier a toute les pages">
+      <option name="closed" value="true" />
+      <created>1718018246051</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1718018246052</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Ajout de jeu en beta mais fonctionnel">
+      <option name="closed" value="true" />
+      <created>1718038347600</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1718038347600</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Ajout de jeu encore Beta">
+      <option name="closed" value="true" />
+      <created>1718050424579</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1718050424579</updated>
+    </task>
+    <task id="LOCAL-00041" summary="L'ajout de jeu marche !">
+      <option name="closed" value="true" />
+      <created>1718089044110</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1718089044110</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Daniiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiil">
+      <option name="closed" value="true" />
+      <created>1718096582687</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1718096582687</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -358,29 +533,51 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ajout des page" />
-    <MESSAGE value="Test" />
-    <MESSAGE value="Logo mis en place" />
-    <MESSAGE value="Mis en place des package pour l'api" />
-    <MESSAGE value="Changement dans l'interface de l'acceuil et ajout du logo dans l'icone de l'application" />
-    <MESSAGE value="Quelque changement de l'interface accueil" />
-    <MESSAGE value="Header de selection mis en place dans l'interface" />
-    <MESSAGE value="Creation des classes pour faire les recherches des jeux" />
-    <MESSAGE value="Creation des classes pour faire la persistence du projet, la sauvegarde local" />
-    <MESSAGE value="Encore des erreur mais sa s&quot;ouvre" />
-    <MESSAGE value="Corriger de l'erreur mais encore quelque erreur" />
-    <MESSAGE value="ça marche ! enfin... presque" />
-    <MESSAGE value="Correction en plus mais pas fini" />
-    <MESSAGE value="Ouais bah, si sa pete c'est la faute a noé" />
-    <MESSAGE value="Ouais bah, si sa pete c'est la faute a daniil" />
-    <MESSAGE value="Daniil" />
     <MESSAGE value="ça marche pour le moment" />
     <MESSAGE value="Le projet marche pour le moment, des chose importer et tous et tous" />
     <MESSAGE value="Mis a jour de l'API et Platform semi fonctionnel" />
     <MESSAGE value="L'app a un ecran de chargement presque fonctionnel (manque juste la page fxml)" />
     <MESSAGE value="L'ecran de chargement est fonctionnel (mais bug a certain moment)" />
     <MESSAGE value="Plateforme, editeur et developeur mis, et la description est mieux maintenant (merci la WebView)" />
-    <MESSAGE value="creation et sauvgarde des tag ( la couleur la decription et le nom)" />
-    <option name="LAST_COMMIT_MESSAGE" value="creation et sauvgarde des tag ( la couleur la decription et le nom)" />
+    <MESSAGE value="Les tags par défaut sont mis" />
+    <MESSAGE value="Je push (si ça pete c'est la faute a daniil)" />
+    <MESSAGE value="Le requirement s'affiche parfaitement" />
+    <MESSAGE value="Début de la recherche de jeu par titre" />
+    <MESSAGE value="La recherche de jeu par titre avance mais pas opperationelle encore" />
+    <MESSAGE value="La recherche de jeu par titre marche (quasi) !!!!" />
+    <MESSAGE value="La recherche de jeu par titre marche !!!!" />
+    <MESSAGE value="Les jeu de la recherche de jeu par titre envoie vers leurs page !" />
+    <MESSAGE value="La parti recherche a eu une ptite mise a jour, ont peu rechercher des jeu sur la page recherche (en grosse beta encore)" />
+    <MESSAGE value="La page Jeu est relier a la page de recherche" />
+    <MESSAGE value="Les pages accueil, PageJeu et search jeu sont parfaitement lié !" />
+    <MESSAGE value="Ta pas interet d'avoir cassé le truc daniil" />
+    <MESSAGE value="commencement de MesJeu" />
+    <MESSAGE value="Page Bibliothèque relier a toute les pages" />
+    <MESSAGE value="Ajout de jeu en beta mais fonctionnel" />
+    <MESSAGE value="Ajout de jeu encore Beta" />
+    <MESSAGE value="L'ajout de jeu marche !" />
+    <MESSAGE value="Daniiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiil" />
+    <MESSAGE value="Mattis merge into DAniil" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mattis merge into DAniil" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/sae_201/MesJeuController.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java</url>
+          <line>286</line>
+          <properties class="com.example.sae_201.PageJeuController">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

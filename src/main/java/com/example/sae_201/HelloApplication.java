@@ -49,6 +49,59 @@ public class HelloApplication extends Application {
             PageJeuController gameInfoController = fxmlgameLoader.getController();
             toJeuController.setGameController(gameInfoController);
 
+            FXMLLoader fxmlsearchLoader = new FXMLLoader(HelloApplication.class.getResource("Recherche.fxml"));
+            Parent searchRoot = fxmlsearchLoader.load();
+            Scene searchPage = new Scene(searchRoot, 1225,745);
+            accueil toSearchController = (accueil) fxmlLoader.getController();
+            toSearchController.setSearchScene(searchPage);
+            toSearchController.setSearchStage(stage);
+
+            FXMLLoader fxmlBiblioLoader = new FXMLLoader(HelloApplication.class.getResource("mesJeu.fxml"));
+            Parent biblioRoot = fxmlBiblioLoader.load();
+            Scene biblioPage = new Scene(biblioRoot, 1225, 745);
+            accueil toBiblioController = (accueil) fxmlLoader.getController();
+            toBiblioController.setBliblioScene(biblioPage);
+            toBiblioController.setBiblioStage(stage);
+            PageJeuController jeuToBiblio = (PageJeuController) fxmlgameLoader.getController();
+            jeuToBiblio.setBliblioScene(biblioPage);
+            jeuToBiblio.setBiblioStage(stage);
+            rechercheController searchToBiblio = (rechercheController) fxmlsearchLoader.getController();
+            searchToBiblio.setBliblioScene(biblioPage);
+            searchToBiblio.setBiblioStage(stage);
+
+            rechercheController searchGameController = fxmlsearchLoader.getController();
+            toSearchController.setSearchController(searchGameController);
+
+
+            rechercheController searchToJeu = (rechercheController) fxmlsearchLoader.getController();
+            searchToJeu.setNewScene(gamePage);
+            searchToJeu.setStage(stage);
+
+            searchToJeu.setGameController(gameInfoController);
+            gameInfoController.setSearchController(searchGameController);
+
+            PageJeuController jeuToSearch = (PageJeuController) fxmlgameLoader.getController();
+            jeuToSearch.setNewScene(searchPage);
+            jeuToSearch.setStage(stage);
+
+            MesJeuController biblioToSearch = (MesJeuController) fxmlBiblioLoader.getController();
+            biblioToSearch.setSearchScene(searchPage);
+            biblioToSearch.setSearchStage(stage);
+
+            MesJeuController biblioToGame = (MesJeuController) fxmlBiblioLoader.getController();
+            biblioToGame.setNewScene(gamePage);
+            biblioToGame.setStage(stage);
+
+            biblioToSearch.setSearchController(searchGameController);
+            biblioToSearch.setGameController(gameInfoController);
+
+            PageJeuController jeuToJeu = (PageJeuController) fxmlgameLoader.getController();
+            jeuToJeu.setThisScene(gamePage);
+            jeuToJeu.setStage(stage);
+
+            MesJeuController biblioController = fxmlBiblioLoader.getController();
+            jeuToJeu.setBiblioController(biblioController);
+
 
         } catch (Exception e) {
             e.printStackTrace();
