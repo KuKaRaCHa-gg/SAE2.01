@@ -142,7 +142,7 @@ public class accueil {
     private Stage stage;
     private Scene searchScene;
     private Stage searchStage;
-    private PageJeuController gameInfoController;
+    private pageJeuController gameInfoController;
     private rechercheController searchGameController;
     private int compteur = 0;
     private int compteur2 = 0;
@@ -160,7 +160,7 @@ public class accueil {
         apiRechercheManager = new APIRechercheManager();
         model = new MyGames();
         persistentModelManager = new PersistenceBySerialization();
-        gameInfoController = new PageJeuController();
+        gameInfoController = new pageJeuController();
     }
 
 
@@ -384,7 +384,7 @@ public class accueil {
         this.stage = stage;
     }
 
-    public void setGameController(PageJeuController gameInfoController) {
+    public void setGameController(pageJeuController gameInfoController) {
         this.gameInfoController = gameInfoController;
     }
 

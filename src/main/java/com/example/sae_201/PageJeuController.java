@@ -28,7 +28,7 @@ import persistence.PersistenceBySerialization;
 import java.io.IOException;
 import java.util.List;
 
-public class PageJeuController {
+public class pageJeuController {
 
     @FXML
     private Label aboutGameLabel;
@@ -211,7 +211,7 @@ public class PageJeuController {
     private MyGames model;
     private int gameCompte;
 
-    public PageJeuController(){
+    public pageJeuController(){
         apiRechercheManager = new APIRechercheManager();
         apiGameManager = new APIGameManager();
         currentGame = new Game();
@@ -477,8 +477,7 @@ public class PageJeuController {
             Label label = new Label(game.getName());
             label.setTextFill(Paint.valueOf("white"));
             ImageView image = new ImageView(new Image(game.getImageURL(), 1000, 250, true, true));
-            image.setViewport(new Rectangle2D(image.getImage().getWidth() / 2 -
-                    image.setViewport(new Rectangle2D(image.getImage().getWidth() / 2 - 268 / 2, 0, 268, 268));
+            image.setViewport(new Rectangle2D(image.getImage().getWidth() / 2 - 268 / 2, 0, 268, 268));
             vBox.getChildren().add(image);
             vBox.getChildren().add(label);
             vBox.getProperties().put("gameId", game.getId());
