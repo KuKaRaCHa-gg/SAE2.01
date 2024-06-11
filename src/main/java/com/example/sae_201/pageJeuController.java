@@ -430,8 +430,10 @@ public class PageJeuController {
         ImageView image = new ImageView(new Image(currentGame.getImageURL(), biblioController.getGridRecherchePane().getPrefWidth() / 4, 250, true, true));
         vBox.getChildren().add(image);
         vBox.getChildren().add(label);
+        vBox.getProperties().put("gameId", currentGame.getId());
         vBox.setOnMouseClicked(mouseEvent -> {
-            jeuSelectionner(currentGame.getId());
+            int gameId = Integer.parseInt(String.valueOf(getGameNameFromVBox(vBox)));
+            jeuSelectionner(gameId);
             Stage stage = (Stage) vBox.getScene().getWindow();
             stage.setScene(scene);
         });
@@ -443,6 +445,10 @@ public class PageJeuController {
             compteur++;
         }
 
+    }
+
+    public int getGameNameFromVBox(VBox vBox) {
+        return (int) vBox.getProperties().get("gameId");
     }
 
 
