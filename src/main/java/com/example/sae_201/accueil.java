@@ -152,6 +152,8 @@ public class accueil {
     private Stage modalChargement;
     private Scene biblioPage;
     private Stage biblioStage;
+    private Scene createTAGPage;
+    private Stage createStage;
 
     public accueil(){
         super();
@@ -363,6 +365,13 @@ public class accueil {
 
     }
 
+    @FXML
+    public void onTagCreatClicked(ActionEvent event) {
+        Button btn = (Button)event.getSource();
+        Stage stage = (Stage) btn.getScene().getWindow();
+        stage.setScene(createTAGPage);
+    }
+
     public void handleMesJeuxButtonAction(ActionEvent event) {
     }
 
@@ -406,5 +415,13 @@ public class accueil {
 
     public void setBiblioStage(Stage stage) {
         this.biblioStage = stage;
+    }
+
+    public void setTagScene(Scene createTAGPage) {
+        this.createTAGPage = createTAGPage;
+    }
+
+    public void setTagStage(Stage stage) {
+        this.createStage = stage;
     }
 }

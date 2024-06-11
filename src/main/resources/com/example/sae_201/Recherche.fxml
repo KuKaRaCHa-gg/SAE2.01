@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
@@ -13,7 +18,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" prefHeight="745.0" prefWidth="1225.0" style="-fx-background-color: #484848;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sae_201.rechercheController">
+<VBox alignment="TOP_CENTER" prefHeight="745.0" prefWidth="1225.0" style="-fx-background-color: #484848;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sae_201.rechercheController">
    <children>
       <HBox prefHeight="75.0" prefWidth="1020.0" style="-fx-background-color: #000000;">
          <children>
@@ -63,7 +68,7 @@
                </font>
             </Button>
             <Pane prefHeight="30.0" prefWidth="10.0" />
-            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="127.0" style="-fx-background-color: #484848;" text="Créer un Tag" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#onTagCreatClicked" prefHeight="40.0" prefWidth="127.0" style="-fx-background-color: #484848;" text="Créer un Tag" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>

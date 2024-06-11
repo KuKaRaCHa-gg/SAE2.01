@@ -21,7 +21,6 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 
-import java.io.*;
 import java.util.List;
 
 public class MesJeuController {
@@ -46,6 +45,8 @@ public class MesJeuController {
     private Stage stage;
     private Scene scene;
     private APIGameManager apiGameManager;
+    private Scene createTAGPage;
+    private Stage createStage;
 
     public MesJeuController() {
     apiRechercheManager = new APIRechercheManager();
@@ -184,6 +185,13 @@ public class MesJeuController {
         }
     }
 
+    @FXML
+    public void onTagCreatClicked(ActionEvent event) {
+        Button btn = (Button) event.getSource();
+        Stage stage = (Stage) btn.getScene().getWindow();
+        stage.setScene(createTAGPage);
+    }
+
 
     public void setSearchController(rechercheController researchGameController) {
         this.searchGameController = researchGameController;
@@ -210,7 +218,13 @@ public class MesJeuController {
     }
 
 
+    public void setTagScene(Scene createTAGPage) {
+        this.createTAGPage = createTAGPage;
+    }
 
+    public void setTagStage(Stage stage) {
+        this.createStage = stage;
+    }
 }
 
 

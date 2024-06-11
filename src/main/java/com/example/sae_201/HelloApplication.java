@@ -69,6 +69,11 @@ public class HelloApplication extends Application {
             searchToBiblio.setBliblioScene(biblioPage);
             searchToBiblio.setBiblioStage(stage);
 
+            FXMLLoader fxmlcreateTAGLoader = new FXMLLoader(HelloApplication.class.getResource("CreerTag.fxml"));
+            Parent createTAGRoot =  fxmlcreateTAGLoader.load();
+            Scene createTAGPage = new Scene(createTAGRoot, 1225,745);
+
+
             rechercheController searchGameController = fxmlsearchLoader.getController();
             toSearchController.setSearchController(searchGameController);
 
@@ -101,6 +106,39 @@ public class HelloApplication extends Application {
 
             MesJeuController biblioController = fxmlBiblioLoader.getController();
             jeuToJeu.setBiblioController(biblioController);
+
+
+            accueil toTagController = (accueil) fxmlLoader.getController();
+            toTagController.setTagScene(createTAGPage);
+            toTagController.setTagStage(stage);
+
+            pageJeuController JeuTagController = (pageJeuController) fxmlgameLoader.getController();
+            JeuTagController.setTagScene(createTAGPage);
+            JeuTagController.setTagStage(stage);
+
+            MesJeuController biblioTagController = (MesJeuController) fxmlBiblioLoader.getController();
+            biblioTagController.setTagScene(createTAGPage);
+            biblioTagController.setTagStage(stage);
+
+            rechercheController searchTagController = (rechercheController) fxmlsearchLoader.getController();
+            searchTagController.setTagScene(createTAGPage);
+            searchTagController.setTagStage(stage);
+
+            CreerTagController TagtoSearch = (CreerTagController) fxmlcreateTAGLoader.getController();
+            TagtoSearch.setSearchScene(searchPage);
+            TagtoSearch.setSearchStage(stage);
+
+            CreerTagController TagtoBiblio = (CreerTagController) fxmlcreateTAGLoader.getController();
+            TagtoBiblio.setBliblioScene(biblioPage);
+            TagtoBiblio.setBiblioStage(stage);
+
+            CreerTagController TagtoGame = (CreerTagController) fxmlcreateTAGLoader.getController();
+            TagtoGame.setNewScene(gamePage);
+            TagtoGame.setStage(stage);
+
+            TagtoGame.setGameController(gameInfoController);
+            TagtoGame.setSearchController(searchGameController);
+
 
 
 

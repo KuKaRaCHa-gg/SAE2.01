@@ -46,6 +46,8 @@ public class rechercheController {
     private pageJeuController gameInfoController;
     private Scene biblioPage;
     private Stage biblioStage;
+    private Scene createTAGPage;
+    private Stage createStage;
 
 
     public GridPane getGridRecherchePane() {
@@ -208,6 +210,22 @@ public class rechercheController {
 
     public void setGameController(pageJeuController gameInfoController) {
         this.gameInfoController = gameInfoController;
+    }
+
+    @FXML
+    public void onTagCreatClicked(ActionEvent event) {
+        Button btn = (Button) event.getSource();
+        Stage stage = (Stage) btn.getScene().getWindow();
+        stage.setScene(createTAGPage);
+    }
+
+    public void setTagScene(Scene createTAGPage) {
+        this.createTAGPage = createTAGPage;
+    }
+
+
+    public void setTagStage(Stage stage) {
+        this.createStage = stage;
     }
 }
 

@@ -1,31 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" prefHeight="900.0" prefWidth="1020.0" style="-fx-background-color: #323232;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sae_201.CreerTagController">
+<VBox alignment="TOP_CENTER" prefHeight="900.0" prefWidth="1020.0" style="-fx-background-color: #323232;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sae_201.CreerTagController">
     <children>
-        <HBox alignment="CENTER_LEFT" prefHeight="75.0" prefWidth="1600.0" style="-fx-background-color: #000000;">
-            <children>
-                <ImageView fx:id="logoImageView" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
-                <Label fx:id="titleLabel" prefHeight="35.0" prefWidth="164.0" style="-fx-font-size: 24px;" text="GreenLog" textFill="white" />
-                <Pane prefWidth="318.0" />
-                <TextField fx:id="searchTextField" prefHeight="31.0" prefWidth="160.0" promptText="Recherche ..." style="-fx-background-color: #3C3C3C; -fx-text-fill: white;" />
-                <Pane prefWidth="255.0" />
-                <Button fx:id="tagButton" mnemonicParsing="false" prefHeight="39.0" prefWidth="175.0" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" text="TAG+" />
-                <Pane prefWidth="194.0" />
-                <ImageView fx:id="loginImageView" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" />
-            </children>
-        </HBox>
-        <Pane prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #484848;">
-            <children>
-                <Button fx:id="mesJeuxButton" layoutX="38.0" layoutY="1.0" onAction="#handleMesJeuxButtonAction" text="Mes Jeux" />
-                <Button fx:id="tagsButton" layoutX="129.0" layoutY="1.0" onAction="#handleTagsButtonAction" text="Tags" />
-                <Button fx:id="creerTagNavButton" layoutX="190.0" layoutY="1.0" onAction="#handleCreerTagButtonAction" text="Créer un Tag" />
-            </children>
-        </Pane>
+      <VBox alignment="TOP_CENTER" prefHeight="135.0" prefWidth="1020.0" style="-fx-background-color: #484848;">
+         <children>
+            <HBox prefHeight="75.0" prefWidth="1020.0" style="-fx-background-color: #000000;">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/LOGO.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="80.0" prefWidth="945.0">
+                     <children>
+                        <Label text="GreenLog" textFill="WHITE">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="80.0" prefWidth="159.0" />
+                        <TextField fx:id="entryAccueil" onAction="#onActionAccueil" prefHeight="26.0" prefWidth="300.0" promptText="Recherche ..." />
+                        <Pane prefHeight="80.0" prefWidth="250.0" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="73.0" fitWidth="320.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/compte.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #484848;">
+               <children>
+                  <Button fx:id="mesJeuxButton1" mnemonicParsing="false" onAction="#mesJeuOnAction" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #484848;" text="Mes Jeux" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Pane prefHeight="30.0" prefWidth="10.0" />
+                  <Button mnemonicParsing="false" prefWidth="100.0" style="-fx-background-color: #484848;" text="Tags" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Pane prefHeight="30.0" prefWidth="10.0" />
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="127.0" style="-fx-background-color: #484848;" text="Créer un Tag" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
         <Label fx:id="titreCreerTag" prefHeight="176.0" prefWidth="533.0" text="Créer un tag" textAlignment="CENTER" textFill="WHITE">
             <font>
                 <Font size="94.0" />
@@ -54,7 +96,7 @@
                 <Pane prefHeight="200.0" prefWidth="200.0">
                     <children>
                         <ColorPicker fx:id="colorPicker" layoutX="65.0" layoutY="8.0" prefHeight="31.0" prefWidth="161.0" />
-                        <Button fx:id="creerTagButton" layoutX="805.0" layoutY="8.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="161.0" style="-fx-border-radius: 180;" text="CRÉER" textFill="#58c358" onAction="#handleCreerTagButtonAction">
+                        <Button fx:id="creerTagButton" layoutX="805.0" layoutY="8.0" mnemonicParsing="false" onAction="#handleCreerTagButtonAction" prefHeight="31.0" prefWidth="161.0" style="-fx-border-radius: 180;" text="CRÉER" textFill="#58c358">
                             <font>
                                 <Font size="22.0" />
                             </font>
