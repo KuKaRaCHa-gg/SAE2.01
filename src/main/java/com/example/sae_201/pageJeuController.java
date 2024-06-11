@@ -307,7 +307,7 @@ public class pageJeuController {
         searchGameController.getEntrySearch().setText(searchedText);
         Stage stage = (Stage) searchTextField.getScene().getWindow();
         stage.setScene(searchPage);
-}
+    }
 
 
     public void jeuSelectionner(int id) {
