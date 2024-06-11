@@ -17,8 +17,8 @@ public class NavigationUtil {
                 ((MainScreenController) controller).setStage(stage);
             } else if (controller instanceof HelloController) {
                 ((HelloController) controller).setStage(stage);
-            } else if (controller instanceof PageJeuController) {
-                ((PageJeuController) controller).setStage(stage);
+            } else if (controller instanceof pageJeuController) {
+                ((pageJeuController) controller).setStage(stage);
             }
             stage.setScene(scene);
             stage.show();

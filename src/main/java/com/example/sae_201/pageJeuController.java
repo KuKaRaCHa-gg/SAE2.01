@@ -24,7 +24,7 @@ import persistence.PersistenceBySerialization;
 
 import java.util.List;
 
-public class PageJeuController {
+public class pageJeuController {
 
     @FXML
     private Label aboutGameLabel;
@@ -202,7 +202,7 @@ public class PageJeuController {
     private static final String FILE_PATH = "mes_jeux.ser";
 
 
-    public PageJeuController(){
+    public pageJeuController(){
         apiRechercheManager = new APIRechercheManager();
         apiGameManager = new APIGameManager();
         currentGame = new Game();

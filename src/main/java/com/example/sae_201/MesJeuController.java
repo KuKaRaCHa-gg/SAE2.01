@@ -40,7 +40,7 @@ public class MesJeuController {
     private int compteurX = 0;
     private int compteurY = 0;
     private rechercheController searchGameController;
-    private PageJeuController gameInfoController;
+    private pageJeuController gameInfoController;
     private Scene searchScene;
     private Stage searchStage;
     private Stage stage;
@@ -189,7 +189,7 @@ public class MesJeuController {
         this.searchGameController = researchGameController;
     }
 
-    public void setGameController(PageJeuController gameInfoController) {
+    public void setGameController(pageJeuController gameInfoController) {
         this.gameInfoController = gameInfoController;
     }
 

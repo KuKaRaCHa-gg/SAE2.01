@@ -43,7 +43,7 @@ public class rechercheController {
     private int compteurX = 0;
     private int compteurY = 0;
     private APIGameManager apiGameManager;
-    private PageJeuController gameInfoController;
+    private pageJeuController gameInfoController;
     private Scene biblioPage;
     private Stage biblioStage;
 
@@ -206,7 +206,7 @@ public class rechercheController {
         this.biblioStage = stage;
     }
 
-    public void setGameController(PageJeuController gameInfoController) {
+    public void setGameController(pageJeuController gameInfoController) {
         this.gameInfoController = gameInfoController;
     }
 }
