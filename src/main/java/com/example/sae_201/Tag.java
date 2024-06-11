@@ -1,16 +1,20 @@
 package com.example.sae_201;
 
 import javafx.scene.paint.Color;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 public class Tag implements Serializable {
     private String name;
     private String description;
+    @JsonIgnore
     private transient Color color; // Color cannot be directly serialized
+
+    public Tag() {
+        // Default constructor needed for Jackson
+    }
 
     public Tag(String name, String description, Color color) {
         this.name = name;
@@ -36,28 +40,23 @@ public class Tag implements Serializable {
         this.description = description;
     }
 
+    @JsonIgnore
     public Color getColor() {
         return color;
     }
 
+    @JsonIgnore
     public void setColor(Color color) {
         this.color = color;
     }
 
-    private void writeObject(ObjectOutputStream out) throws IOException {
-        out.defaultWriteObject();
-        out.writeDouble(color.getRed());
-        out.writeDouble(color.getGreen());
-        out.writeDouble(color.getBlue());
-        out.writeDouble(color.getOpacity());
+    @JsonProperty("color")
+    public String getColorAsString() {
+        return color.toString();
     }
 
-    private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {
-        in.defaultReadObject();
-        double red = in.readDouble();
-        double green = in.readDouble();
-        double blue = in.readDouble();
-        double opacity = in.readDouble();
-        this.color = new Color(red, green, blue, opacity);
+    @JsonProperty("color")
+    public void setColorAsString(String colorString) {
+        this.color = Color.valueOf(colorString);
     }
 }
