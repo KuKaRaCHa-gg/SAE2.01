@@ -101,5 +101,8 @@ public class Game implements Comparator<Game>, Serializable {
     public void setTags(Tags[] tags) {
         this.tags = tags;
     }
+
+    public void addTag(String tagName) {
+    }
 }
 

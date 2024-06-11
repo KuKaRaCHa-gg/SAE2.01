@@ -7,14 +7,12 @@ import gameModel.Game;
 import gameModel.MyGames;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.geometry.Rectangle2D;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -27,9 +25,8 @@ import javafx.scene.web.WebView;
 import javafx.stage.Stage;
 import persistence.PersistenceBySerialization;
 
-import java.util.List;
-
 import java.io.IOException;
+import java.util.List;
 
 public class PageJeuController {
 
@@ -120,7 +117,6 @@ public class PageJeuController {
     @FXML
     private Label ratingValueLabel;
 
-
     @FXML
     private GridPane tagGridPane;
 
@@ -193,6 +189,8 @@ public class PageJeuController {
     @FXML
     private WebView webDescView;
 
+    @FXML
+    private Button pageAjout;
 
     private Stage stage;
     private APIRechercheManager apiRechercheManager;
@@ -207,7 +205,11 @@ public class PageJeuController {
     private MesJeuController biblioController;
     private List<Game> savedGames;
     private static final String FILE_PATH = "mes_jeux.ser";
-
+    private int compteur = 0;
+    private int compteur2 = 0;
+    private Game currentGame;
+    private MyGames model;
+    private int gameCompte;
 
     public PageJeuController(){
         apiRechercheManager = new APIRechercheManager();
@@ -231,16 +233,6 @@ public class PageJeuController {
     private void handleCreerTagButtonAction() {
         NavigationUtil.navigateTo(stage, "Recherche.fxml");
     }
-
-
-    @FXML
-    private Button pageAjout;
-    private int compteur = 0;
-    private int compteur2 = 0;
-    private Game currentGame;
-    private MyGames model;
-    private int gameCompte;
-
 
     public Game getCurrentGame(){
         return currentGame;
@@ -286,8 +278,6 @@ public class PageJeuController {
         return webDescView;
     }
 
-
-
     @FXML
     void onActionJeu(ActionEvent event) throws GameNotFoundException {
         String searchedText = searchTextField.getText();
@@ -324,14 +314,12 @@ public class PageJeuController {
                     compteurX++;
                 }
             });
-
         }
         searchTextField.setText("");
         searchGameController.getEntrySearch().setText(searchedText);
         Stage stage = (Stage) searchTextField.getScene().getWindow();
         stage.setScene(searchPage);
-}
-
+    }
 
     public void jeuSelectionner(int id) {
         List<Game> selectionGame = apiGameManager.getInfoGame(id);
@@ -411,7 +399,6 @@ public class PageJeuController {
             getCurrentGame().setId(game.getId());
             getCurrentGame().setName(game.getName());
             getCurrentGame().setImageURL(game.getImageURL());
-
         }
     }
 
@@ -450,14 +437,11 @@ public class PageJeuController {
         } else {
             compteur++;
         }
-
-
     }
 
     public int getGameNameFromVBox(VBox vBox) {
         return (int) vBox.getProperties().get("gameId");
     }
-
 
     public void setBliblioScene(Scene biblioPage) {
         this.biblioPage = biblioPage;
@@ -466,7 +450,6 @@ public class PageJeuController {
     public void setBiblioStage(Stage stage) {
         this.biblioStage = stage;
     }
-
 
     public void setSearchController(rechercheController searchGameController) {
         this.searchGameController = searchGameController;
@@ -479,7 +462,6 @@ public class PageJeuController {
     public void setStage(Stage stage) {
         this.stage = stage;
     }
-
 
     public void setNewScene(Scene searchPage) {
         this.searchPage = searchPage;
@@ -495,12 +477,13 @@ public class PageJeuController {
             Label label = new Label(game.getName());
             label.setTextFill(Paint.valueOf("white"));
             ImageView image = new ImageView(new Image(game.getImageURL(), 1000, 250, true, true));
-            image.setViewport(new Rectangle2D(image.getImage().getWidth() / 2 - 268 / 2, 0, 268, 268));
+            image.setViewport(new Rectangle2D(image.getImage().getWidth() / 2 -
+                    image.setViewport(new Rectangle2D(image.getImage().getWidth() / 2 - 268 / 2, 0, 268, 268));
             vBox.getChildren().add(image);
             vBox.getChildren().add(label);
             vBox.getProperties().put("gameId", game.getId());
             vBox.setOnMouseClicked(mouseEvent -> {
-                int gameId = Integer.parseInt(String.valueOf(getGameNameFromVBox(vBox)));
+                int gameId = (int) getGameNameFromVBox(vBox);
                 jeuSelectionner(gameId);
                 Stage stage = (Stage) vBox.getScene().getWindow();
                 stage.setScene(scene);
@@ -515,8 +498,7 @@ public class PageJeuController {
         }
     }
 
-}
-
+    @FXML
     public void handleMesJeuxButtonAction(ActionEvent event) {
         navigateTo(event, "mesJeux.fxml");
     }
@@ -542,6 +524,16 @@ public class PageJeuController {
         } catch (IOException e) {
             e.printStackTrace();
             System.out.println("Erreur lors du chargement du fichier FXML : " + e.getMessage());
+        }
+    }
+
+    // Méthode pour ajouter un tag à un jeu
+    @FXML
+    private void addTagToGame(ActionEvent event) {
+        String tagName = ((Button) event.getSource()).getText(); // Get the tag name from the button text
+        if (currentGame != null) {
+            currentGame.addTag(tagName);
+            System.out.println("Tag ajouté : " + tagName + " au jeu " + currentGame.getName());
         }
     }
 }
