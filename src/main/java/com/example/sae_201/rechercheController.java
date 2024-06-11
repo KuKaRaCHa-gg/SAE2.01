@@ -7,6 +7,7 @@ import gameModel.Game;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -85,7 +86,8 @@ public class rechercheController {
                 VBox vBox = new VBox();
                 Label label = new Label(game.getName());
                 label.setTextFill(Paint.valueOf("white"));
-                ImageView image = new ImageView(new Image(game.getImageURL(), gridRecherchePane.getPrefWidth() / 4, 250, true, true));
+                ImageView image = new ImageView(new Image(game.getImageURL(), 1000, 250, true, true));
+                image.setViewport(new Rectangle2D(image.getImage().getWidth()/2 - 268 /2 ,0,268, 268));
                 vBox.getChildren().add(image);
                 vBox.getChildren().add(label);
                 vBox.setOnMouseClicked(mouseEvent -> {

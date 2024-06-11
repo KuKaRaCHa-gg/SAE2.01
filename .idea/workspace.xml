@@ -4,9 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="Ajout de jeu encore Beta">
+    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="L'ajout de jeu marche !">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/PageJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/PageJeu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/PageJeuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/PageJeuController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/accueil.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/rechercheController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/com/example/sae_201/rechercheController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/PageJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SAE_201/resources/com/example/sae_201/PageJeu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/PersistentModelManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/rechercheController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/rechercheController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/persistence/PersistenceBySerialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/persistence/PersistenceBySerialization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/PageJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/PageJeu.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -455,7 +467,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718050424579</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="L'ajout de jeu marche !">
+      <option name="closed" value="true" />
+      <created>1718089044110</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1718089044110</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -470,7 +490,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ouais bah, si sa pete c'est la faute a noé" />
     <MESSAGE value="Ouais bah, si sa pete c'est la faute a daniil" />
     <MESSAGE value="Daniil" />
     <MESSAGE value="ça marche pour le moment" />
@@ -495,7 +514,8 @@
     <MESSAGE value="Page Bibliothèque relier a toute les pages" />
     <MESSAGE value="Ajout de jeu en beta mais fonctionnel" />
     <MESSAGE value="Ajout de jeu encore Beta" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout de jeu encore Beta" />
+    <MESSAGE value="L'ajout de jeu marche !" />
+    <option name="LAST_COMMIT_MESSAGE" value="L'ajout de jeu marche !" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -507,7 +527,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/sae_201/PageJeuController.java</url>
-          <line>285</line>
+          <line>295</line>
           <properties class="com.example.sae_201.PageJeuController" method="onActionJeu">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />

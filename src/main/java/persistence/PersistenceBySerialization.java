@@ -1,42 +1,35 @@
 package persistence;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
 
-import com.example.sae_201.PersistentModelManager;
-import gameModel.MyGames;
+import gameModel.Game;
 
-public class PersistenceBySerialization implements PersistentModelManager {
+public class PersistenceBySerialization {
 
-    private static final String SAVE_FILE = "saveFile";
+    private static final String FILE_PATH = "mes_jeux.ser";
 
-    @Override
-    public void save(MyGames model) {
-        try (ObjectOutputStream objectOutputStream = new ObjectOutputStream(new FileOutputStream(SAVE_FILE)))
-        {
-            objectOutputStream.writeObject(model);
-            objectOutputStream.flush();
-            System.out.println("SAVE OK");
+    public void saveGames(List<Game> games) {
+        try (ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(FILE_PATH))) {
+            oos.writeObject(games);
         } catch (IOException e) {
-            System.err.println("Saving file error");
+            e.printStackTrace();
         }
     }
 
-    @Override
-    public MyGames load() {
-        MyGames model = null;
-
-        try (ObjectInputStream input = new ObjectInputStream(new FileInputStream(SAVE_FILE)))
-        {
-            model = (MyGames) input.readObject();
-            System.out.println("LOAD OK");
-        } catch (IOException e) {
-            System.err.println("Save file does not exist");
-            System.err.println("Creation of empty model");
-            model = new MyGames();
-        } catch (ClassNotFoundException e) {
-            System.err.println("Loading save file error");
+    public List<Game> loadGames() {
+        File file = new File(FILE_PATH);
+        if (!file.exists()) {
+            return new ArrayList<>();
         }
-        return model;
+
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))) {
+            return (List<Game>) ois.readObject();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+            return new ArrayList<>();
+        }
     }
 
 }
