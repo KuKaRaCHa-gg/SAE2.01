@@ -198,26 +198,15 @@ public class PageJeuController {
     private Scene biblioPage;
     private Stage biblioStage;
     private MesJeuController biblioController;
-    private PersistenceBySerialization persistentModelManager;
     private List<Game> savedGames;
     private static final String FILE_PATH = "mes_jeux.ser";
 
-    @FXML
-    private void initialize() {
-        savedGames = persistentModelManager.loadGames();
-        populateMesJeux();
-    }
-
-    private void saveGames() {
-        persistentModelManager.saveGames(savedGames);
-    }
 
     public PageJeuController(){
         apiRechercheManager = new APIRechercheManager();
         apiGameManager = new APIGameManager();
         currentGame = new Game();
         model = new MyGames();
-        persistentModelManager = new PersistenceBySerialization();
         gameCompte = 0;
     }
 
@@ -432,9 +421,6 @@ public class PageJeuController {
         if (currentGame == null) {
             return; // Aucun jeu n'est actuellement sélectionné
         }
-
-        savedGames.add(currentGame);
-        saveGames();
 
         VBox vBox = new VBox();
         Label label = new Label(currentGame.getName());
