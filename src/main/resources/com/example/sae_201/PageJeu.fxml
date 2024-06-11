@@ -5,6 +5,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -23,7 +24,7 @@
             <children>
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
-                      <ImageView fx:id="logoToAccueil" fitHeight="80.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+                      <ImageView fx:id="logoImageView" fitHeight="80.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Images/LOGO.png" />
                      </image>
@@ -38,7 +39,7 @@
                      </font>
                   </Label>
                       <Pane prefHeight="80.0" prefWidth="150.0" />
-                      <TextField fx:id="searchTextField" onAction="#onActionJeu" prefHeight="26.0" prefWidth="300.0" promptText="Recherche ..." />
+                      <TextField fx:id="searchTextField" prefHeight="26.0" prefWidth="300.0" promptText="Recherche ..." />
                       <Pane prefHeight="80.0" prefWidth="250.0" />
                </children>
             </HBox>
@@ -55,7 +56,7 @@
         </HBox>
       <HBox prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #484848;">
          <children>
-            <Button mnemonicParsing="false" onAction="#mesJeuOnAction" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #484848;" text="Mes Jeux" textFill="WHITE">
+            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #484848;" text="Mes Jeux" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
@@ -72,22 +73,13 @@
                   <Font size="18.0" />
                </font>
             </Button>
-            <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="814.0">
-               <children>
-                  <Button fx:id="pageAjout" mnemonicParsing="false" onAction="#onAjoutClicked" prefHeight="18.0" prefWidth="106.0" style="-fx-background-color: lightgreen;" text="Ajouter le Jeu">
-                     <font>
-                        <Font name="System Bold" size="12.0" />
-                     </font>
-                  </Button>
-               </children>
-            </HBox>
          </children>
       </HBox>
       <ScrollPane hbarPolicy="NEVER" pannable="true" prefWidth="1225.0" vbarPolicy="NEVER">
          <content>
             <VBox alignment="TOP_CENTER" prefHeight="1050.0" prefWidth="1225.0" style="-fx-background-color: #323232;">
                 <children>
-                    <ImageView fx:id="bannerImageView" fitHeight="400.0" fitWidth="1233.0" pickOnBounds="true" />
+                    <ImageView fx:id="bannerImageView" fitHeight="68.0" fitWidth="1020.0" pickOnBounds="true" preserveRatio="true" />
                     <HBox alignment="TOP_LEFT" prefHeight="978.0" prefWidth="1276.0" spacing="20.0">
                         <padding>
                             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
@@ -96,7 +88,10 @@
                             <VBox fx:id="leftContainer" prefHeight="950.0" prefWidth="850.0" spacing="10.0">
                                 <children>
                                     <Label fx:id="descriptionLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="DESCRIPTION:" textFill="white" />
-                              <WebView fx:id="webDescView" prefHeight="279.0" prefWidth="850.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-control-inner-background: #2e2e2e; -fx-background-color: #2e2e2e; -fx-border-color: none;" styleClass="background-color: gray; color: white" />
+                              <WebView fx:id="webDescView" prefHeight="182.0" prefWidth="850.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-control-inner-background: #2e2e2e; -fx-background-color: #2e2e2e; -fx-border-color: none;" styleClass="background-color: gray; color: white" />
+                                    <Label fx:id="aboutGameLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="A propos du jeu" textFill="white" />
+                                    <TextArea fx:id="aboutGameTextArea" editable="false" prefHeight="150.0" style="-fx-font-size: 14px; -fx-text-fill: white; -fx-control-inner-background: #2e2e2e; -fx-background-color: #2e2e2e; -fx-border-color: transparent;" wrapText="true" />
+                                    <Button fx:id="moreInfoButton" style="-fx-background-color: #3a3a3a; -fx-text-fill: white;" text="Voir plus" />
                                     <Separator fx:id="separator1" orientation="HORIZONTAL" />
                                     <VBox fx:id="authorDateContainer" spacing="5.0">
                                         <children>
