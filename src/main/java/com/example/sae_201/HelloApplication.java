@@ -46,7 +46,7 @@ public class HelloApplication extends Application {
             toJeuController.setNewScene(gamePage);
             toJeuController.setStage(stage);
 
-            pageJeuController gameInfoController = fxmlgameLoader.getController();
+            PageJeuController gameInfoController = fxmlgameLoader.getController();
             toJeuController.setGameController(gameInfoController);
 
             FXMLLoader fxmlsearchLoader = new FXMLLoader(HelloApplication.class.getResource("Recherche.fxml"));
@@ -62,7 +62,7 @@ public class HelloApplication extends Application {
             accueil toBiblioController = (accueil) fxmlLoader.getController();
             toBiblioController.setBliblioScene(biblioPage);
             toBiblioController.setBiblioStage(stage);
-            pageJeuController jeuToBiblio = (pageJeuController) fxmlgameLoader.getController();
+            PageJeuController jeuToBiblio = (PageJeuController) fxmlgameLoader.getController();
             jeuToBiblio.setBliblioScene(biblioPage);
             jeuToBiblio.setBiblioStage(stage);
             rechercheController searchToBiblio = (rechercheController) fxmlsearchLoader.getController();
@@ -85,7 +85,7 @@ public class HelloApplication extends Application {
             searchToJeu.setGameController(gameInfoController);
             gameInfoController.setSearchController(searchGameController);
 
-            pageJeuController jeuToSearch = (pageJeuController) fxmlgameLoader.getController();
+            PageJeuController jeuToSearch = (PageJeuController) fxmlgameLoader.getController();
             jeuToSearch.setNewScene(searchPage);
             jeuToSearch.setStage(stage);
 
@@ -100,7 +100,7 @@ public class HelloApplication extends Application {
             biblioToSearch.setSearchController(searchGameController);
             biblioToSearch.setGameController(gameInfoController);
 
-            pageJeuController jeuToJeu = (pageJeuController) fxmlgameLoader.getController();
+            PageJeuController jeuToJeu = (PageJeuController) fxmlgameLoader.getController();
             jeuToJeu.setThisScene(gamePage);
             jeuToJeu.setStage(stage);
 
@@ -112,7 +112,7 @@ public class HelloApplication extends Application {
             toTagController.setTagScene(createTAGPage);
             toTagController.setTagStage(stage);
 
-            pageJeuController JeuTagController = (pageJeuController) fxmlgameLoader.getController();
+            PageJeuController JeuTagController = (PageJeuController) fxmlgameLoader.getController();
             JeuTagController.setTagScene(createTAGPage);
             JeuTagController.setTagStage(stage);
 

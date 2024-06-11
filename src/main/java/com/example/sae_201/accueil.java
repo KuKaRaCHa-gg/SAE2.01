@@ -142,7 +142,7 @@ public class accueil {
     private Stage stage;
     private Scene searchScene;
     private Stage searchStage;
-    private pageJeuController gameInfoController;
+    private PageJeuController gameInfoController;
     private rechercheController searchGameController;
     private int compteur = 0;
     private int compteur2 = 0;
@@ -162,7 +162,7 @@ public class accueil {
         apiRechercheManager = new APIRechercheManager();
         model = new MyGames();
         persistentModelManager = new PersistenceBySerialization();
-        gameInfoController = new pageJeuController();
+        gameInfoController = new PageJeuController();
     }
 
 
@@ -347,7 +347,6 @@ public class accueil {
                     Stage stage = (Stage) vBox.getScene().getWindow();
                     stage.setScene(scene);
                 });
-                System.out.println(game.getName());
                 searchGameController.getGridRecherchePane().add(vBox, compteurX, compteurY);
                 if (compteurX == 3) {
                     compteurX = 0;
@@ -393,7 +392,7 @@ public class accueil {
         this.stage = stage;
     }
 
-    public void setGameController(pageJeuController gameInfoController) {
+    public void setGameController(PageJeuController gameInfoController) {
         this.gameInfoController = gameInfoController;
     }
 

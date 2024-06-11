@@ -43,7 +43,7 @@ public class rechercheController {
     private int compteurX = 0;
     private int compteurY = 0;
     private APIGameManager apiGameManager;
-    private pageJeuController gameInfoController;
+    private PageJeuController gameInfoController;
     private Scene biblioPage;
     private Stage biblioStage;
     private Scene createTAGPage;
@@ -98,7 +98,6 @@ public class rechercheController {
                     Stage stage = (Stage) vBox.getScene().getWindow();
                     stage.setScene(scene);
                 });
-                System.out.println(game.getName());
                 gridRecherchePane.add(vBox, compteurX, compteurY);
                 if (compteurX == 3) {
                     compteurX = 0;
@@ -208,7 +207,7 @@ public class rechercheController {
         this.biblioStage = stage;
     }
 
-    public void setGameController(pageJeuController gameInfoController) {
+    public void setGameController(PageJeuController gameInfoController) {
         this.gameInfoController = gameInfoController;
     }
 

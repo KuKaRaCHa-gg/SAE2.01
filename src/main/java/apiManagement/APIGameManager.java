@@ -47,10 +47,6 @@ public class APIGameManager {
             game.setDevelopers(detailedResult.getDevelopers());
             game.setTags(detailedResult.getTags());
 
-            System.out.println(game.getDescription());
-            System.out.println(game.getRate());
-            System.out.println(game.getName());
-
             gamesList.add(game);
 
         } catch (JsonProcessingException e) {

@@ -7,6 +7,7 @@ import gameModel.Game;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -39,7 +40,7 @@ public class MesJeuController {
     private int compteurX = 0;
     private int compteurY = 0;
     private rechercheController searchGameController;
-    private pageJeuController gameInfoController;
+    private PageJeuController gameInfoController;
     private Scene searchScene;
     private Stage searchStage;
     private Stage stage;
@@ -75,7 +76,8 @@ public class MesJeuController {
                     VBox vBox = new VBox();
                     Label label = new Label(game.getName());
                     label.setTextFill(Paint.valueOf("white"));
-                    ImageView image = new ImageView(new Image(game.getImageURL(), searchGameController.getGridRecherchePane().getPrefWidth() / 4, 250, true, true));
+                    ImageView image = new ImageView(new Image(game.getImageURL(), 1000, 250, true, true));
+                    image.setViewport(new Rectangle2D(image.getImage().getWidth()/2 - 268 /2 ,0,268, 268));
                     vBox.getChildren().add(image);
                     vBox.getChildren().add(label);
                     vBox.setOnMouseClicked(mouseEvent -> {
@@ -84,7 +86,6 @@ public class MesJeuController {
                         Stage stage = (Stage) vBox.getScene().getWindow();
                         stage.setScene(scene);
                     });
-                    System.out.println(game.getName());
                     searchGameController.getGridRecherchePane().add(vBox, compteurX, compteurY);
                     if (compteurX == 3) {
                         compteurX = 0;
@@ -197,7 +198,7 @@ public class MesJeuController {
         this.searchGameController = researchGameController;
     }
 
-    public void setGameController(pageJeuController gameInfoController) {
+    public void setGameController(PageJeuController gameInfoController) {
         this.gameInfoController = gameInfoController;
     }
 

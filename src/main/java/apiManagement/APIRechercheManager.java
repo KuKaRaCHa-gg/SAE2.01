@@ -49,7 +49,7 @@ public class APIRechercheManager {
         ResultGame result;
         try {
             if ((objectMapper.readValue(response.body(), ResultGame.class)) == null) {
-                System.out.println("y a une erreur ducoup");
+                System.out.println("Erreur");
             }
             result = objectMapper.readValue(response.body(), ResultGame.class);
             if (result.getResults().length == 0) {
@@ -62,7 +62,6 @@ public class APIRechercheManager {
                 game.setName(gameResult.getName());
                 game.setImageURL(gameResult.getBackgroundImage());
 
-                System.out.println(game.getName());
                 gamesList.add(game);
             }
         } catch (JsonProcessingException e) {

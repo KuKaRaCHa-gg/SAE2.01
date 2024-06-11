@@ -23,12 +23,11 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.scene.web.WebView;
 import javafx.stage.Stage;
-import persistence.PersistenceBySerialization;
 
 import java.io.IOException;
 import java.util.List;
 
-public class pageJeuController {
+public class PageJeuController {
 
     @FXML
     private Label aboutGameLabel;
@@ -213,27 +212,12 @@ public class pageJeuController {
     private Scene createTAGPage;
     private Stage createStage;
 
-    public pageJeuController(){
+    public PageJeuController(){
         apiRechercheManager = new APIRechercheManager();
         apiGameManager = new APIGameManager();
         currentGame = new Game();
         model = new MyGames();
         gameCompte = 0;
-    }
-
-    @FXML
-    private void handleMesJeuxButtonAction() {
-        NavigationUtil.navigateTo(stage, "accueil.fxml");
-    }
-
-    @FXML
-    private void handleTagsButtonAction() {
-        NavigationUtil.navigateTo(stage, "RechercheParTAG.fxml");
-    }
-
-    @FXML
-    private void handleCreerTagButtonAction() {
-        NavigationUtil.navigateTo(stage, "Recherche.fxml");
     }
 
     public Game getCurrentGame(){
@@ -307,7 +291,6 @@ public class pageJeuController {
                     Stage stage = (Stage) vBox.getScene().getWindow();
                     stage.setScene(scene);
                 });
-                System.out.println(game.getName());
                 searchGameController.getGridRecherchePane().add(vBox, compteurX, compteurY);
                 if (compteurX == 3) {
                     compteurX = 0;

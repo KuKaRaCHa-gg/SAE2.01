@@ -10,12 +10,10 @@ public class ChargementController {
     private ProgressBar progressBar;
 
     public void initialize() {
-        // Initialiser la ProgressBar ici si nécessaire
         progressBar.setProgress(0.0);
         startTask();
     }
 
-    // Méthode pour mettre à jour la ProgressBar
     public void updateProgress(double progress) {
         progressBar.setProgress(progress);
     }

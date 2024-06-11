@@ -9,10 +9,7 @@ import gameModel.Game;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
-import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ColorPicker;
@@ -85,7 +82,7 @@ public class CreerTagController {
     private int compteurY;
     private Scene biblioPage;
     private Stage biblioStage;
-    private pageJeuController gameInfoController;
+    private PageJeuController gameInfoController;
     private APIGameManager apiGameManager;
     private rechercheController searchGameController;
     private Scene scene;
@@ -102,15 +99,6 @@ public class CreerTagController {
         loadTags();
     }
 
-    @FXML
-    private void handleMesJeuxButtonAction() {
-        NavigationUtil.navigateTo(stage, "accueil.fxml");
-    }
-
-    @FXML
-    private void handleTagsButtonAction() {
-        NavigationUtil.navigateTo(stage, "RechercheParTAG.fxml");
-    }
 
     @FXML
     private void handleCreerTagButtonAction() {
@@ -173,7 +161,6 @@ public class CreerTagController {
                     Stage stage = (Stage) vBox.getScene().getWindow();
                     stage.setScene(scene);
                 });
-                System.out.println(game.getName());
                 searchGameController.getGridRecherchePane().add(vBox, compteurX, compteurY);
                 if (compteurX == 3) {
                     compteurX = 0;
@@ -286,7 +273,7 @@ public class CreerTagController {
         this.biblioStage = stage;
     }
 
-    public void setGameController(pageJeuController gameInfoController) {
+    public void setGameController(PageJeuController gameInfoController) {
         this.gameInfoController = gameInfoController;
     }
 
