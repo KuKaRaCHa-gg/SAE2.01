@@ -210,6 +210,8 @@ public class pageJeuController {
     private Game currentGame;
     private MyGames model;
     private int gameCompte;
+    private Scene createTAGPage;
+    private Stage createStage;
 
     public pageJeuController(){
         apiRechercheManager = new APIRechercheManager();
@@ -410,6 +412,13 @@ public class pageJeuController {
     }
 
     @FXML
+    public void onTagCreatClicked(ActionEvent event) {
+        Button btn = (Button) event.getSource();
+        Stage stage = (Stage) btn.getScene().getWindow();
+        stage.setScene(createTAGPage);
+    }
+
+    @FXML
     void onAjoutClicked(ActionEvent event) {
 
         if (currentGame == null) {
@@ -534,5 +543,13 @@ public class pageJeuController {
             currentGame.addTag(tagName);
             System.out.println("Tag ajouté : " + tagName + " au jeu " + currentGame.getName());
         }
+    }
+
+    public void setTagScene(Scene createTAGPage) {
+        this.createTAGPage = createTAGPage;
+    }
+
+    public void setTagStage(Stage stage) {
+        this.createStage = stage;
     }
 }

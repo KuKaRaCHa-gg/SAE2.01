@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="creation et sauvgarde des tag ( la couleur la decription et le nom)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/CreerTagController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/CreerTagController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/MesJeuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/MesJeuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/accueil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/sae_201/rechercheController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/sae_201/rechercheController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/CreerTag.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/CreerTag.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/PageJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/PageJeu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/Recherche.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/Recherche.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/accueil.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/accueil.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/mesJeu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/sae_201/mesJeu.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="e0c726b3-c5af-401d-896c-47a945972e82" name="Changes" comment="creation et sauvgarde des tag deplacement entre FXML" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -485,7 +473,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718096582687</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="creation et sauvgarde des tag deplacement entre FXML">
+      <option name="closed" value="true" />
+      <created>1718121566779</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1718121566779</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -500,7 +496,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ça marche pour le moment" />
     <MESSAGE value="Le projet marche pour le moment, des chose importer et tous et tous" />
     <MESSAGE value="Mis a jour de l'API et Platform semi fonctionnel" />
     <MESSAGE value="L'app a un ecran de chargement presque fonctionnel (manque juste la page fxml)" />
@@ -525,7 +520,8 @@
     <MESSAGE value="L'ajout de jeu marche !" />
     <MESSAGE value="Daniiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiil" />
     <MESSAGE value="Mattis merge into DAniil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mattis merge into DAniil" />
+    <MESSAGE value="creation et sauvgarde des tag deplacement entre FXML" />
+    <option name="LAST_COMMIT_MESSAGE" value="creation et sauvgarde des tag deplacement entre FXML" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
