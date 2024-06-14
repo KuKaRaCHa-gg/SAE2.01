@@ -89,12 +89,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.HelloApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/10/Documents/GitHub/SAE2.01 Gestion Jeu/SAE2.01/src/main/java/com/example/sae_201",
-    "last_opened_file_path": "C:/Users/danii/Desktop/Cours/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/ideaIC-2022.3.2+JavaFX19+SceneBuilder19/bin/wslproxy",
+    "last_opened_file_path": "C:/Users/danii/Desktop/Livrable SAE2.01 worspace/SAE2.01",
     "project.structure.last.edited": "Artifacts",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -509,7 +510,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718127911785</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="final">
+      <option name="closed" value="true" />
+      <created>1718128094197</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1718128094197</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
